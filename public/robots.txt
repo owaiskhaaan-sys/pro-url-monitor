@@ -15,8 +15,5 @@ Disallow: /signup
 Allow: /tools/
 Allow: /app/
 
-# Crawl delay (be nice to our servers)
-Crawl-delay: 1
-
 # Sitemap location
 Sitemap: https://www.prourlmonitor.com/sitemap.xml
