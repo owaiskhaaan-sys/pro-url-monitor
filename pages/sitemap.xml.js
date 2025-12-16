@@ -1,3 +1,6 @@
+import fs from 'fs';
+import path from 'path';
+
 export default function handler(req, res) {
   const baseUrl = 'https://www.prourlmonitor.com';
   
@@ -19,8 +22,22 @@ export default function handler(req, res) {
     '',
     '/login',
     '/signup',
-    '/app/dashboard'
+    '/app/dashboard',
+    '/blog'
   ];
+
+  // Get blog posts
+  const postsDirectory = path.join(process.cwd(), 'content/blog');
+  let blogPosts = [];
+  
+  try {
+    const fileNames = fs.readdirSync(postsDirectory);
+    blogPosts = fileNames
+      .filter(fileName => fileName.endsWith('.md'))
+      .map(fileName => fileName.replace(/\.md$/, ''));
+  } catch (error) {
+    // Blog directory doesn't exist yet
+  }
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -37,6 +54,13 @@ export default function handler(req, res) {
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>`).join('')}
+  ${blogPosts.map(slug => `
+  <url>
+    <loc>${baseUrl}/blog/${slug}</loc>
+    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>`).join('')}
 </urlset>`;
 
