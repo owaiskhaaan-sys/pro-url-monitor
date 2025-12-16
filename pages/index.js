@@ -4,19 +4,19 @@ import Layout from '../components/Layout';
 export default function Home() {
   return (
     <Layout>
-      <section className="max-w-6xl mx-auto px-4 py-20 text-center">
-        <h1 className="text-5xl font-extrabold text-emerald-800 mb-4">Complete Domain & URL Intelligence Tools</h1>
-        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">ProURLMonitor provides a comprehensive suite of domain analysis, SEO auditing, and URL monitoring tools. Check domain authority, analyze backlinks, verify domain history, and monitor your web presence — all in one platform.</p>
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 text-center">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-emerald-800 mb-4 leading-tight">Complete Domain & URL Intelligence Tools</h1>
+        <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 max-w-2xl mx-auto">ProURLMonitor provides a comprehensive suite of domain analysis, SEO auditing, and URL monitoring tools. Check domain authority, analyze backlinks, verify domain history, and monitor your web presence — all in one platform.</p>
 
-        <div className="flex gap-4 justify-center">
-          <Link href="/tools" className="btn btn-primary text-lg px-8 py-3">Explore Tools</Link>
-          <Link href="/blog" className="btn btn-secondary text-lg px-8 py-3">Read Blog</Link>
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+          <Link href="/tools" className="btn btn-primary text-base sm:text-lg px-6 sm:px-8 py-2 sm:py-3 w-full sm:w-auto">Explore Tools</Link>
+          <Link href="/blog" className="btn btn-secondary text-base sm:text-lg px-6 sm:px-8 py-2 sm:py-3 w-full sm:w-auto">Read Blog</Link>
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto px-4 py-12">
-        <h2 className="text-3xl font-bold text-emerald-700 mb-6">Popular Tools</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <h2 className="text-2xl sm:text-3xl font-bold text-emerald-700 mb-4 sm:mb-6">Popular Tools</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {[{
             title: 'SEO Audit Tool',
             href: '/tools/seo-audit',
@@ -63,9 +63,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto px-4 py-12">
-        <h2 className="text-2xl font-bold mb-4">Why ProURLMonitor?</h2>
-        <ul className="list-disc pl-6 text-gray-700 space-y-2">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Why ProURLMonitor?</h2>
+        <ul className="list-disc pl-5 sm:pl-6 text-gray-700 space-y-2 text-sm sm:text-base">
           <li>17 professional domain, link, and SEO analysis tools.</li>
           <li>Fast, secure, and most tools run fully in your browser — no uploads.</li>
           <li>Monitor domain health, track backlinks, check rankings, and verify URL safety.</li>
