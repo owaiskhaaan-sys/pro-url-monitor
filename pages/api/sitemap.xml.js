@@ -1,5 +1,4 @@
-import fs from 'fs';
-import path from 'path';
+import { getSortedPostsData } from '../../lib/blog';
 
 export default function handler(req, res) {
   const baseUrl = 'https://www.prourlmonitor.com';
@@ -26,17 +25,13 @@ export default function handler(req, res) {
     '/blog'
   ];
 
-  // Get blog posts
-  const postsDirectory = path.join(process.cwd(), 'content/blog');
+  // Get blog posts dynamically
   let blogPosts = [];
-  
   try {
-    const fileNames = fs.readdirSync(postsDirectory);
-    blogPosts = fileNames
-      .filter(fileName => fileName.endsWith('.md'))
-      .map(fileName => fileName.replace(/\.md$/, ''));
+    const posts = getSortedPostsData();
+    blogPosts = posts.map(post => post.slug);
   } catch (error) {
-    // Blog directory doesn't exist yet
+    // No blog posts yet
   }
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -65,6 +60,7 @@ export default function handler(req, res) {
 </urlset>`;
 
   res.setHeader('Content-Type', 'text/xml');
+  res.setHeader('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate');
   res.write(sitemap);
   res.end();
 }
