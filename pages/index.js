@@ -1,34 +1,9 @@
 import Link from 'next/link';
 import Layout from '../components/Layout';
-import Head from 'next/head';
 
 export default function Home() {
   return (
     <Layout>
-      <Head>
-        <title>ProURLMonitor - Domain & URL Analysis Tools | SEO Monitoring Platform</title>
-        <meta name="description" content="ProURLMonitor offers comprehensive domain analysis, URL monitoring, SEO audit tools, backlinks checker, domain authority checker, and web presence monitoring. Free online tools for SEO professionals." />
-        <meta name="keywords" content="domain analysis, URL monitoring, SEO tools, domain authority checker, backlinks analyzer, reverse IP lookup, domain age checker, WHOIS lookup, web monitoring, SEO audit" />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content="ProURLMonitor - Complete Domain & URL Intelligence Tools" />
-        <meta property="og:description" content="Comprehensive suite of domain analysis, SEO auditing, and URL monitoring tools for professionals" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://prourlmonitor.com" />
-        <meta property="og:image" content="https://prourlmonitor.com/og-image.png" />
-        
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="ProURLMonitor - Domain & URL Analysis Tools" />
-        <meta name="twitter:description" content="Free domain analysis, SEO audit, and URL monitoring tools" />
-        <meta name="twitter:image" content="https://prourlmonitor.com/og-image.png" />
-        
-        {/* Additional SEO */}
-        <link rel="canonical" content="https://prourlmonitor.com" />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="ProURLMonitor" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
       <section className="max-w-6xl mx-auto px-4 py-20 text-center">
         <h1 className="text-5xl font-extrabold text-emerald-800 mb-4">Complete Domain & URL Intelligence Tools</h1>
         <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">ProURLMonitor provides a comprehensive suite of domain analysis, SEO auditing, and URL monitoring tools. Check domain authority, analyze backlinks, verify domain history, and monitor your web presence — all in one platform.</p>
@@ -42,14 +17,20 @@ export default function Home() {
       <section className="max-w-6xl mx-auto px-4 py-12">
         <h2 className="text-3xl font-bold text-emerald-700 mb-6">Popular Tools</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[{            title: 'SEO Audit Tool',
+          {[{
+            title: 'SEO Audit Tool',
             href: '/tools/seo-audit',
-            desc: 'Complete website SEO analysis with actionable insights.'          },{            title: 'AI Robots.txt Generator',
+            desc: 'Complete website SEO analysis with PageSpeed scores, Core Web Vitals, and 18+ checks.'
+          },{
+            title: 'Robots.txt Generator',
             href: '/tools/robots-txt-generator',
-            desc: 'Create SEO-friendly robots.txt files instantly.'
-          },{            title: 'HTTP Status Code Checker',
+            desc: 'AI-powered robots.txt file generator with live preview and download.'
+          },{
+            title: 'HTTP Status Checker',
             href: '/tools/http-status-checker',
-            desc: 'Check 200, 301, 404, 500 status codes and redirects.'          },{            title: 'Domain Authority Checker',
+            desc: 'Check 200, 301, 404, 500 status codes and redirects for multiple URLs.'
+          },{
+            title: 'Domain Authority Checker',
             href: '/tools/domain-authority-checker',
             desc: 'Check domain authority and spam score instantly.'
           },{
