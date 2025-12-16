@@ -1,7 +1,7 @@
 ---
 title: "How to Check HTTP Status Codes for SEO: Complete Guide to Fix 404 Errors and Boost Rankings"
 excerpt: "Learn how to check HTTP status codes, fix 404 errors, handle 301 redirects, and improve your website's SEO with our comprehensive guide. Discover free tools and best practices."
-image: ""
+image: "/blog/images/http-status-codes-seo.jpg"
 author: "ProURLMonitor Team"
 date: "2025-12-17"
 keywords: "check HTTP status codes, 404 error fix, 301 redirect SEO, HTTP status checker tool, broken links SEO, website crawl errors, server response codes, bulk URL checker"
