@@ -42,8 +42,10 @@ export default function Home() {
       <section className="max-w-6xl mx-auto px-4 py-12">
         <h2 className="text-3xl font-bold text-emerald-700 mb-6">Popular Tools</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[{
-            title: 'Domain Authority Checker',
+          {[{            title: 'SEO Audit Tool',
+            href: '/tools/seo-audit',
+            desc: 'Complete website SEO analysis with actionable insights.'
+          },{            title: 'Domain Authority Checker',
             href: '/tools/domain-authority-checker',
             desc: 'Check domain authority and spam score instantly.'
           },{
