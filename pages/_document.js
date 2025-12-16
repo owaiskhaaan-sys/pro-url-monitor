@@ -4,10 +4,10 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        {/* Google Analytics - Replace with your tracking ID */}
+        {/* Google Analytics */}
         <script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+          src="https://www.googletagmanager.com/gtag/js?id=G-YFHKJ1WJ61"
         />
         <script
           dangerouslySetInnerHTML={{
@@ -15,13 +15,13 @@ export default function Document() {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-XXXXXXXXXX');
+              gtag('config', 'G-YFHKJ1WJ61');
             `,
           }}
         />
 
-        {/* Google Search Console Verification - Replace with your code */}
-        <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE" />
+        {/* Google Search Console Verification */}
+        <meta name="google-site-verification" content="2tgob67uTDkdiRiOs0DXG0wsgNQhVAcbhkhVMfqWmec" />
       </Head>
       <body>
         <Main />
