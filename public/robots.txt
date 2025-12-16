@@ -19,4 +19,4 @@ Allow: /app/
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://www.prourlmonitor.com/api/sitemap.xml
+Sitemap: https://www.prourlmonitor.com/sitemap.xml

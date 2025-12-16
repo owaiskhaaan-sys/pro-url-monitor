@@ -1,6 +1,6 @@
-import { getSortedPostsData } from '../../lib/blog';
+import { getSortedPostsData } from '../lib/blog';
 
-export default function handler(req, res) {
+export async function getServerSideProps({ res }) {
   const baseUrl = 'https://www.prourlmonitor.com';
   
   const tools = [
@@ -63,4 +63,12 @@ export default function handler(req, res) {
   res.setHeader('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate');
   res.write(sitemap);
   res.end();
+
+  return {
+    props: {},
+  };
+}
+
+export default function Sitemap() {
+  return null;
 }
