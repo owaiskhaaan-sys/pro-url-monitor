@@ -6,6 +6,42 @@ export default function HTTPStatusChecker() {
   const [urls, setUrls] = useState('');
   const [loading, setLoading] = useState(false);
   const [results, setResults] = useState(null);
+  const [websiteUrl, setWebsiteUrl] = useState('');
+  const [crawling, setCrawling] = useState(false);
+  const [crawlInfo, setCrawlInfo] = useState(null);
+
+  const crawlWebsite = async (e) => {
+    e.preventDefault();
+    setCrawling(true);
+    setCrawlInfo(null);
+
+    try {
+      let crawlUrl = websiteUrl.trim();
+      if (!crawlUrl.startsWith('http')) {
+        crawlUrl = 'https://' + crawlUrl;
+      }
+
+      const response = await fetch(`/api/crawl-sitemap?url=${encodeURIComponent(crawlUrl)}`);
+      const data = await response.json();
+
+      if (data.success) {
+        setCrawlInfo({
+          sitemaps: data.sitemaps,
+          totalUrls: data.totalUrls,
+          filteredUrls: data.filteredUrls
+        });
+        
+        // Populate textarea with found URLs
+        setUrls(data.urls.join('\n'));
+      } else {
+        alert('Error: ' + data.error);
+      }
+    } catch (error) {
+      alert('Failed to crawl website: ' + error.message);
+    } finally {
+      setCrawling(false);
+    }
+  };
 
   const checkStatus = async (e) => {
     e.preventDefault();
@@ -111,6 +147,42 @@ export default function HTTPStatusChecker() {
       <div className="max-w-4xl mx-auto px-4 py-8">
         <h1 className="text-3xl sm:text-4xl font-bold text-emerald-700 mb-4">HTTP Status Checker</h1>
         <p className="text-gray-600 mb-8">Check 200, 301, 404, 500 status codes and redirects for multiple URLs</p>
+
+        {/* Website Crawler Section */}
+        <div className="card mb-6 bg-gradient-to-r from-emerald-50 to-blue-50 border-2 border-emerald-200">
+          <h2 className="text-xl font-bold text-emerald-700 mb-3">🕷️ Website Crawler</h2>
+          <p className="text-sm text-gray-600 mb-4">Extract all URLs from your website's sitemap automatically</p>
+          
+          <form onSubmit={crawlWebsite} className="flex gap-3">
+            <input
+              type="text"
+              value={websiteUrl}
+              onChange={(e) => setWebsiteUrl(e.target.value)}
+              placeholder="Enter your website URL (e.g., example.com)"
+              className="flex-1 px-4 py-2 border border-emerald-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+              required
+            />
+            <button
+              type="submit"
+              disabled={crawling}
+              className="btn btn-primary px-6 whitespace-nowrap"
+            >
+              {crawling ? '🔍 Crawling...' : '🕷️ Extract URLs'}
+            </button>
+          </form>
+
+          {crawlInfo && (
+            <div className="mt-4 p-3 bg-white rounded-lg border border-emerald-200">
+              <div className="text-sm space-y-1">
+                <p className="text-green-600 font-semibold">✅ Crawl Complete!</p>
+                <p className="text-gray-600">📑 Sitemaps found: {crawlInfo.sitemaps.length}</p>
+                <p className="text-gray-600">🔗 Total URLs: {crawlInfo.totalUrls}</p>
+                <p className="text-gray-600">✨ Filtered URLs: {crawlInfo.filteredUrls}</p>
+                <p className="text-xs text-gray-500 mt-2">URLs have been added to the checker below ⬇️</p>
+              </div>
+            </div>
+          )}
+        </div>
 
         <form onSubmit={checkStatus} className="card mb-8">
           <div className="mb-4">
