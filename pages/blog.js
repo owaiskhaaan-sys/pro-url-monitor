@@ -1,5 +1,4 @@
 import Layout from '../components/Layout';
-import Layout from '../components/Layout';
 import Link from 'next/link';
 
 const posts = [
@@ -13,10 +12,9 @@ export default function Blog() {
       <section className="max-w-4xl mx-auto px-4 py-16">
         <h1 className="text-3xl font-bold text-emerald-700 mb-6">Blog</h1>
         <p className="text-gray-600 mb-8">Helpful articles about SEO, content and tooling.</p>
-
         <div className="space-y-4">
           {posts.map(p => (
-            <Link key={p.slug} href={`/blog/${p.slug}`}>
+            <Link key={p.slug} href={/blog/}>
               <article className="card hover:shadow-md transition">
                 <h2 className="text-xl font-semibold text-emerald-700">{p.title}</h2>
                 <p className="text-gray-600 mt-2">{p.excerpt}</p>
