@@ -44,8 +44,12 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {[{            title: 'SEO Audit Tool',
             href: '/tools/seo-audit',
-            desc: 'Complete website SEO analysis with actionable insights.'
-          },{            title: 'Domain Authority Checker',
+            desc: 'Complete website SEO analysis with actionable insights.'          },{            title: 'AI Robots.txt Generator',
+            href: '/tools/robots-txt-generator',
+            desc: 'Create SEO-friendly robots.txt files instantly.'
+          },{            title: 'HTTP Status Code Checker',
+            href: '/tools/http-status-checker',
+            desc: 'Check 200, 301, 404, 500 status codes and redirects.'          },{            title: 'Domain Authority Checker',
             href: '/tools/domain-authority-checker',
             desc: 'Check domain authority and spam score instantly.'
           },{

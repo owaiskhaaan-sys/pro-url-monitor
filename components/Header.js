@@ -6,7 +6,7 @@ import { useState } from 'react';
 export default function Header() {
   const [showToolsDropdown, setShowToolsDropdown] = useState(false);
 
-  const tools = [    { title: 'SEO Audit Tool', href: '/tools/seo-audit' },    { title: 'Domain Authority Checker', href: '/tools/domain-authority-checker' },
+  const tools = [    { title: 'SEO Audit Tool', href: '/tools/seo-audit' },    { title: 'AI Robots.txt Generator', href: '/tools/robots-txt-generator' },    { title: 'HTTP Status Code Checker', href: '/tools/http-status-checker' },    { title: 'SEO Audit Tool', href: '/tools/seo-audit' },    { title: 'Domain Authority Checker', href: '/tools/domain-authority-checker' },
     { title: 'Bulk Domain Age Checker', href: '/tools/bulk-domain-age-checker' },
     { title: 'Bulk Domain WHOIS Checker', href: '/tools/bulk-domain-whois-checker' },
     { title: 'Domain IP History Checker', href: '/tools/domain-ip-history-checker' },
@@ -82,3 +82,4 @@ export default function Header() {
     </header>
   );
 }
+

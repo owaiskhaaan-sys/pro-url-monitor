@@ -1,0 +1,23 @@
+  const tools = [
+    { title: 'SEO Audit Tool', href: '/tools/seo-audit' },
+    { title: 'AI Robots.txt Generator', href: '/tools/robots-txt-generator' },
+    { title: 'HTTP Status Code Checker', href: '/tools/http-status-checker' },
+    { title: 'XML & HTML Sitemap Generator', href: '/tools/xml-html-sitemap-generator' },
+    { title: 'Domain Authority Checker', href: '/tools/domain-authority-checker' },
+    { title: 'Bulk Domain Age Checker', href: '/tools/bulk-domain-age-checker' },
+    { title: 'Bulk Domain WHOIS Checker', href: '/tools/bulk-domain-whois-checker' },
+    { title: 'Domain IP History Checker', href: '/tools/domain-ip-history-checker' },
+    { title: 'Reverse IP Domain Checker', href: '/tools/reverse-ip-domain-checker' },
+    { title: 'Reverse WHOIS Checker', href: '/tools/reverse-whois-checker' },
+    { title: 'Google Malware Checker', href: '/tools/google-malware-checker' },
+    { title: 'Bulk Alexa Rank Checker', href: '/tools/bulk-alexa-rank-checker' },
+    { title: 'Alexa Rank Comparison', href: '/tools/alexa-rank-comparison' },
+    { title: 'Backlinks Maker', href: '/tools/backlinks-maker' },
+    { title: 'Social Media Counter', href: '/tools/social-media-counter' },
+    { title: 'Link Search', href: '/tools/link-search' },
+    { title: 'Broken Links Checker', href: '/tools/broken-links-checker' },
+    { title: 'Google PageRank Checker', href: '/tools/google-pagerank-checker' },
+    { title: 'Link Extractor', href: '/tools/link-extractor' },
+    { title: 'Ping Multiple URLs', href: '/tools/ping-multiple-urls-online' },
+    { title: 'Binary Translator', href: '/tools/binary-translator' }
+  ];
