@@ -1,9 +1,20 @@
 import Link from 'next/link';
 import Layout from '../components/Layout';
+import Head from 'next/head';
 
 export default function About() {
   return (
     <Layout>
+      <Head>
+        <title>About ProURLMonitor - Professional Domain & SEO Tools Platform</title>
+        <meta name="description" content="Learn about ProURLMonitor, your trusted platform for domain analysis, URL monitoring, and SEO tools. Professional-grade solutions for digital marketers and SEO specialists." />
+        <meta name="keywords" content="about ProURLMonitor, domain tools, SEO platform, web analytics, digital marketing tools, professional SEO software" />
+        <meta property="og:title" content="About ProURLMonitor" />
+        <meta property="og:description" content="Professional domain analysis and SEO tools platform" />
+        <meta property="og:url" content="https://prourlmonitor.com/about" />
+        <link rel="canonical" content="https://prourlmonitor.com/about" />
+        <meta name="robots" content="index, follow" />
+      </Head>
       <section className="max-w-6xl mx-auto px-4 py-16">
         {/* Header */}
         <div className="mb-16">
