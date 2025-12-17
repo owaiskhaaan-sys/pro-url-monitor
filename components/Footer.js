@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 mt-12">
       <div className="container py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
             <h4 className="font-semibold text-emerald-400 mb-4">Product</h4>
             <ul className="space-y-2 text-sm">
