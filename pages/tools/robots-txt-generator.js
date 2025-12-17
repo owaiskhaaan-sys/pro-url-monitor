@@ -3,7 +3,7 @@ import Layout from '../../components/Layout';
 import Head from 'next/head';
 
 export default function RobotsTxtGenerator() {
-  const [sitemap, setSitemap] = useState('');
+  const [sitemap, setSitemap] = useState('https://example.com/sitemap.xml');
   const [disallowPaths, setDisallowPaths] = useState('/admin/\n/api/\n/login\n/signup');
   const [crawlDelay, setCrawlDelay] = useState('');
   const [generatedRobots, setGeneratedRobots] = useState('');
