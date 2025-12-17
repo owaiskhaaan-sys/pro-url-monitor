@@ -30,6 +30,22 @@ export default function Home() {
             href: '/tools/http-status-checker',
             desc: 'Check 200, 301, 404, 500 status codes and redirects for multiple URLs.'
           },{
+            title: 'Meta Tag Generator',
+            href: '/tools/meta-generator',
+            desc: 'Generate SEO-friendly title tags, meta descriptions, and Open Graph tags with character counter.'
+          },{
+            title: 'Keyword Density Checker',
+            href: '/tools/keyword-density-checker',
+            desc: 'Analyze keyword frequency and density to avoid keyword stuffing and optimize content.'
+          },{
+            title: 'Heading Tag Analyzer',
+            href: '/tools/heading-analyzer',
+            desc: 'Check your H1-H6 heading structure for SEO best practices and accessibility.'
+          },{
+            title: 'Schema Markup Generator',
+            href: '/tools/schema-generator',
+            desc: 'Create JSON-LD structured data for rich snippets in Google search results.'
+          },{
             title: 'Domain Authority Checker',
             href: '/tools/domain-authority-checker',
             desc: 'Check domain authority and spam score instantly.'
