@@ -285,9 +285,9 @@ export default function BinaryTranslator() {
                   <tr><td className="px-3 py-1 border-b">01111000</td><td className="px-3 py-1 border-b">78</td><td className="px-3 py-1 border-b">x</td></tr>
                   <tr><td className="px-3 py-1 border-b">01111001</td><td className="px-3 py-1 border-b">79</td><td className="px-3 py-1 border-b">y</td></tr>
                   <tr><td className="px-3 py-1 border-b">01111010</td><td className="px-3 py-1 border-b">7A</td><td className="px-3 py-1 border-b">z</td></tr>
-                  <tr><td className="px-3 py-1 border-b">01111011</td><td className="px-3 py-1 border-b">7B</td><td className="px-3 py-1 border-b">{</td></tr>
+                  <tr><td className="px-3 py-1 border-b">01111011</td><td className="px-3 py-1 border-b">7B</td><td className="px-3 py-1 border-b">{'{'}</td></tr>
                   <tr><td className="px-3 py-1 border-b">01111100</td><td className="px-3 py-1 border-b">7C</td><td className="px-3 py-1 border-b">|</td></tr>
-                  <tr><td className="px-3 py-1 border-b">01111101</td><td className="px-3 py-1 border-b">7D</td><td className="px-3 py-1 border-b">}</td></tr>
+                  <tr><td className="px-3 py-1 border-b">01111101</td><td className="px-3 py-1 border-b">7D</td><td className="px-3 py-1 border-b">{'}'}</td></tr>
                   <tr><td className="px-3 py-1 border-b">01111110</td><td className="px-3 py-1 border-b">7E</td><td className="px-3 py-1 border-b">~</td></tr>
                   <tr><td className="px-3 py-1 border-b">01111111</td><td className="px-3 py-1 border-b">7F</td><td className="px-3 py-1 border-b">DEL</td></tr>
                 </tbody>
