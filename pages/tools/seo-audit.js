@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Layout from '../../components/Layout';
 import Head from 'next/head';
 
-const PAGESPEED_API_KEY = 'AIzaSyBgmfPJmx4LbiCrwl0itXtKuspEsqaUM_Y';
+const PAGESPEED_API_KEY = 'AIzaSyACg_8Pn61ChGGFlS0oFyzZlXXEVaQWVUM';
 
 export default function SEOAudit() {
   const [url, setUrl] = useState('');
