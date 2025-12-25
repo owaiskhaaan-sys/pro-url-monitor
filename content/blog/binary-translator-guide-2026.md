@@ -16,7 +16,6 @@ keywords:
   - computer language translation tool
 ---
 
-# Binary Translator Online – Complete Guide
 
 [Back to all articles](/blog)
 
