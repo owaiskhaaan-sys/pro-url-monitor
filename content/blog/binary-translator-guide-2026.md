@@ -1,8 +1,9 @@
 ---
 title: "Binary Translator Online – Complete Guide"
-description: "Learn everything about binary translators: how to convert text to binary, binary to text, and ASCII. Includes code examples, conversion tables, and best tools for students, programmers, and hobbyists."
+excerpt: "Learn how to convert text to binary, binary to text, and ASCII with code examples, conversion tables, and the best tools for students, programmers, and hobbyists."
+author: "ProURLMonitor Team"
 date: "2025-12-26"
-featuredImage: "/blog/images/Binary Translator – Visual Guide to Binary Code Conversion.jpg"
+image: "/blog/images/Binary%20Translator%20%E2%80%93%20Visual%20Guide%20to%20Binary%20Code%20Conversion.jpg"
 keywords:
   - binary translator
   - binary translator online
