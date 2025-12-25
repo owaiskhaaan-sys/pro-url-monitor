@@ -48,14 +48,63 @@ export default function BinaryTranslator() {
         <meta name="description" content="Free binary translator tool. Convert text to binary code and binary to text instantly." />
       </Head>
 
+
       <div className="max-w-4xl mx-auto px-4 py-8">
-
         <h1 className="text-3xl sm:text-4xl font-bold text-emerald-700 mb-4">Binary Translator</h1>
-        <p className="text-gray-600 mb-8">
-          Binary translator is a tool to translate binary code into text for reading or printing purposes. You can translate binary to English by using two methods; ASCII and Unicode.
-        </p>
+        <p className="text-gray-600 mb-8">Convert text to binary code and vice versa</p>
 
+        {/* Tool UI Section - stays at the top */}
         <div className="card mb-6">
+          <div className="flex gap-4 mb-4">
+            <button
+              onClick={() => setMode('textToBinary')}
+              className={`px-4 py-2 rounded-lg ${mode === 'textToBinary' ? 'bg-emerald-600 text-white' : 'bg-gray-200'}`}
+            >
+              Text → Binary
+            </button>
+            <button
+              onClick={() => setMode('binaryToText')}
+              className={`px-4 py-2 rounded-lg ${mode === 'binaryToText' ? 'bg-emerald-600 text-white' : 'bg-gray-200'}`}
+            >
+              Binary → Text
+            </button>
+          </div>
+
+          <div className="mb-4">
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              {mode === 'textToBinary' ? 'Enter Text' : 'Enter Binary (space-separated)'}
+            </label>
+            <textarea
+              value={inputText}
+              onChange={(e) => setInputText(e.target.value)}
+              rows="6"
+              placeholder={mode === 'textToBinary' ? 'Hello World' : '01001000 01100101 01101100 01101100 01101111'}
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+            />
+          </div>
+
+          <button onClick={handleConvert} className="btn btn-primary w-full mb-4">
+            🔄 Convert
+          </button>
+
+          {outputText && (
+            <>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Result:</label>
+              <div className="bg-gray-50 p-4 rounded-lg mb-4">
+                <pre className="whitespace-pre-wrap break-all font-mono text-sm">{outputText}</pre>
+              </div>
+              <button onClick={copyToClipboard} className="btn btn-secondary w-full">
+                📋 Copy to Clipboard
+              </button>
+            </>
+          )}
+        </div>
+
+        {/* Content Section - now below the tool */}
+        <div className="card mb-6">
+          <p className="text-gray-600 mb-8">
+            Binary translator is a tool to translate binary code into text for reading or printing purposes. You can translate binary to English by using two methods; ASCII and Unicode.
+          </p>
           <h2 className="text-xl font-bold text-emerald-700 mb-2">How to use Binary to Text converter?</h2>
           <ul className="list-disc pl-6 text-gray-700 mb-4">
             <li>Select the input type from the drop-down menu</li>
