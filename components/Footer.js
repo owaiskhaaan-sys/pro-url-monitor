@@ -29,6 +29,7 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-emerald-400 mb-4">Follow</h4>
             <ul className="space-y-2 text-sm">
+              <li><a href="https://prourlmonitor.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-emerald-400 transition">Website</a></li>
               <li><a href="#" className="text-gray-300 hover:text-emerald-400 transition">Twitter</a></li>
               <li><a href="#" className="text-gray-300 hover:text-emerald-400 transition">LinkedIn</a></li>
             </ul>
