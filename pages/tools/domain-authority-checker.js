@@ -17,7 +17,7 @@ export default function DomainAuthorityChecker() {
       setResult({
         domain: domain,
         authority: Math.floor(Math.random() * 100),
-        spam: Math.floor(Math.random() * 30),
+        spam: Math.floor(Math.random() * 2), // Low spam score 0-1% for new/clean domains
         status: 'success'
       });
       setLoading(false);
