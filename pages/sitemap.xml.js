@@ -14,7 +14,8 @@ export async function getServerSideProps({ res }) {
     'domain-authority-checker',
     'bulk-domain-age-checker',
     'reverse-ip-domain-checker',
-    'social-media-counter'
+    'social-media-counter',
+    'google-index-checker'
   ];
 
   const staticPages = [

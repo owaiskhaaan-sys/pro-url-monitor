@@ -16,6 +16,7 @@ export default function Header() {
     { title: 'Reverse WHOIS Checker', href: '/tools/reverse-whois-checker' },
     { title: 'XML & HTML Sitemap Generator', href: '/tools/xml-html-sitemap-generator' },
     { title: 'Google Malware Checker', href: '/tools/google-malware-checker' },
+    { title: 'Google Index Checker', href: '/tools/google-index-checker' },
     { title: 'Bulk Alexa Rank Checker', href: '/tools/bulk-alexa-rank-checker' },
     { title: 'Alexa Rank Comparison', href: '/tools/alexa-rank-comparison' },
     { title: 'Backlinks Maker', href: '/tools/backlinks-maker' },
