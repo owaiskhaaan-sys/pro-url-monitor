@@ -39,7 +39,8 @@ export default function Header() {
     { title: 'Decimal to Hex Converter', href: '/tools/decimal-to-hex' },
     { title: 'Hex to Decimal Converter', href: '/tools/hex-to-decimal' },
     { title: 'Bitwise Operations Calculator', href: '/tools/bitwise-operations' },
-    { title: 'Meta Description Generator', href: '/tools/meta-description-generator' }
+    { title: 'Meta Description Generator', href: '/tools/meta-description-generator' },
+    { title: 'SEO Title Generator', href: '/tools/seo-title-generator' }
   ];
 
   return (
