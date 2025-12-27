@@ -42,6 +42,7 @@ export default function Header() {
     { title: 'HTML Beautifier & Minifier', href: '/tools/html-beautifier-minifier' },
     { title: 'CSS Beautifier & Minifier', href: '/tools/css-beautifier-minifier' },
     { title: 'JSON Beautifier & Validator', href: '/tools/json-beautifier-validator' },
+    { title: 'XML Beautifier & Validator', href: '/tools/xml-beautifier-validator' },
     { title: 'Meta Description Generator', href: '/tools/meta-description-generator' },
     { title: 'SEO Title Generator', href: '/tools/seo-title-generator' },
     { title: 'Alt Text Generator', href: '/tools/alt-text-generator' },
