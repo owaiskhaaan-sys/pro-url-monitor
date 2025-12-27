@@ -38,6 +38,7 @@ export async function getServerSideProps({ res }) {
     'binary-converter',
     'hex-converter',
     'rot13-cipher',
+    'ascii-converter',
     'jwt-decoder',
     'meta-description-generator',
     'seo-title-generator',
