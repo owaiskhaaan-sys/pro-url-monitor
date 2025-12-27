@@ -22,6 +22,7 @@ export async function getServerSideProps({ res }) {
     'bitwise-operations',
     'meta-description-generator',
     'seo-title-generator',
+    'alt-text-generator',
     'word-counter',
     'link-extractor',
     'robots-txt-generator',

@@ -40,7 +40,8 @@ export default function Header() {
     { title: 'Hex to Decimal Converter', href: '/tools/hex-to-decimal' },
     { title: 'Bitwise Operations Calculator', href: '/tools/bitwise-operations' },
     { title: 'Meta Description Generator', href: '/tools/meta-description-generator' },
-    { title: 'SEO Title Generator', href: '/tools/seo-title-generator' }
+    { title: 'SEO Title Generator', href: '/tools/seo-title-generator' },
+    { title: 'Alt Text Generator', href: '/tools/alt-text-generator' }
   ];
 
   return (
