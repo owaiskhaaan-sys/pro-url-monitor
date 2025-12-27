@@ -53,6 +53,7 @@ export default function Header() {
     { title: 'Server Port Scanner', href: '/tools/server-port-scanner' },
     { title: 'Class C IP Checker', href: '/tools/class-c-ip-checker' },
     { title: 'IP Location', href: '/tools/ip-location' },
+    { title: 'Server Status Checker', href: '/tools/server-status-checker' },
     { title: 'Reverse NS Checker', href: '/tools/reverse-ns-checker' }
   ];
 
