@@ -55,6 +55,7 @@ export default function Header() {
     { title: 'IP Location', href: '/tools/ip-location' },
     { title: 'Server Status Checker', href: '/tools/server-status-checker' },
     { title: 'Different Locations Ping', href: '/tools/different-locations-ping' },
+    { title: 'Traceroute', href: '/tools/traceroute' },
     { title: 'Reverse NS Checker', href: '/tools/reverse-ns-checker' }
   ];
 

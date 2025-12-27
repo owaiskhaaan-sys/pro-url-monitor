@@ -36,6 +36,7 @@ export async function getServerSideProps({ res }) {
     'ip-location',
     'server-status-checker',
     'different-locations-ping',
+    'traceroute',
     'reverse-ns-checker',
     'word-counter',
     'link-extractor',
