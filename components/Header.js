@@ -27,7 +27,10 @@ export default function Header() {
     { title: 'Link Extractor', href: '/tools/link-extractor' },
     { title: 'Ping Multiple URLs', href: '/tools/ping-multiple-urls-online' },
     { title: 'Binary Translator', href: '/tools/binary-translator' },
-    { title: 'Binary Calculator', href: '/tools/binary-calculator' }
+    { title: 'Binary Calculator', href: '/tools/binary-calculator' },
+    { title: 'Decimal to Binary Converter', href: '/tools/decimal-to-binary' },
+    { title: 'Binary to Decimal Converter', href: '/tools/binary-to-decimal' },
+    { title: 'Binary to Hex Converter', href: '/tools/binary-to-hex' }
   ];
 
   return (
