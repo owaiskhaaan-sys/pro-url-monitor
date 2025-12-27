@@ -30,6 +30,7 @@ export async function getServerSideProps({ res }) {
     'code-syntax-highlighter',
     'regex-tester',
     'base64-encoder-decoder',
+    'url-encoder-decoder',
     'meta-description-generator',
     'seo-title-generator',
     'alt-text-generator',

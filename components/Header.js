@@ -49,6 +49,7 @@ export default function Header() {
     { title: 'Code Syntax Highlighter', href: '/tools/code-syntax-highlighter' },
     { title: 'Regex Tester', href: '/tools/regex-tester' },
     { title: 'Base64 Encoder/Decoder', href: '/tools/base64-encoder-decoder' },
+    { title: 'URL Encoder/Decoder', href: '/tools/url-encoder-decoder' },
     { title: 'Meta Description Generator', href: '/tools/meta-description-generator' },
     { title: 'SEO Title Generator', href: '/tools/seo-title-generator' },
     { title: 'Alt Text Generator', href: '/tools/alt-text-generator' },
