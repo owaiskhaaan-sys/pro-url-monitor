@@ -33,6 +33,7 @@ export async function getServerSideProps({ res }) {
     'dns-propagation-checker',
     'server-port-scanner',
     'class-c-ip-checker',
+    'ip-location',
     'reverse-ns-checker',
     'word-counter',
     'link-extractor',
