@@ -28,6 +28,7 @@ export async function getServerSideProps({ res }) {
     'content-readability-optimizer',
     'semantic-keyword-finder',
     'internal-linking-assistant',
+    'dns-records-checker',
     'word-counter',
     'link-extractor',
     'robots-txt-generator',

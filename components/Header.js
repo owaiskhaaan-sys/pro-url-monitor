@@ -46,7 +46,8 @@ export default function Header() {
     { title: 'FAQ Schema Generator', href: '/tools/faq-schema-generator' },
     { title: 'Content Readability Optimizer', href: '/tools/content-readability-optimizer' },
     { title: 'Semantic Keyword Finder', href: '/tools/semantic-keyword-finder' },
-    { title: 'Internal Linking Assistant', href: '/tools/internal-linking-assistant' }
+    { title: 'Internal Linking Assistant', href: '/tools/internal-linking-assistant' },
+    { title: 'DNS Records Checker', href: '/tools/dns-records-checker' }
   ];
 
   return (
