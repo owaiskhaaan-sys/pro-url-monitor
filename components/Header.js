@@ -45,6 +45,7 @@ export default function Header() {
     { title: 'XML Beautifier & Validator', href: '/tools/xml-beautifier-validator' },
     { title: 'SQL Formatter', href: '/tools/sql-formatter' },
     { title: 'PHP Beautifier', href: '/tools/php-beautifier' },
+    { title: 'Python Formatter', href: '/tools/python-formatter' },
     { title: 'Meta Description Generator', href: '/tools/meta-description-generator' },
     { title: 'SEO Title Generator', href: '/tools/seo-title-generator' },
     { title: 'Alt Text Generator', href: '/tools/alt-text-generator' },
