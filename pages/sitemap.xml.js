@@ -24,6 +24,7 @@ export async function getServerSideProps({ res }) {
     'seo-title-generator',
     'alt-text-generator',
     'faq-schema-generator',
+    'content-readability-optimizer',
     'word-counter',
     'link-extractor',
     'robots-txt-generator',

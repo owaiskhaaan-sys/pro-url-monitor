@@ -42,7 +42,8 @@ export default function Header() {
     { title: 'Meta Description Generator', href: '/tools/meta-description-generator' },
     { title: 'SEO Title Generator', href: '/tools/seo-title-generator' },
     { title: 'Alt Text Generator', href: '/tools/alt-text-generator' },
-    { title: 'FAQ Schema Generator', href: '/tools/faq-schema-generator' }
+    { title: 'FAQ Schema Generator', href: '/tools/faq-schema-generator' },
+    { title: 'Content Readability Optimizer', href: '/tools/content-readability-optimizer' }
   ];
 
   return (
