@@ -33,6 +33,7 @@ export async function getServerSideProps({ res }) {
     'url-encoder-decoder',
     'md5-generator',
     'sha256-generator',
+    'html-encoder-decoder',
     'meta-description-generator',
     'seo-title-generator',
     'alt-text-generator',
