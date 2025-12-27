@@ -15,6 +15,7 @@ export async function getServerSideProps({ res }) {
     'hex-to-binary',
     'binary-to-octal',
     'octal-to-binary',
+    'octal-to-decimal',
     'word-counter',
     'link-extractor',
     'robots-txt-generator',

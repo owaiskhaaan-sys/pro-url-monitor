@@ -438,6 +438,12 @@ Real-world meaning:
                 </h3>
                 <p className="text-sm text-gray-700">Convert text to binary code and decode binary back to readable text.</p>
               </div>
+              <div className="border border-emerald-200 p-4 rounded-lg hover:shadow-md transition-shadow">
+                <h3 className="font-semibold text-emerald-800 mb-2">
+                  <a href="/tools/octal-to-decimal" className="hover:text-emerald-600">📊 Octal to Decimal Converter</a>
+                </h3>
+                <p className="text-sm text-gray-700">Convert octal numbers to decimal format—understand chmod values numerically.</p>
+              </div>
             </div>
           </div>
 

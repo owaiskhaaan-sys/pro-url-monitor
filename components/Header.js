@@ -33,7 +33,8 @@ export default function Header() {
     { title: 'Binary to Hex Converter', href: '/tools/binary-to-hex' },
     { title: 'Hex to Binary Converter', href: '/tools/hex-to-binary' },
     { title: 'Binary to Octal Converter', href: '/tools/binary-to-octal' },
-    { title: 'Octal to Binary Converter', href: '/tools/octal-to-binary' }
+    { title: 'Octal to Binary Converter', href: '/tools/octal-to-binary' },
+    { title: 'Octal to Decimal Converter', href: '/tools/octal-to-decimal' }
   ];
 
   return (
