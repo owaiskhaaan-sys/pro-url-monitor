@@ -455,15 +455,21 @@ Result: 100 (4 in decimal)`}
                 <p className="text-sm text-gray-700">Convert text to binary code and binary to text instantly. Perfect for encoding and decoding messages.</p>
               </div>
               <div className="border border-emerald-200 p-4 rounded-lg hover:shadow-md transition-shadow">
-                <h3 className="font-semibold text-emerald-800 mb-2">📊 Decimal to Binary Converter</h3>
+                <h3 className="font-semibold text-emerald-800 mb-2">
+                  <a href="/tools/decimal-to-binary" className="hover:text-emerald-600">📊 Decimal to Binary Converter</a>
+                </h3>
                 <p className="text-sm text-gray-700">Convert decimal numbers to binary format quickly and accurately.</p>
               </div>
               <div className="border border-emerald-200 p-4 rounded-lg hover:shadow-md transition-shadow">
-                <h3 className="font-semibold text-emerald-800 mb-2">🔢 Binary to Decimal Converter</h3>
+                <h3 className="font-semibold text-emerald-800 mb-2">
+                  <a href="/tools/binary-to-decimal" className="hover:text-emerald-600">🔢 Binary to Decimal Converter</a>
+                </h3>
                 <p className="text-sm text-gray-700">Convert binary numbers back to decimal format for easy understanding.</p>
               </div>
               <div className="border border-emerald-200 p-4 rounded-lg hover:shadow-md transition-shadow">
-                <h3 className="font-semibold text-emerald-800 mb-2">🔷 Binary to Hex Converter</h3>
+                <h3 className="font-semibold text-emerald-800 mb-2">
+                  <a href="/tools/binary-to-hex" className="hover:text-emerald-600">🔷 Binary to Hex Converter</a>
+                </h3>
                 <p className="text-sm text-gray-700">Convert binary numbers to hexadecimal format used in programming and computer systems.</p>
               </div>
             </div>
