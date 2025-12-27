@@ -54,6 +54,7 @@ export default function Header() {
     { title: 'Class C IP Checker', href: '/tools/class-c-ip-checker' },
     { title: 'IP Location', href: '/tools/ip-location' },
     { title: 'Server Status Checker', href: '/tools/server-status-checker' },
+    { title: 'Different Locations Ping', href: '/tools/different-locations-ping' },
     { title: 'Reverse NS Checker', href: '/tools/reverse-ns-checker' }
   ];
 

@@ -35,6 +35,7 @@ export async function getServerSideProps({ res }) {
     'class-c-ip-checker',
     'ip-location',
     'server-status-checker',
+    'different-locations-ping',
     'reverse-ns-checker',
     'word-counter',
     'link-extractor',
