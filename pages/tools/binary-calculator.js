@@ -490,6 +490,12 @@ Result: 100 (4 in decimal)`}
                 </h3>
                 <p className="text-sm text-gray-700">Convert octal numbers to binary—perfect for understanding chmod file permissions.</p>
               </div>
+              <div className="border border-emerald-200 p-4 rounded-lg hover:shadow-md transition-shadow">
+                <h3 className="font-semibold text-emerald-800 mb-2">
+                  <a href="/tools/twos-complement-calculator" className="hover:text-emerald-600">➮ Two's Complement Calculator</a>
+                </h3>
+                <p className="text-sm text-gray-700">Calculate one's and two's complement for negative binary number representation.</p>
+              </div>
             </div>
           </div>
 
