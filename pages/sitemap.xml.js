@@ -21,6 +21,7 @@ export async function getServerSideProps({ res }) {
     'hex-to-decimal',
     'bitwise-operations',
     'html-beautifier-minifier',
+    'css-beautifier-minifier',
     'meta-description-generator',
     'seo-title-generator',
     'alt-text-generator',
