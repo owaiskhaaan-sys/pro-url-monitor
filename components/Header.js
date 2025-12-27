@@ -38,7 +38,8 @@ export default function Header() {
     { title: "Two's Complement Calculator", href: '/tools/twos-complement-calculator' },
     { title: 'Decimal to Hex Converter', href: '/tools/decimal-to-hex' },
     { title: 'Hex to Decimal Converter', href: '/tools/hex-to-decimal' },
-    { title: 'Bitwise Operations Calculator', href: '/tools/bitwise-operations' }
+    { title: 'Bitwise Operations Calculator', href: '/tools/bitwise-operations' },
+    { title: 'Meta Description Generator', href: '/tools/meta-description-generator' }
   ];
 
   return (

@@ -20,6 +20,7 @@ export async function getServerSideProps({ res }) {
     'decimal-to-hex',
     'hex-to-decimal',
     'bitwise-operations',
+    'meta-description-generator',
     'word-counter',
     'link-extractor',
     'robots-txt-generator',
