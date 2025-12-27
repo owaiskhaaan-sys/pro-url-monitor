@@ -47,7 +47,8 @@ export default function Header() {
     { title: 'Content Readability Optimizer', href: '/tools/content-readability-optimizer' },
     { title: 'Semantic Keyword Finder', href: '/tools/semantic-keyword-finder' },
     { title: 'Internal Linking Assistant', href: '/tools/internal-linking-assistant' },
-    { title: 'DNS Records Checker', href: '/tools/dns-records-checker' }
+    { title: 'DNS Records Checker', href: '/tools/dns-records-checker' },
+    { title: 'Reverse NS Checker', href: '/tools/reverse-ns-checker' }
   ];
 
   return (
