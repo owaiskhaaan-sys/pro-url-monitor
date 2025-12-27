@@ -30,8 +30,7 @@ export default function Header() {
     { title: 'Binary Calculator', href: '/tools/binary-calculator' },
     { title: 'Decimal to Binary Converter', href: '/tools/decimal-to-binary' },
     { title: 'Binary to Decimal Converter', href: '/tools/binary-to-decimal' },
-    { title: 'Binary to Hex Converter', href: '/tools/binary-to-hex' }
-  ];
+    { title: 'Binary to Hex Converter', href: '/tools/binary-to-hex' }    { title: 'Hex to Binary Converter', href: '/tools/hex-to-binary' },  ];
 
   return (
     <header className="sticky top-0 bg-white border-b z-50" style={{borderColor: 'rgba(6,95,70,0.06)'}}>

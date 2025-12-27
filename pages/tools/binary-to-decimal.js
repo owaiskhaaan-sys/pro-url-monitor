@@ -443,6 +443,45 @@ Therefore, 1101 in binary = 13 in decimal`}
             </div>
           </div>
 
+          <div className="card">
+            <h2 className="text-2xl font-bold text-emerald-800 mb-4">Related Binary Conversion Tools</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Explore our complete suite of binary and number system converters:
+            </p>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="border border-emerald-200 p-4 rounded-lg hover:shadow-md transition-shadow">
+                <h3 className="font-semibold text-emerald-800 mb-2">
+                  <a href="/tools/decimal-to-binary" className="hover:text-emerald-600">📊 Decimal to Binary Converter</a>
+                </h3>
+                <p className="text-sm text-gray-700">Convert decimal numbers to binary format for computer operations.</p>
+              </div>
+              <div className="border border-emerald-200 p-4 rounded-lg hover:shadow-md transition-shadow">
+                <h3 className="font-semibold text-emerald-800 mb-2">
+                  <a href="/tools/binary-to-hex" className="hover:text-emerald-600">🔷 Binary to Hex Converter</a>
+                </h3>
+                <p className="text-sm text-gray-700">Convert binary numbers to hexadecimal format used in programming and computer systems.</p>
+              </div>
+              <div className="border border-emerald-200 p-4 rounded-lg hover:shadow-md transition-shadow">
+                <h3 className="font-semibold text-emerald-800 mb-2">
+                  <a href="/tools/hex-to-binary" className="hover:text-emerald-600">🔄 Hex to Binary Converter</a>
+                </h3>
+                <p className="text-sm text-gray-700">Convert hexadecimal numbers to binary format—perfect for analyzing hex color codes and memory addresses.</p>
+              </div>
+              <div className="border border-emerald-200 p-4 rounded-lg hover:shadow-md transition-shadow">
+                <h3 className="font-semibold text-emerald-800 mb-2">
+                  <a href="/tools/binary-calculator" className="hover:text-emerald-600">🧮 Binary Calculator</a>
+                </h3>
+                <p className="text-sm text-gray-700">Perform addition, subtraction, multiplication, and division on binary numbers.</p>
+              </div>
+              <div className="border border-emerald-200 p-4 rounded-lg hover:shadow-md transition-shadow">
+                <h3 className="font-semibold text-emerald-800 mb-2">
+                  <a href="/tools/binary-translator" className="hover:text-emerald-600">🔤 Binary Translator</a>
+                </h3>
+                <p className="text-sm text-gray-700">Convert text to binary code and decode binary back to readable text.</p>
+              </div>
+            </div>
+          </div>
+
           <div className="card bg-emerald-700 text-white">
             <h2 className="text-2xl font-bold mb-4">🚀 Start Converting Binary to Decimal Now!</h2>
             <p className="mb-4">
@@ -452,7 +491,7 @@ Therefore, 1101 in binary = 13 in decimal`}
               No registration required. Unlimited conversions. Completely free forever!
             </p>
             <p className="font-semibold">
-              Explore more conversion tools: <a href="/tools/decimal-to-binary" className="text-emerald-100 hover:text-white underline">Decimal to Binary</a> • <a href="/tools/binary-calculator" className="text-emerald-100 hover:text-white underline">Binary Calculator</a> • <a href="/tools/binary-to-hex" className="text-emerald-100 hover:text-white underline">Binary to Hex</a> 🎯
+              Explore more conversion tools: <a href="/tools/decimal-to-binary" className="text-emerald-100 hover:text-white underline">Decimal to Binary</a> • <a href="/tools/binary-calculator" className="text-emerald-100 hover:text-white underline">Binary Calculator</a> • <a href="/tools/hex-to-binary" className="text-emerald-100 hover:text-white underline">Hex to Binary</a> 🎯
             </p>
           </div>
         </div>
