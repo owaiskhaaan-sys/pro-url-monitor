@@ -44,7 +44,8 @@ export default function Header() {
     { title: 'Alt Text Generator', href: '/tools/alt-text-generator' },
     { title: 'FAQ Schema Generator', href: '/tools/faq-schema-generator' },
     { title: 'Content Readability Optimizer', href: '/tools/content-readability-optimizer' },
-    { title: 'Semantic Keyword Finder', href: '/tools/semantic-keyword-finder' }
+    { title: 'Semantic Keyword Finder', href: '/tools/semantic-keyword-finder' },
+    { title: 'Internal Linking Assistant', href: '/tools/internal-linking-assistant' }
   ];
 
   return (
