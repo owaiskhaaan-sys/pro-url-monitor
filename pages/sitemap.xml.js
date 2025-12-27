@@ -28,6 +28,7 @@ export async function getServerSideProps({ res }) {
     'php-beautifier',
     'python-formatter',
     'code-syntax-highlighter',
+    'regex-tester',
     'meta-description-generator',
     'seo-title-generator',
     'alt-text-generator',
