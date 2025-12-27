@@ -51,6 +51,7 @@ export default function Header() {
     { title: 'DNS Report Checker', href: '/tools/dns-report-checker' },
     { title: 'DNS Propagation Checker', href: '/tools/dns-propagation-checker' },
     { title: 'Server Port Scanner', href: '/tools/server-port-scanner' },
+    { title: 'Class C IP Checker', href: '/tools/class-c-ip-checker' },
     { title: 'Reverse NS Checker', href: '/tools/reverse-ns-checker' }
   ];
 
