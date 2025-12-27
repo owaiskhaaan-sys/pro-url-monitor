@@ -1,9 +1,14 @@
 import Link from 'next/link';
 import Layout from '../components/Layout';
+import Head from 'next/head';
 
 export default function Home() {
   return (
     <Layout>
+      <Head>
+        <title>ProURLMonitor - Free SEO Tools, Domain Authority Checker & URL Analysis</title>
+        <meta name="description" content="ProURLMonitor offers 17+ free SEO tools including Domain Authority Checker, Broken Links Checker, HTTP Status Checker, Meta Tag Generator, and more. Analyze domains, check backlinks, and optimize your website for better search rankings." />
+      </Head>
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 text-center">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-emerald-800 mb-4 leading-tight">Complete Domain & URL Intelligence Tools</h1>
         <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 max-w-2xl mx-auto">ProURLMonitor provides a comprehensive suite of domain analysis, SEO auditing, and URL monitoring tools. Check domain authority, analyze backlinks, verify domain history, and monitor your web presence — all in one platform.</p>
@@ -76,6 +81,35 @@ export default function Home() {
               <Link href={t.href} className="btn btn-primary">Open Tool</Link>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Tools Overview Content */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <div className="prose prose-emerald max-w-none">
+          <h2 className="text-2xl sm:text-3xl font-bold text-emerald-700 mb-6">Comprehensive SEO & Domain Analysis Tools</h2>
+          
+          <div className="text-gray-700 leading-relaxed space-y-4">
+            <p>
+              ProURLMonitor is your all-in-one platform for <strong>professional SEO analysis and domain intelligence</strong>. Whether you're an SEO specialist, digital marketer, web developer, or website owner, our suite of 17+ free tools helps you optimize your online presence, monitor website health, and improve search engine rankings.
+            </p>
+            
+            <p>
+              Our <Link href="/tools/domain-authority-checker" className="text-emerald-600 hover:text-emerald-700 font-medium">Domain Authority Checker</Link> provides instant insights into your website's credibility with accurate DA scores and spam score analysis. Need to ensure your website is crawlable? Use our <Link href="/tools/robots-txt-generator" className="text-emerald-600 hover:text-emerald-700 font-medium">Robots.txt Generator</Link> to create perfectly formatted robots.txt files with AI-powered suggestions. Identify technical issues with our <Link href="/tools/http-status-checker" className="text-emerald-600 hover:text-emerald-700 font-medium">HTTP Status Checker</Link> that scans multiple URLs for 200, 301, 404, and 500 status codes, helping you fix broken pages and redirect chains.
+            </p>
+            
+            <p>
+              Optimize your on-page SEO with our <Link href="/tools/meta-generator" className="text-emerald-600 hover:text-emerald-700 font-medium">Meta Tag Generator</Link> for creating perfect title tags and meta descriptions, while the <Link href="/tools/heading-analyzer" className="text-emerald-600 hover:text-emerald-700 font-medium">Heading Analyzer</Link> ensures proper H1-H6 structure. Check your keyword optimization using the <Link href="/tools/keyword-density-checker" className="text-emerald-600 hover:text-emerald-700 font-medium">Keyword Density Checker</Link> to avoid over-optimization penalties. Enhance your search visibility with our <Link href="/tools/schema-generator" className="text-emerald-600 hover:text-emerald-700 font-medium">Schema Markup Generator</Link> that creates JSON-LD structured data for rich snippets.
+            </p>
+            
+            <p>
+              For comprehensive website audits, our <Link href="/tools/seo-audit" className="text-emerald-600 hover:text-emerald-700 font-medium">SEO Audit Tool</Link> performs 18+ critical checks including PageSpeed scores, Core Web Vitals, and mobile-friendliness. Maintain site health with the <Link href="/tools/broken-links-checker" className="text-emerald-600 hover:text-emerald-700 font-medium">Broken Links Checker</Link> that scans your entire website for dead links. Monitor your backlink profile and track social engagement using our <Link href="/tools/social-media-counter" className="text-emerald-600 hover:text-emerald-700 font-medium">Social Media Counter</Link>. Need to analyze competitors or check domain history? Try our <Link href="/tools/reverse-ip-domain-checker" className="text-emerald-600 hover:text-emerald-700 font-medium">Reverse IP Domain Checker</Link> and <Link href="/tools/bulk-domain-age-checker" className="text-emerald-600 hover:text-emerald-700 font-medium">Bulk Domain Age Checker</Link> for detailed domain intelligence.
+            </p>
+            
+            <p>
+              All our tools are designed with <strong>user experience in mind</strong>—fast loading, no registration required, and most tools run entirely in your browser for maximum privacy and security. From <Link href="/tools/link-extractor" className="text-emerald-600 hover:text-emerald-700 font-medium">Link Extraction</Link> to <Link href="/tools/xml-html-sitemap-generator" className="text-emerald-600 hover:text-emerald-700 font-medium">XML Sitemap Generation</Link>, ProURLMonitor provides everything you need to succeed in modern SEO.
+            </p>
+          </div>
         </div>
       </section>
 
