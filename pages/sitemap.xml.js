@@ -8,6 +8,7 @@ export async function getServerSideProps({ res }) {
     'http-status-checker',
     'broken-links-checker',
     'binary-translator',
+    'binary-calculator',
     'word-counter',
     'link-extractor',
     'robots-txt-generator',
