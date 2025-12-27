@@ -22,15 +22,23 @@ export default function DNSRecordsChecker() {
     setResults(null);
 
     try {
-      // Using Google DNS-over-HTTPS API
+      // Using backend API to avoid CORS issues
       const recordTypes = ['A', 'AAAA', 'MX', 'TXT', 'NS', 'CNAME', 'SOA'];
       const dnsResults = {};
 
       for (const type of recordTypes) {
         try {
-          const response = await fetch(
-            `https://dns.google/resolve?name=${encodeURIComponent(cleanDomain)}&type=${type}`
-          );
+          const response = await fetch('/api/dns-lookup', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              domain: cleanDomain,
+              recordType: type
+            })
+          });
+          
           const data = await response.json();
           
           if (data.Answer) {
@@ -44,6 +52,7 @@ export default function DNSRecordsChecker() {
             dnsResults[type] = [];
           }
         } catch (err) {
+          console.error(`Error fetching ${type} records:`, err);
           dnsResults[type] = [];
         }
       }
@@ -55,6 +64,7 @@ export default function DNSRecordsChecker() {
       });
     } catch (err) {
       setError('Failed to check DNS records. Please try again.');
+      console.error('DNS check error:', err);
     } finally {
       setIsChecking(false);
     }
