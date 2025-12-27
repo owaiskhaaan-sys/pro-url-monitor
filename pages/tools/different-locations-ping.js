@@ -587,7 +587,7 @@ export default function DifferentLocationsPing() {
               </div>
               <div>
                 <h3 className="font-semibold text-gray-800 mb-2">Q: What is jitter and why does it matter?</h3>
-                <p className="text-gray-700 text-sm">A: Jitter is the variation in ping times. High jitter (>30ms) causes inconsistent performance, affecting video calls, gaming, and VoIP. Low jitter means stable, predictable network performance.</p>
+                <p className="text-gray-700 text-sm">A: Jitter is the variation in ping times. High jitter (&gt;30ms) causes inconsistent performance, affecting video calls, gaming, and VoIP. Low jitter means stable, predictable network performance.</p>
               </div>
               <div>
                 <h3 className="font-semibold text-gray-800 mb-2">Q: How can I reduce high ping times?</h3>
