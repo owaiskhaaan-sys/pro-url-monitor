@@ -18,6 +18,7 @@ export async function getServerSideProps({ res }) {
     'octal-to-decimal',
     'twos-complement-calculator',
     'decimal-to-hex',
+    'hex-to-decimal',
     'word-counter',
     'link-extractor',
     'robots-txt-generator',
