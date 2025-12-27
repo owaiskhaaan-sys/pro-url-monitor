@@ -39,6 +39,7 @@ export default function Header() {
     { title: 'Decimal to Hex Converter', href: '/tools/decimal-to-hex' },
     { title: 'Hex to Decimal Converter', href: '/tools/hex-to-decimal' },
     { title: 'Bitwise Operations Calculator', href: '/tools/bitwise-operations' },
+    { title: 'HTML Beautifier & Minifier', href: '/tools/html-beautifier-minifier' },
     { title: 'Meta Description Generator', href: '/tools/meta-description-generator' },
     { title: 'SEO Title Generator', href: '/tools/seo-title-generator' },
     { title: 'Alt Text Generator', href: '/tools/alt-text-generator' },
