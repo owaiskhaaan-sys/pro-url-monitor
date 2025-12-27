@@ -467,6 +467,12 @@ Therefore, 11010110 in binary = D6 in hexadecimal`}
                 </h3>
                 <p className="text-sm text-gray-700">Convert hexadecimal numbers to binary format—perfect for analyzing hex color codes and memory addresses.</p>
               </div>
+              <div className="border border-emerald-200 p-4 rounded-lg hover:shadow-md transition-shadow">
+                <h3 className="font-semibold text-emerald-800 mb-2">
+                  <a href="/tools/binary-to-octal" className="hover:text-emerald-600">🔢 Binary to Octal Converter</a>
+                </h3>
+                <p className="text-sm text-gray-700">Convert binary numbers to octal format—essential for Unix file permissions.</p>
+              </div>
             </div>
           </div>
 
