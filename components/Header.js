@@ -54,6 +54,7 @@ export default function Header() {
     { title: 'SHA-256 Hash Generator', href: '/tools/sha256-generator' },
     { title: 'SHA-512 Hash Generator', href: '/tools/sha512-generator' },
     { title: 'HTML Encoder/Decoder', href: '/tools/html-encoder-decoder' },
+    { title: 'Binary Encoder/Decoder', href: '/tools/binary-converter' },
     { title: 'JWT Decoder', href: '/tools/jwt-decoder' },
     { title: 'Meta Description Generator', href: '/tools/meta-description-generator' },
     { title: 'SEO Title Generator', href: '/tools/seo-title-generator' },
