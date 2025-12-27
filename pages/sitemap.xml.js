@@ -30,6 +30,7 @@ export async function getServerSideProps({ res }) {
     'internal-linking-assistant',
     'dns-records-checker',
     'dns-report-checker',
+    'dns-propagation-checker',
     'reverse-ns-checker',
     'word-counter',
     'link-extractor',

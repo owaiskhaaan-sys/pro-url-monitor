@@ -49,6 +49,7 @@ export default function Header() {
     { title: 'Internal Linking Assistant', href: '/tools/internal-linking-assistant' },
     { title: 'DNS Records Checker', href: '/tools/dns-records-checker' },
     { title: 'DNS Report Checker', href: '/tools/dns-report-checker' },
+    { title: 'DNS Propagation Checker', href: '/tools/dns-propagation-checker' },
     { title: 'Reverse NS Checker', href: '/tools/reverse-ns-checker' }
   ];
 
