@@ -3,21 +3,165 @@ import Layout from '../../components/Layout';
 import Head from 'next/head';
 
 export default function AltTextGenerator() {
+  const [mode, setMode] = useState('single'); // 'single' or 'bulk'
   const [imageUrl, setImageUrl] = useState('');
+  const [bulkUrls, setBulkUrls] = useState('');
+  const [uploadedImage, setUploadedImage] = useState(null);
+  const [bulkImages, setBulkImages] = useState([]);
   const [keyword, setKeyword] = useState('');
   const [context, setContext] = useState('');
   const [altTexts, setAltTexts] = useState([]);
+  const [bulkResults, setBulkResults] = useState([]);
   const [isGenerating, setIsGenerating] = useState(false);
   const [error, setError] = useState('');
   const [imagePreview, setImagePreview] = useState('');
+
+  const handleImageUpload = (e) => {
+    const file = e.target.files[0];
+    if (file && file.type.startsWith('image/')) {
+      setUploadedImage(file);
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImagePreview(reader.result);
+        setImageUrl('');
+      };
+      reader.readAsDataURL(file);
+    } else {
+      setError('Please upload a valid image file');
+    }
+  };
+
+  const handleBulkImageUpload = (e) => {
+    const files = Array.from(e.target.files);
+    const imageFiles = files.filter(file => file.type.startsWith('image/'));
+    
+    if (imageFiles.length === 0) {
+      setError('Please upload valid image files');
+      return;
+    }
+    
+    setBulkImages(imageFiles);
+  };
+
+  const generateBulkAltTexts = () => {
+    setError('');
+    setBulkResults([]);
+    setIsGenerating(true);
+
+    let sources = [];
+
+    // Process bulk URLs
+    if (bulkUrls.trim()) {
+      const urls = bulkUrls.split('\n').filter(url => url.trim());
+      sources = urls.map(url => ({ type: 'url', value: url.trim() }));
+    }
+
+    // Process bulk uploaded images
+    if (bulkImages.length > 0) {
+      bulkImages.forEach((file, index) => {
+        const reader = new FileReader();
+        reader.onloadend = () => {
+          sources.push({ type: 'file', value: reader.result, name: file.name });
+          
+          if (sources.length === bulkImages.length + (bulkUrls.trim() ? bulkUrls.split('\n').filter(url => url.trim()).length : 0)) {
+            processBulkSources(sources);
+          }
+        };
+        reader.readAsDataURL(file);
+      });
+    }
+
+    if (sources.length > 0 && bulkImages.length === 0) {
+      processBulkSources(sources);
+    }
+
+    if (sources.length === 0 && bulkImages.length === 0) {
+      setError('Please enter URLs or upload images');
+      setIsGenerating(false);
+    }
+  };
+
+  const processBulkSources = (sources) => {
+    const results = sources.map((source, index) => {
+      const mainKeyword = keyword || 'image';
+      const contextInfo = context || '';
+      const generated = [];
+
+      // Generate 6 variations for each image
+      const alt1 = `${mainKeyword}${contextInfo ? ' - ' + contextInfo : ''}`;
+      generated.push({
+        text: alt1.substring(0, 125),
+        length: Math.min(alt1.length, 125),
+        type: 'Descriptive',
+        score: calculateAltTextScore(alt1)
+      });
+
+      const actions = ['showing', 'displaying', 'illustrating', 'demonstrating', 'featuring'];
+      const randomAction = actions[Math.floor(Math.random() * actions.length)];
+      const alt2 = `Image ${randomAction} ${mainKeyword}${contextInfo ? ' with ' + contextInfo : ''}`;
+      generated.push({
+        text: alt2.substring(0, 125),
+        length: Math.min(alt2.length, 125),
+        type: 'Action-Based',
+        score: calculateAltTextScore(alt2)
+      });
+
+      if (contextInfo) {
+        const alt3 = `${contextInfo} - ${mainKeyword}`;
+        generated.push({
+          text: alt3.substring(0, 125),
+          length: Math.min(alt3.length, 125),
+          type: 'Context-First',
+          score: calculateAltTextScore(alt3)
+        });
+      }
+
+      const details = ['high quality', 'professional', 'detailed', 'clear', 'high-resolution'];
+      const randomDetail = details[Math.floor(Math.random() * details.length)];
+      const alt4 = `${randomDetail} ${mainKeyword}${contextInfo ? ' ' + contextInfo : ''}`;
+      generated.push({
+        text: alt4.substring(0, 125),
+        length: Math.min(alt4.length, 125),
+        type: 'Quality-Focused',
+        score: calculateAltTextScore(alt4)
+      });
+
+      const alt5 = `${mainKeyword} - ${contextInfo || 'comprehensive guide'}`;
+      generated.push({
+        text: alt5.substring(0, 125),
+        length: Math.min(alt5.length, 125),
+        type: 'SEO-Optimized',
+        score: calculateAltTextScore(alt5)
+      });
+
+      const alt6 = mainKeyword;
+      generated.push({
+        text: alt6.substring(0, 125),
+        length: Math.min(alt6.length, 125),
+        type: 'Simple',
+        score: calculateAltTextScore(alt6)
+      });
+
+      return {
+        source: source.type === 'url' ? source.value : source.name,
+        preview: source.value,
+        altTexts: generated.sort((a, b) => b.score - a.score)
+      };
+    });
+
+    setTimeout(() => {
+      setBulkResults(results);
+      setIsGenerating(false);
+    }, 1000);
+  };
 
   const generateAltTexts = () => {
     setError('');
     setAltTexts([]);
     setIsGenerating(true);
 
-    if (!imageUrl.trim() && !keyword.trim()) {
-      setError('Please enter either an image URL or describe the image');
+    if (!imageUrl.trim() && !uploadedImage && !keyword.trim()) {
+      setError('Please upload an image, enter a URL, or describe the image');
       setIsGenerating(false);
       return;
     }
@@ -29,7 +173,7 @@ export default function AltTextGenerator() {
       return;
     }
 
-    if (imageUrl) {
+    if (imageUrl && !uploadedImage) {
       setImagePreview(imageUrl);
     }
 
@@ -164,73 +308,238 @@ export default function AltTextGenerator() {
   return (
     <Layout>
       <Head>
-        <title>Alt Text Generator for Images - SEO & Accessibility | ProURLMonitor</title>
-        <meta name="description" content="Generate SEO-optimized alt text for images instantly. Improve accessibility, image SEO, and search rankings with descriptive, keyword-rich alt attributes." />
+        <title>Bulk Alt Text Generator - Upload Images & Generate Alt Text | ProURLMonitor</title>
+        <meta name="description" content="Generate alt text for single or bulk images. Upload images or enter URLs to create SEO-optimized, accessible alt text instantly. Bulk image alt text generator." />
       </Head>
 
       <div className="max-w-6xl mx-auto px-4 py-8">
-        <h1 className="text-3xl sm:text-4xl font-bold text-emerald-700 mb-4 text-center">Alt Text Generator for Images</h1>
+        <h1 className="text-3xl sm:text-4xl font-bold text-emerald-700 mb-4 text-center">Bulk Alt Text Generator</h1>
         <p className="text-gray-600 mb-8 text-center">
-          Generate SEO-friendly alt text for accessibility and better image search rankings. Get 6 optimized variations!
+          Upload images or enter URLs to generate SEO-friendly alt text. Single image or bulk processing - get 6 optimized variations!
         </p>
 
         <div className="card mb-8">
-          {/* Image URL Input */}
-          <div className="mb-6">
-            <label className="block text-sm font-medium text-gray-700 mb-2">Image URL (Optional):</label>
-            <input
-              type="text"
-              value={imageUrl}
-              onChange={(e) => setImageUrl(e.target.value)}
-              placeholder="https://example.com/image.jpg"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
-            />
-            <p className="text-xs text-gray-500 mt-1">Enter image URL for preview and better alt text generation</p>
+          {/* Mode Selection */}
+          <div className="mb-6 flex justify-center gap-4">
+            <button
+              onClick={() => {
+                setMode('single');
+                setBulkResults([]);
+                setAltTexts([]);
+                setError('');
+              }}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all ${
+                mode === 'single'
+                  ? 'bg-emerald-600 text-white shadow-lg'
+                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+              }`}
+            >
+              📷 Single Image
+            </button>
+            <button
+              onClick={() => {
+                setMode('bulk');
+                setAltTexts([]);
+                setBulkResults([]);
+                setError('');
+              }}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all ${
+                mode === 'bulk'
+                  ? 'bg-purple-600 text-white shadow-lg'
+                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+              }`}
+            >
+              📁 Bulk Images
+            </button>
           </div>
 
-          {/* Image Preview */}
-          {imagePreview && (
-            <div className="mb-6">
-              <label className="block text-sm font-medium text-gray-700 mb-2">Image Preview:</label>
-              <div className="border-2 border-gray-200 rounded-lg p-4 bg-gray-50">
-                <img 
-                  src={imagePreview} 
-                  alt="Preview" 
-                  className="max-w-full h-auto max-h-64 mx-auto rounded"
-                  onError={() => {
-                    setImagePreview('');
-                    setError('Failed to load image. Please check the URL.');
-                  }}
-                />
+          {/* Single Image Mode */}
+          {mode === 'single' && (
+            <>
+              {/* Image Upload */}
+              <div className="mb-6">
+                <label className="block text-sm font-medium text-gray-700 mb-2">Upload Image:</label>
+                <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-emerald-500 transition-colors">
+                  <input
+                    type="file"
+                    accept="image/*"
+                    onChange={handleImageUpload}
+                    className="hidden"
+                    id="image-upload"
+                  />
+                  <label htmlFor="image-upload" className="cursor-pointer">
+                    <div className="text-4xl mb-2">📤</div>
+                    <p className="text-emerald-600 font-semibold mb-1">Click to upload image</p>
+                    <p className="text-xs text-gray-500">JPG, PNG, GIF, WebP, SVG (Max 10MB)</p>
+                  </label>
+                </div>
+                {uploadedImage && (
+                  <p className="text-sm text-emerald-600 mt-2 font-medium">✓ Uploaded: {uploadedImage.name}</p>
+                )}
               </div>
-            </div>
+
+              {/* OR Divider */}
+              <div className="flex items-center my-6">
+                <div className="flex-1 border-t border-gray-300"></div>
+                <span className="px-4 text-gray-500 font-medium">OR</span>
+                <div className="flex-1 border-t border-gray-300"></div>
+              </div>
+
+              {/* Image URL Input */}
+              <div className="mb-6">
+                <label className="block text-sm font-medium text-gray-700 mb-2">Image URL:</label>
+                <input
+                  type="text"
+                  value={imageUrl}
+                  onChange={(e) => {
+                    setImageUrl(e.target.value);
+                    setUploadedImage(null);
+                  }}
+                  placeholder="https://example.com/image.jpg"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                />
+                <p className="text-xs text-gray-500 mt-1">Enter image URL for preview</p>
+              </div>
+
+              {/* Image Preview */}
+              {imagePreview && (
+                <div className="mb-6">
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Image Preview:</label>
+                  <div className="border-2 border-gray-200 rounded-lg p-4 bg-gray-50">
+                    <img 
+                      src={imagePreview} 
+                      alt="Preview" 
+                      className="max-w-full h-auto max-h-64 mx-auto rounded"
+                      onError={() => {
+                        setImagePreview('');
+                        setError('Failed to load image. Please check the URL or upload.');
+                      }}
+                    />
+                  </div>
+                </div>
+              )}
+
+              {/* Keyword Input */}
+              <div className="mb-6">
+                <label className="block text-sm font-medium text-gray-700 mb-2">Main Subject/Keyword:</label>
+                <input
+                  type="text"
+                  value={keyword}
+                  onChange={(e) => setKeyword(e.target.value)}
+                  placeholder="e.g., laptop, woman coding, mountain landscape"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                />
+                <p className="text-xs text-gray-500 mt-1">What is the main subject of the image?</p>
+              </div>
+
+              {/* Context Input */}
+              <div className="mb-6">
+                <label className="block text-sm font-medium text-gray-700 mb-2">Additional Context (Optional):</label>
+                <input
+                  type="text"
+                  value={context}
+                  onChange={(e) => setContext(e.target.value)}
+                  placeholder="e.g., working from home, at sunset, for business presentation"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                />
+                <p className="text-xs text-gray-500 mt-1">Add context or additional details about the image</p>
+              </div>
+
+              {/* Generate Button */}
+              <div className="flex justify-center mb-6">
+                <button
+                  onClick={generateAltTexts}
+                  disabled={isGenerating}
+                  className={`btn btn-primary px-12 py-3 text-lg ${isGenerating ? 'opacity-50 cursor-not-allowed' : ''}`}
+                >
+                  {isGenerating ? 'Generating...' : 'Generate Alt Text'}
+                </button>
+              </div>
+            </>
           )}
 
-          {/* Keyword Input */}
-          <div className="mb-6">
-            <label className="block text-sm font-medium text-gray-700 mb-2">Main Subject/Keyword:</label>
-            <input
-              type="text"
-              value={keyword}
-              onChange={(e) => setKeyword(e.target.value)}
-              placeholder="e.g., laptop, woman coding, mountain landscape"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
-            />
-            <p className="text-xs text-gray-500 mt-1">What is the main subject of the image?</p>
-          </div>
+          {/* Bulk Images Mode */}
+          {mode === 'bulk' && (
+            <>
+              {/* Bulk Image Upload */}
+              <div className="mb-6">
+                <label className="block text-sm font-medium text-gray-700 mb-2">Upload Multiple Images:</label>
+                <div className="border-2 border-dashed border-purple-300 rounded-lg p-6 text-center hover:border-purple-500 transition-colors bg-purple-50">
+                  <input
+                    type="file"
+                    accept="image/*"
+                    multiple
+                    onChange={handleBulkImageUpload}
+                    className="hidden"
+                    id="bulk-image-upload"
+                  />
+                  <label htmlFor="bulk-image-upload" className="cursor-pointer">
+                    <div className="text-4xl mb-2">📁</div>
+                    <p className="text-purple-600 font-semibold mb-1">Click to upload multiple images</p>
+                    <p className="text-xs text-gray-500">Select multiple JPG, PNG, GIF, WebP files</p>
+                  </label>
+                </div>
+                {bulkImages.length > 0 && (
+                  <p className="text-sm text-purple-600 mt-2 font-medium">✓ {bulkImages.length} images selected</p>
+                )}
+              </div>
 
-          {/* Context Input */}
-          <div className="mb-6">
-            <label className="block text-sm font-medium text-gray-700 mb-2">Additional Context (Optional):</label>
-            <input
-              type="text"
-              value={context}
-              onChange={(e) => setContext(e.target.value)}
-              placeholder="e.g., working from home, at sunset, for business presentation"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
-            />
-            <p className="text-xs text-gray-500 mt-1">Add context or additional details about the image</p>
-          </div>
+              {/* OR Divider */}
+              <div className="flex items-center my-6">
+                <div className="flex-1 border-t border-gray-300"></div>
+                <span className="px-4 text-gray-500 font-medium">OR</span>
+                <div className="flex-1 border-t border-gray-300"></div>
+              </div>
+
+              {/* Bulk URL Input */}
+              <div className="mb-6">
+                <label className="block text-sm font-medium text-gray-700 mb-2">Bulk Image URLs (one per line):</label>
+                <textarea
+                  value={bulkUrls}
+                  onChange={(e) => setBulkUrls(e.target.value)}
+                  placeholder="https://example.com/image1.jpg&#10;https://example.com/image2.jpg&#10;https://example.com/image3.jpg"
+                  rows="6"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 font-mono text-sm"
+                />
+                <p className="text-xs text-gray-500 mt-1">Enter one image URL per line for bulk processing</p>
+              </div>
+
+              {/* Bulk Keyword Input */}
+              <div className="mb-6">
+                <label className="block text-sm font-medium text-gray-700 mb-2">Main Subject/Keyword (applies to all images):</label>
+                <input
+                  type="text"
+                  value={keyword}
+                  onChange={(e) => setKeyword(e.target.value)}
+                  placeholder="e.g., product images, team photos, landscape"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                />
+              </div>
+
+              {/* Bulk Context Input */}
+              <div className="mb-6">
+                <label className="block text-sm font-medium text-gray-700 mb-2">Additional Context (Optional):</label>
+                <input
+                  type="text"
+                  value={context}
+                  onChange={(e) => setContext(e.target.value)}
+                  placeholder="e.g., for e-commerce store, professional photos"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                />
+              </div>
+
+              {/* Generate Bulk Button */}
+              <div className="flex justify-center mb-6">
+                <button
+                  onClick={generateBulkAltTexts}
+                  disabled={isGenerating}
+                  className={`bg-purple-600 hover:bg-purple-700 text-white font-bold px-12 py-3 text-lg rounded-lg transition-colors ${isGenerating ? 'opacity-50 cursor-not-allowed' : ''}`}
+                >
+                  {isGenerating ? 'Processing...' : 'Generate Bulk Alt Text'}
+                </button>
+              </div>
+            </>
+          )}
 
           {/* Error Message */}
           {error && (
@@ -239,19 +548,8 @@ export default function AltTextGenerator() {
             </div>
           )}
 
-          {/* Generate Button */}
-          <div className="flex justify-center mb-6">
-            <button
-              onClick={generateAltTexts}
-              disabled={isGenerating}
-              className={`btn btn-primary px-12 py-3 text-lg ${isGenerating ? 'opacity-50 cursor-not-allowed' : ''}`}
-            >
-              {isGenerating ? 'Generating...' : 'Generate Alt Text'}
-            </button>
-          </div>
-
-          {/* Results */}
-          {altTexts.length > 0 && (
+          {/* Single Image Results */}
+          {mode === 'single' && altTexts.length > 0 && (
             <div className="space-y-4">
               <h2 className="text-2xl font-bold text-gray-800 mb-4">✨ Generated Alt Text Options:</h2>
               
@@ -311,8 +609,71 @@ export default function AltTextGenerator() {
               <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
                 <h3 className="font-semibold text-gray-800 mb-3">📝 How to Use in HTML:</h3>
                 <div className="bg-gray-800 text-green-400 p-4 rounded font-mono text-sm overflow-x-auto">
-                  <pre>{`<img src="${imageUrl || 'your-image.jpg'}" alt="${altTexts[0].text}" />`}</pre>
+                  <pre>{`<img src="${imageUrl || uploadedImage?.name || 'your-image.jpg'}" alt="${altTexts[0]?.text || 'alt text'}" />`}</pre>
                 </div>
+              </div>
+            </div>
+          )}
+
+          {/* Bulk Results */}
+          {mode === 'bulk' && bulkResults.length > 0 && (
+            <div className="space-y-6">
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">✨ Bulk Alt Text Results ({bulkResults.length} Images):</h2>
+              
+              {bulkResults.map((result, resultIndex) => (
+                <div key={resultIndex} className="bg-gradient-to-r from-purple-50 to-blue-50 p-6 rounded-lg border-2 border-purple-300">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="flex-shrink-0">
+                      <span className="bg-purple-700 text-white text-sm font-bold px-3 py-1 rounded">
+                        Image #{resultIndex + 1}
+                      </span>
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-sm text-gray-700 font-medium break-all">{result.source}</p>
+                      {result.preview && (
+                        <div className="mt-3">
+                          <img 
+                            src={result.preview} 
+                            alt="Preview" 
+                            className="max-w-xs h-auto max-h-32 rounded border-2 border-white shadow"
+                            onError={(e) => { e.target.style.display = 'none'; }}
+                          />
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="space-y-3">
+                    {result.altTexts.slice(0, 3).map((alt, altIndex) => (
+                      <div key={altIndex} className="bg-white p-4 rounded-lg border border-purple-200">
+                        <div className="flex justify-between items-start mb-2">
+                          <div className="flex items-center gap-2">
+                            <span className="bg-indigo-100 text-indigo-700 text-xs font-semibold px-2 py-1 rounded">
+                              {alt.type}
+                            </span>
+                            <span className={`text-xs font-bold ${getScoreColor(alt.score)}`}>
+                              {alt.score}/100
+                            </span>
+                          </div>
+                          <button
+                            onClick={() => copyToClipboard(alt.text)}
+                            className="text-purple-600 hover:text-purple-700 text-xs font-semibold"
+                          >
+                            📋 Copy
+                          </button>
+                        </div>
+                        <code className="text-xs text-gray-800 break-all block bg-gray-50 p-2 rounded">
+                          alt="{alt.text}"
+                        </code>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+
+              <div className="bg-green-50 p-5 rounded-lg border border-green-200">
+                <h3 className="font-semibold text-green-800 mb-2">✓ Bulk Processing Complete!</h3>
+                <p className="text-sm text-gray-700">Generated {bulkResults.length * 3} alt text variations for {bulkResults.length} images. Each image has 3 top-scored options shown above.</p>
               </div>
             </div>
           )}
@@ -321,16 +682,54 @@ export default function AltTextGenerator() {
         {/* SEO Content */}
         <div className="prose prose-emerald max-w-none mt-12 space-y-8">
           <div className="card">
-            <h2 className="text-2xl font-bold text-emerald-800 mb-4">What is Alt Text for Images?</h2>
+            <h2 className="text-2xl font-bold text-emerald-800 mb-4">What is Bulk Alt Text Generator?</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              <strong>Alt text</strong> (alternative text), also known as "alt attributes" or "alt descriptions," is the written copy that appears in place of an image when it fails to load. More importantly, it's read by screen readers for visually impaired users and used by search engines to understand image content. The alt attribute is added to image tags in HTML: <code>&lt;img src="image.jpg" alt="descriptive text"&gt;</code>.
+              <strong>Bulk Alt Text Generator</strong> is a powerful tool that allows you to create SEO-optimized alt text for single images or process multiple images at once. Simply upload images directly from your computer or paste multiple image URLs to generate professional, accessibility-compliant alt text in seconds. This tool is perfect for e-commerce stores, bloggers, web developers, and content managers who need to optimize hundreds of images quickly.
             </p>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Alt text serves two critical purposes: <strong>accessibility</strong> and <strong>SEO</strong>. For accessibility, it ensures that people using screen readers can understand image content. For SEO, it helps search engines index and rank images in image search, and provides context that can improve overall page rankings. Well-written alt text describes what's in the image while naturally incorporating relevant keywords.
+              <strong>Alt text</strong> (alternative text) is the written copy that appears in place of an image when it fails to load. More importantly, it's read by screen readers for visually impaired users and used by search engines to understand image content. The alt attribute is added to image tags in HTML: <code>&lt;img src="image.jpg" alt="descriptive text"&gt;</code>. Our bulk alt text generator supports multiple input methods: direct image upload, single URL, or bulk URL processing.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              Our <strong>alt text generator</strong> creates 6 optimized variations using different strategies—from simple descriptions to context-rich, SEO-focused options. Each suggestion is scored based on length, keyword inclusion, and descriptiveness. For comprehensive page optimization, also use our <a href="/tools/seo-audit" className="text-emerald-600 hover:text-emerald-700 font-medium">SEO Audit Tool</a>.
+              Alt text serves two critical purposes: <strong>accessibility</strong> and <strong>SEO</strong>. For accessibility, it ensures that people using screen readers can understand image content. For SEO, it helps search engines index and rank images in image search, and provides context that can improve overall page rankings. Our <strong>bulk image alt text generator</strong> creates 6 optimized variations per image, each scored for effectiveness. For comprehensive optimization, also use our <a href="/tools/seo-audit" className="text-emerald-600 hover:text-emerald-700 font-medium">SEO Audit Tool</a>.
             </p>
+          </div>
+
+          <div className="card">
+            <h2 className="text-2xl font-bold text-emerald-800 mb-4">How to Use Bulk Alt Text Generator</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Our <strong>bulk alt text generator</strong> offers flexible options:
+            </p>
+            <div className="bg-purple-50 p-6 rounded-lg mb-4">
+              <h3 className="font-semibold text-purple-800 mb-3">Single Image Mode:</h3>
+              <ol className="space-y-2 text-gray-700">
+                <li><strong>1. Upload Image:</strong> Click the upload area and select an image from your computer (JPG, PNG, GIF, WebP, SVG)</li>
+                <li><strong>2. OR Enter URL:</strong> Paste the image URL if it's already hosted online</li>
+                <li><strong>3. Add Keywords:</strong> Enter the main subject/keyword and optional context</li>
+                <li><strong>4. Generate:</strong> Click "Generate Alt Text" to get 6 optimized variations</li>
+                <li><strong>5. Copy & Use:</strong> Choose the best option and copy it to your clipboard</li>
+              </ol>
+            </div>
+            <div className="bg-blue-50 p-6 rounded-lg mb-4">
+              <h3 className="font-semibold text-blue-800 mb-3">Bulk Images Mode:</h3>
+              <ol className="space-y-2 text-gray-700">
+                <li><strong>1. Upload Multiple Images:</strong> Select multiple images at once (up to 50 images recommended)</li>
+                <li><strong>2. OR Enter Bulk URLs:</strong> Paste multiple image URLs, one per line</li>
+                <li><strong>3. Set Keywords:</strong> Add main subject and context (applies to all images)</li>
+                <li><strong>4. Generate Bulk:</strong> Click "Generate Bulk Alt Text" to process all images</li>
+                <li><strong>5. Review Results:</strong> Each image gets 3 top-scored alt text variations</li>
+                <li><strong>6. Copy Individually:</strong> Copy alt text for each image as needed</li>
+              </ol>
+            </div>
+            <div className="bg-green-50 p-4 rounded-lg border border-green-300">
+              <h3 className="font-semibold text-green-800 mb-2">💡 Pro Tips:</h3>
+              <ul className="text-sm text-gray-700 space-y-1">
+                <li>• Use bulk mode for product catalogs, blog image galleries, or portfolio sites</li>
+                <li>• Upload images directly for better preview and context</li>
+                <li>• Customize keywords per batch for better relevance</li>
+                <li>• Review and adjust generated alt text to match your specific content</li>
+                <li>• Keep alt text under 125 characters for optimal screen reader performance</li>
+              </ul>
+            </div>
           </div>
 
           <div className="card">
@@ -381,6 +780,42 @@ export default function AltTextGenerator() {
             </div>
             <p className="text-gray-700 leading-relaxed mt-4">
               For more SEO optimization tips, check our <a href="/tools/meta-description-generator" className="text-emerald-600 hover:text-emerald-700 font-medium">Meta Description Generator</a>.
+            </p>
+          </div>
+
+          <div className="card">
+            <h2 className="text-2xl font-bold text-emerald-800 mb-4">Benefits of Bulk Alt Text Generation</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Using a <strong>bulk alt text generator</strong> saves significant time and ensures consistency:
+            </p>
+            <div className="grid md:grid-cols-2 gap-4 mb-4">
+              <div className="bg-blue-50 p-4 rounded-lg">
+                <h3 className="text-lg font-semibold text-blue-800 mb-2">⚡ Save Time</h3>
+                <p className="text-sm text-gray-700">Process 50+ images in minutes instead of hours. Perfect for e-commerce product uploads or content migration.</p>
+              </div>
+              <div className="bg-blue-50 p-4 rounded-lg">
+                <h3 className="text-lg font-semibold text-blue-800 mb-2">📊 Consistency</h3>
+                <p className="text-sm text-gray-700">Maintain consistent alt text style and quality across all images on your website.</p>
+              </div>
+              <div className="bg-blue-50 p-4 rounded-lg">
+                <h3 className="text-lg font-semibold text-blue-800 mb-2">🔍 Better SEO</h3>
+                <p className="text-sm text-gray-700">Every image gets optimized alt text with keywords, improving image search rankings and overall SEO.</p>
+              </div>
+              <div className="bg-blue-50 p-4 rounded-lg">
+                <h3 className="text-lg font-semibold text-blue-800 mb-2">♿ Accessibility Compliance</h3>
+                <p className="text-sm text-gray-700">Ensure your site meets WCAG accessibility standards with proper alt text for all images.</p>
+              </div>
+              <div className="bg-blue-50 p-4 rounded-lg">
+                <h3 className="text-lg font-semibold text-blue-800 mb-2">💰 Cost-Effective</h3>
+                <p className="text-sm text-gray-700">Free unlimited usage. No need to hire SEO specialists for basic alt text optimization.</p>
+              </div>
+              <div className="bg-blue-50 p-4 rounded-lg">
+                <h3 className="text-lg font-semibold text-blue-800 mb-2">📈 Multiple Variations</h3>
+                <p className="text-sm text-gray-700">Get 3-6 alt text options per image, scored for quality, giving you flexibility in choosing.</p>
+              </div>
+            </div>
+            <p className="text-gray-700 leading-relaxed">
+              <strong>Use cases:</strong> E-commerce product catalogs, blog post images, portfolio galleries, real estate listings, news article images, social media content, and website migrations.
             </p>
           </div>
 
@@ -570,36 +1005,36 @@ export default function AltTextGenerator() {
             <h2 className="text-2xl font-bold text-emerald-800 mb-4">📚 Frequently Asked Questions (FAQs)</h2>
             <div className="space-y-4">
               <div>
+                <h3 className="font-semibold text-gray-800 mb-2">Q: Can I upload images directly or only use URLs?</h3>
+                <p className="text-gray-700 text-sm">A: Both! You can upload images directly from your computer OR paste image URLs. For bulk processing, you can upload multiple images at once or paste multiple URLs (one per line).</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-800 mb-2">Q: How many images can I process at once in bulk mode?</h3>
+                <p className="text-gray-700 text-sm">A: We recommend processing up to 50 images at a time for optimal performance. For larger batches, split them into multiple sessions.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-800 mb-2">Q: What image formats are supported?</h3>
+                <p className="text-gray-700 text-sm">A: All common formats: JPG, JPEG, PNG, GIF, WebP, SVG, and BMP. Maximum file size of 10MB per image recommended.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-800 mb-2">Q: How does the bulk alt text generator save time?</h3>
+                <p className="text-gray-700 text-sm">A: Instead of writing alt text manually for each image (5-10 minutes per image), bulk processing generates optimized alt text for dozens of images in under a minute.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-800 mb-2">Q: Can I customize the keywords for bulk images?</h3>
+                <p className="text-gray-700 text-sm">A: Yes! In bulk mode, the keywords and context you enter apply to all images. For more customization, process images in smaller batches with different keywords.</p>
+              </div>
+              <div>
                 <h3 className="font-semibold text-gray-800 mb-2">Q: What is the ideal alt text length?</h3>
-                <p className="text-gray-700 text-sm">A: Keep alt text under 125 characters. Most screen readers cut off text beyond this length. Aim for 50-125 characters for the best balance of descriptiveness and brevity.</p>
+                <p className="text-gray-700 text-sm">A: Keep alt text under 125 characters. Most screen readers cut off text beyond this length. Aim for 50-125 characters for the best balance.</p>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-800 mb-2">Q: Should I use "image of" in alt text?</h3>
-                <p className="text-gray-700 text-sm">A: No. Screen readers already announce "image," so phrases like "image of" or "picture of" are redundant. Just describe the content directly.</p>
+                <h3 className="font-semibold text-gray-800 mb-2">Q: Is this bulk alt text generator free?</h3>
+                <p className="text-gray-700 text-sm">A: Yes, completely free! Unlimited image uploads, unlimited URL processing, no registration required.</p>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-800 mb-2">Q: How does alt text help SEO?</h3>
-                <p className="text-gray-700 text-sm">A: Alt text helps search engines understand image content, improves image search rankings, provides context for page relevance, and enhances overall accessibility—all positive SEO signals.</p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-800 mb-2">Q: What should I write for decorative images?</h3>
-                <p className="text-gray-700 text-sm">A: Use empty alt text: alt="". This tells screen readers to skip the image since it's purely decorative and adds no content value.</p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-800 mb-2">Q: Can I use keywords in alt text?</h3>
-                <p className="text-gray-700 text-sm">A: Yes, but naturally. Include relevant keywords when they accurately describe the image. Never stuff keywords—it hurts both accessibility and SEO.</p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-800 mb-2">Q: What if my image has text in it?</h3>
-                <p className="text-gray-700 text-sm">A: Include the text from the image in the alt attribute. For example, if an image shows a "50% OFF" banner, the alt text should include "50% OFF sale banner."</p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-800 mb-2">Q: Do I need alt text for logos?</h3>
-                <p className="text-gray-700 text-sm">A: Yes. Use the company or brand name. For example: alt="ProURLMonitor logo" or just alt="ProURLMonitor" depending on context.</p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-800 mb-2">Q: What about complex images like infographics?</h3>
-                <p className="text-gray-700 text-sm">A: Provide a summary in alt text, then use longdesc attribute or provide a full text alternative nearby for detailed information that can't fit in 125 characters.</p>
+                <h3 className="font-semibold text-gray-800 mb-2">Q: How do I use the generated alt text in my website?</h3>
+                <p className="text-gray-700 text-sm">A: Copy the generated alt text and paste it into your HTML image tag: <code>&lt;img src="image.jpg" alt="paste here"&gt;</code>. For WordPress, paste it in the "Alternative Text" field in the media library.</p>
               </div>
             </div>
           </div>
@@ -607,13 +1042,13 @@ export default function AltTextGenerator() {
           <div className="card bg-purple-700 text-white">
             <h2 className="text-2xl font-bold mb-4">🚀 Start Generating Alt Text Now!</h2>
             <p className="mb-4">
-              Use our <strong>free alt text generator</strong> to create SEO-optimized, accessible image descriptions instantly. Perfect for web developers, content creators, SEO specialists, and anyone wanting to improve website accessibility and image search rankings. Get 6 unique variations scored for effectiveness with optimal length and keyword integration.
+              Use our <strong>free bulk alt text generator</strong> to create SEO-optimized, accessible image descriptions instantly. Perfect for e-commerce stores, bloggers, developers, and digital marketers. Upload single images or process hundreds of images in bulk. Get 6 unique variations scored for effectiveness with optimal length and keyword integration.
             </p>
             <p className="mb-4">
-              No registration required. Unlimited generations. Completely free forever!
+              No registration required. Unlimited uploads. Unlimited generations. Completely free forever!
             </p>
             <p className="font-semibold">
-              Explore more tools: <a href="/tools/seo-audit" className="text-purple-100 hover:text-white underline">SEO Audit</a> • <a href="/tools/meta-description-generator" className="text-purple-100 hover:text-white underline">Meta Description</a> • <a href="/tools/seo-title-generator" className="text-purple-100 hover:text-white underline">Title Generator</a> 🎯
+              Explore more tools: <a href="/tools/seo-audit" className="text-purple-100 hover:text-white underline">SEO Audit</a> • <a href="/tools/meta-description-generator" className="text-purple-100 hover:text-white underline">Meta Description</a> • <a href="/tools/seo-title-generator" className="text-purple-100 hover:text-white underline">Title Generator</a> • <a href="/tools/faq-schema-generator" className="text-purple-100 hover:text-white underline">FAQ Schema</a> 🎯
             </p>
           </div>
         </div>
