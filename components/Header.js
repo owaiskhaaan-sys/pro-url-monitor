@@ -35,7 +35,8 @@ export default function Header() {
     { title: 'Binary to Octal Converter', href: '/tools/binary-to-octal' },
     { title: 'Octal to Binary Converter', href: '/tools/octal-to-binary' },
     { title: 'Octal to Decimal Converter', href: '/tools/octal-to-decimal' },
-    { title: "Two's Complement Calculator", href: '/tools/twos-complement-calculator' }
+    { title: "Two's Complement Calculator", href: '/tools/twos-complement-calculator' },
+    { title: 'Decimal to Hex Converter', href: '/tools/decimal-to-hex' }
   ];
 
   return (
