@@ -617,7 +617,7 @@ export default function BitwiseOperations() {
               </div>
               <div>
                 <h3 className="font-semibold text-gray-800 mb-2">Q: What are bitwise shifts?</h3>
-                <p className="text-gray-700 text-sm">A: Left shift (<<) multiplies by 2, right shift (>>) divides by 2. Example: 1010 << 1 = 10100 (10 → 20), 1010 >> 1 = 0101 (10 → 5).</p>
+                <p className="text-gray-700 text-sm">A: Left shift (&lt;&lt;) multiplies by 2, right shift (&gt;&gt;) divides by 2. Example: 1010 &lt;&lt; 1 = 10100 (10 → 20), 1010 &gt;&gt; 1 = 0101 (10 → 5).</p>
               </div>
             </div>
           </div>
