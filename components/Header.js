@@ -43,7 +43,8 @@ export default function Header() {
     { title: 'SEO Title Generator', href: '/tools/seo-title-generator' },
     { title: 'Alt Text Generator', href: '/tools/alt-text-generator' },
     { title: 'FAQ Schema Generator', href: '/tools/faq-schema-generator' },
-    { title: 'Content Readability Optimizer', href: '/tools/content-readability-optimizer' }
+    { title: 'Content Readability Optimizer', href: '/tools/content-readability-optimizer' },
+    { title: 'Semantic Keyword Finder', href: '/tools/semantic-keyword-finder' }
   ];
 
   return (
