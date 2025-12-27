@@ -19,6 +19,7 @@ export async function getServerSideProps({ res }) {
     'twos-complement-calculator',
     'decimal-to-hex',
     'hex-to-decimal',
+    'bitwise-operations',
     'word-counter',
     'link-extractor',
     'robots-txt-generator',

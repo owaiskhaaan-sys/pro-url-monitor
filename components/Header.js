@@ -37,7 +37,8 @@ export default function Header() {
     { title: 'Octal to Decimal Converter', href: '/tools/octal-to-decimal' },
     { title: "Two's Complement Calculator", href: '/tools/twos-complement-calculator' },
     { title: 'Decimal to Hex Converter', href: '/tools/decimal-to-hex' },
-    { title: 'Hex to Decimal Converter', href: '/tools/hex-to-decimal' }
+    { title: 'Hex to Decimal Converter', href: '/tools/hex-to-decimal' },
+    { title: 'Bitwise Operations Calculator', href: '/tools/bitwise-operations' }
   ];
 
   return (
