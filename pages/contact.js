@@ -1,14 +1,21 @@
 import { useState } from 'react';
 import Layout from '../components/Layout';
+import CloudflareTurnstile from '../components/CloudflareTurnstile';
 
 export default function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState(null);
+  const [verified, setVerified] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!verified) {
+      setStatus({ type: 'error', text: 'Please complete the human verification first.' });
+      return;
+    }
     if (!name.trim() || !email.trim() || !message.trim()) {
       setStatus({ type: 'error', text: 'Please fill in Name, Email, and Comments before sending.' });
       return;
@@ -92,7 +99,24 @@ export default function Contact() {
               </div>
             )}
 
-            <button type="submit" className="btn btn-primary w-full">Send Message</button>
+            <div className="pt-2">
+              <CloudflareTurnstile
+                onVerify={(token) => {
+                  setTurnstileToken(token);
+                  setVerified(true);
+                }}
+                onError={() => setVerified(false)}
+                onExpire={() => setVerified(false)}
+              />
+            </div>
+
+            <button 
+              type="submit" 
+              disabled={!verified}
+              className={`btn w-full ${verified ? 'btn-primary' : 'bg-gray-300 text-gray-500 cursor-not-allowed'}`}
+            >
+              {verified ? 'Send Message' : 'Complete Verification First'}
+            </button>
           </form>
         </div>
       </section>

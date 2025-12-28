@@ -27,6 +27,9 @@ export default function Document() {
 
         {/* Google Search Console Verification */}
         <meta name="google-site-verification" content="2tgob67uTDkdiRiOs0DXG0wsgNQhVAcbhkhVMfqWmec" />
+        
+        {/* Cloudflare Turnstile */}
+        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
       </Head>
       <body>
         <Main />
