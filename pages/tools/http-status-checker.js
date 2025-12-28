@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Layout from '../../components/Layout';
 import Head from 'next/head';
 import VerifiedButton from '../../components/VerifiedButton';
+import RelatedTools from '../../components/RelatedTools';
 
 export default function HTTPStatusChecker() {
   const [urls, setUrls] = useState('');
@@ -362,6 +363,10 @@ export default function HTTPStatusChecker() {
               </p>
             </div>
           </div>
+        </div>
+
+        <div className="max-w-4xl mx-auto px-4">
+          <RelatedTools currentTool="/tools/http-status-checker" category="Network" />
         </div>
       </div>
     </Layout>

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Layout from '../../components/Layout';
 import Head from 'next/head';
 import VerifiedButton from '../../components/VerifiedButton';
+import RelatedTools from '../../components/RelatedTools';
 
 export default function MetaGenerator() {
   const [title, setTitle] = useState('');
@@ -432,6 +433,10 @@ ${image ? `<meta property="twitter:image" content="${image}">` : ''}`}</code>
               <p className="text-gray-700">Yes! You can have different og:title and og:description (for social) vs your SEO title tag and meta description. This lets you optimize each for its specific purpose.</p>
             </div>
           </div>
+        </div>
+
+        <div className="max-w-6xl mx-auto px-4">
+          <RelatedTools currentTool="/tools/meta-generator" category="SEO" />
         </div>
       </div>
     </Layout>

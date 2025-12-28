@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Layout from '../../components/Layout';
 import VerifiedButton from '../../components/VerifiedButton';
+import RelatedTools from '../../components/RelatedTools';
 
 export default function DomainAuthorityChecker() {
   const [urls, setUrls] = useState('');
@@ -369,6 +370,10 @@ export default function DomainAuthorityChecker() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4">
+          <RelatedTools currentTool="/tools/domain-authority-checker" category="Domain" />
         </div>
       </div>
     </Layout>
