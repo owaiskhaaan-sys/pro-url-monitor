@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Layout from '../../components/Layout';
 import Head from 'next/head';
+import VerifiedButton from '../../components/VerifiedButton';
 
 export default function HTTPStatusChecker() {
   const [urls, setUrls] = useState('');
@@ -200,13 +201,13 @@ export default function HTTPStatusChecker() {
             <p className="text-xs text-gray-500 mt-2">Enter one URL per line. HTTP/HTTPS is optional.</p>
           </div>
 
-          <button
-            type="submit"
-            disabled={loading}
-            className="btn btn-primary w-full"
+          <VerifiedButton
+            onClick={checkStatus}
+            loading={loading}
+            className="w-full btn btn-primary"
           >
-            {loading ? '🔍 Checking URLs...' : '🔍 Check Status Codes'}
-          </button>
+            Check Status Codes
+          </VerifiedButton>
         </form>
 
         {results && (

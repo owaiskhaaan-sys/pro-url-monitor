@@ -6,7 +6,7 @@ export default function CloudflareTurnstile({ onVerify, onError, onExpire }) {
 
   // Replace this with your actual Cloudflare Turnstile site key
   // Get it from: https://dash.cloudflare.com/?to=/:account/turnstile
-  const SITE_KEY = '1x00000000000000000000AA'; // Demo key - replace with your actual key
+  const SITE_KEY = '0x4AAAAAACJefAMC1oY_DaBk'; // Demo key - replace with your actual key
 
   useEffect(() => {
     // Wait for Turnstile script to load

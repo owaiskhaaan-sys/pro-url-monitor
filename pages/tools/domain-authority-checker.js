@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Layout from '../../components/Layout';
+import VerifiedButton from '../../components/VerifiedButton';
 
 export default function DomainAuthorityChecker() {
   const [urls, setUrls] = useState('');
@@ -126,13 +127,13 @@ export default function DomainAuthorityChecker() {
 
             {/* Action Buttons */}
             <div className="flex flex-wrap gap-3 mb-6">
-              <button
+              <VerifiedButton
                 onClick={handleCheck}
-                disabled={loading}
-                className="px-8 py-3 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition font-medium shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                loading={loading}
+                className="px-8 py-3 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition font-medium shadow-lg"
               >
-                {loading ? 'Checking...' : 'Check Authority'}
-              </button>
+                Check Authority
+              </VerifiedButton>
               <button
                 onClick={loadExample}
                 className="px-8 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition font-medium"

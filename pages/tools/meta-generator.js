@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Layout from '../../components/Layout';
 import Head from 'next/head';
+import VerifiedButton from '../../components/VerifiedButton';
 
 export default function MetaGenerator() {
   const [title, setTitle] = useState('');
@@ -247,13 +248,14 @@ ${siteName ? `<meta property="og:site_name" content="${siteName}">` : ''}
             </div>
 
             {/* Copy Button */}
-            <button
+            <VerifiedButton
               onClick={copyAllMetaTags}
               disabled={!title || !desc}
               className="btn btn-primary w-full text-lg py-4"
+              loading={false}
             >
               📋 Copy All Meta Tags
-            </button>
+            </VerifiedButton>
 
             {(!title || !desc) && (
               <p className="text-center text-sm text-gray-500">Fill in Title and Description to copy tags</p>
