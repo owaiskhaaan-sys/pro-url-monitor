@@ -46,6 +46,7 @@ export async function getServerSideProps({ res }) {
     'duplicate-line-remover',
     'sort-text-lines',
     'find-and-replace',
+    'text-diff-checker',
     'jwt-decoder',
     'meta-description-generator',
     'seo-title-generator',
