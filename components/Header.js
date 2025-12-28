@@ -64,6 +64,7 @@ export default function Header() {
     { title: 'Lorem Ipsum Generator', href: '/tools/lorem-ipsum-generator' },
     { title: 'Duplicate Line Remover', href: '/tools/duplicate-line-remover' },
     { title: 'Sort Text Lines', href: '/tools/sort-text-lines' },
+    { title: 'Find and Replace', href: '/tools/find-and-replace' },
     { title: 'JWT Decoder', href: '/tools/jwt-decoder' },
     { title: 'Meta Description Generator', href: '/tools/meta-description-generator' },
     { title: 'SEO Title Generator', href: '/tools/seo-title-generator' },
