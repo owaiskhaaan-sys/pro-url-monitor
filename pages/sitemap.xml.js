@@ -42,6 +42,7 @@ export async function getServerSideProps({ res }) {
     'case-converter',
     'text-reverser',
     'text-to-slug',
+    'lorem-ipsum-generator',
     'jwt-decoder',
     'meta-description-generator',
     'seo-title-generator',

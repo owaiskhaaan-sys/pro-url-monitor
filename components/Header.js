@@ -61,6 +61,7 @@ export default function Header() {
     { title: 'Case Converter', href: '/tools/case-converter' },
     { title: 'Text Reverser', href: '/tools/text-reverser' },
     { title: 'Text to Slug Generator', href: '/tools/text-to-slug' },
+    { title: 'Lorem Ipsum Generator', href: '/tools/lorem-ipsum-generator' },
     { title: 'JWT Decoder', href: '/tools/jwt-decoder' },
     { title: 'Meta Description Generator', href: '/tools/meta-description-generator' },
     { title: 'SEO Title Generator', href: '/tools/seo-title-generator' },
