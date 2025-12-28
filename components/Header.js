@@ -60,6 +60,7 @@ export default function Header() {
     { title: 'ASCII Converter', href: '/tools/ascii-converter' },
     { title: 'Case Converter', href: '/tools/case-converter' },
     { title: 'Text Reverser', href: '/tools/text-reverser' },
+    { title: 'Text to Slug Generator', href: '/tools/text-to-slug' },
     { title: 'JWT Decoder', href: '/tools/jwt-decoder' },
     { title: 'Meta Description Generator', href: '/tools/meta-description-generator' },
     { title: 'SEO Title Generator', href: '/tools/seo-title-generator' },

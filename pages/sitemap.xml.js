@@ -41,6 +41,7 @@ export async function getServerSideProps({ res }) {
     'ascii-converter',
     'case-converter',
     'text-reverser',
+    'text-to-slug',
     'jwt-decoder',
     'meta-description-generator',
     'seo-title-generator',
