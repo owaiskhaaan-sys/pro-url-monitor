@@ -75,6 +75,7 @@ export default function Header() {
     { title: 'CMYK to RGB Converter', href: '/tools/cmyk-to-rgb' },
     { title: 'RGB to CMYK Converter', href: '/tools/rgb-to-cmyk' },
     { title: 'Color Palette Generator', href: '/tools/color-palette-generator' },
+    { title: 'Color Shades Generator', href: '/tools/color-shades-generator' },
     { title: 'JWT Decoder', href: '/tools/jwt-decoder' },
     { title: 'Meta Description Generator', href: '/tools/meta-description-generator' },
     { title: 'SEO Title Generator', href: '/tools/seo-title-generator' },
