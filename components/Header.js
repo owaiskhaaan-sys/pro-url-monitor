@@ -62,6 +62,7 @@ export default function Header() {
     { title: 'Text Reverser', href: '/tools/text-reverser' },
     { title: 'Text to Slug Generator', href: '/tools/text-to-slug' },
     { title: 'Lorem Ipsum Generator', href: '/tools/lorem-ipsum-generator' },
+    { title: 'Duplicate Line Remover', href: '/tools/duplicate-line-remover' },
     { title: 'JWT Decoder', href: '/tools/jwt-decoder' },
     { title: 'Meta Description Generator', href: '/tools/meta-description-generator' },
     { title: 'SEO Title Generator', href: '/tools/seo-title-generator' },
