@@ -73,6 +73,7 @@ export default function Header() {
     { title: 'HSL to RGB Converter', href: '/tools/hsl-to-rgb' },
     { title: 'RGB to HSL Converter', href: '/tools/rgb-to-hsl' },
     { title: 'CMYK to RGB Converter', href: '/tools/cmyk-to-rgb' },
+    { title: 'RGB to CMYK Converter', href: '/tools/rgb-to-cmyk' },
     { title: 'JWT Decoder', href: '/tools/jwt-decoder' },
     { title: 'Meta Description Generator', href: '/tools/meta-description-generator' },
     { title: 'SEO Title Generator', href: '/tools/seo-title-generator' },
