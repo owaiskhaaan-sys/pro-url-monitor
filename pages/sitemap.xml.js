@@ -57,6 +57,8 @@ export async function getServerSideProps({ res }) {
     'rgb-to-cmyk',
     'color-palette-generator',
     'color-shades-generator',
+    'color-mixer',
+    'color-name-finder',
     'jwt-decoder',
     'meta-description-generator',
     'seo-title-generator',
