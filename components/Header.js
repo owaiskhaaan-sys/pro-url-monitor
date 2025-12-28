@@ -66,6 +66,7 @@ export default function Header() {
     { title: 'Sort Text Lines', href: '/tools/sort-text-lines' },
     { title: 'Find and Replace', href: '/tools/find-and-replace' },
     { title: 'Text Diff Checker', href: '/tools/text-diff-checker' },
+    { title: 'Remove Line Breaks', href: '/tools/remove-line-breaks' },
     { title: 'JWT Decoder', href: '/tools/jwt-decoder' },
     { title: 'Meta Description Generator', href: '/tools/meta-description-generator' },
     { title: 'SEO Title Generator', href: '/tools/seo-title-generator' },
