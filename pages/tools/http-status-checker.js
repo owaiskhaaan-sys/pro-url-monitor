@@ -185,7 +185,7 @@ export default function HTTPStatusChecker() {
           )}
         </div>
 
-        <form onSubmit={checkStatus} className="card mb-8">
+        <div className="card mb-8">
           <div className="mb-4">
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Enter URLs (one per line)
@@ -202,13 +202,16 @@ export default function HTTPStatusChecker() {
           </div>
 
           <VerifiedButton
-            onClick={checkStatus}
+            onClick={(e) => {
+              e.preventDefault();
+              checkStatus(e);
+            }}
             loading={loading}
             className="w-full btn btn-primary"
           >
             Check Status Codes
           </VerifiedButton>
-        </form>
+        </div>
 
         {results && (
           <div className="space-y-6">
