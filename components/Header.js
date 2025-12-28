@@ -58,6 +58,7 @@ export default function Header() {
     { title: 'Hex Encoder/Decoder', href: '/tools/hex-converter' },
     { title: 'ROT13 Cipher', href: '/tools/rot13-cipher' },
     { title: 'ASCII Converter', href: '/tools/ascii-converter' },
+    { title: 'Case Converter', href: '/tools/case-converter' },
     { title: 'JWT Decoder', href: '/tools/jwt-decoder' },
     { title: 'Meta Description Generator', href: '/tools/meta-description-generator' },
     { title: 'SEO Title Generator', href: '/tools/seo-title-generator' },
