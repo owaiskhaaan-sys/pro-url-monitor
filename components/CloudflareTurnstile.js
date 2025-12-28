@@ -9,23 +9,39 @@ export default function CloudflareTurnstile({ onVerify, onError, onExpire }) {
   const SITE_KEY = '0x4AAAAAACJefAMC1oY_DaBk'; // Demo key - replace with your actual key
 
   useEffect(() => {
+    let mounted = true;
+    let intervalId = null;
+
     // Wait for Turnstile script to load
     const loadTurnstile = () => {
+      if (!mounted) return;
+      
       if (window.turnstile && turnstileRef.current) {
-        const id = window.turnstile.render(turnstileRef.current, {
-          sitekey: SITE_KEY,
-          theme: 'light',
-          callback: (token) => {
-            if (onVerify) onVerify(token);
-          },
-          'error-callback': () => {
-            if (onError) onError();
-          },
-          'expired-callback': () => {
-            if (onExpire) onExpire();
-          },
-        });
-        setWidgetId(id);
+        // Check if widget already exists
+        if (turnstileRef.current.children.length > 0) {
+          return;
+        }
+
+        try {
+          const id = window.turnstile.render(turnstileRef.current, {
+            sitekey: SITE_KEY,
+            theme: 'light',
+            callback: (token) => {
+              if (mounted && onVerify) onVerify(token);
+            },
+            'error-callback': () => {
+              if (mounted && onError) onError();
+            },
+            'expired-callback': () => {
+              if (mounted && onExpire) onExpire();
+            },
+          });
+          if (mounted) {
+            setWidgetId(id);
+          }
+        } catch (error) {
+          console.error('Turnstile render error:', error);
+        }
       }
     };
 
@@ -34,23 +50,30 @@ export default function CloudflareTurnstile({ onVerify, onError, onExpire }) {
       loadTurnstile();
     } else {
       // Wait for script to load
-      const checkTurnstile = setInterval(() => {
+      intervalId = setInterval(() => {
         if (window.turnstile) {
           loadTurnstile();
-          clearInterval(checkTurnstile);
+          clearInterval(intervalId);
+          intervalId = null;
         }
       }, 100);
-
-      return () => clearInterval(checkTurnstile);
     }
 
     // Cleanup
     return () => {
+      mounted = false;
+      if (intervalId) {
+        clearInterval(intervalId);
+      }
       if (widgetId !== null && window.turnstile) {
-        window.turnstile.remove(widgetId);
+        try {
+          window.turnstile.remove(widgetId);
+        } catch (error) {
+          // Widget may already be removed
+        }
       }
     };
-  }, [onVerify, onError, onExpire]);
+  }, []);
 
   return <div ref={turnstileRef}></div>;
 }
