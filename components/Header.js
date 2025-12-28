@@ -70,6 +70,7 @@ export default function Header() {
     { title: 'Character Frequency Counter', href: '/tools/character-frequency-counter' },
     { title: 'HEX to RGB Converter', href: '/tools/hex-to-rgb' },
     { title: 'RGB to HEX Converter', href: '/tools/rgb-to-hex' },
+    { title: 'HSL to RGB Converter', href: '/tools/hsl-to-rgb' },
     { title: 'JWT Decoder', href: '/tools/jwt-decoder' },
     { title: 'Meta Description Generator', href: '/tools/meta-description-generator' },
     { title: 'SEO Title Generator', href: '/tools/seo-title-generator' },
