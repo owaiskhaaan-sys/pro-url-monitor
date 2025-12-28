@@ -44,6 +44,7 @@ export async function getServerSideProps({ res }) {
     'text-to-slug',
     'lorem-ipsum-generator',
     'duplicate-line-remover',
+    'sort-text-lines',
     'jwt-decoder',
     'meta-description-generator',
     'seo-title-generator',
