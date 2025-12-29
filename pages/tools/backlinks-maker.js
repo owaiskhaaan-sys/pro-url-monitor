@@ -3,9 +3,12 @@ import Head from 'next/head';
 import Layout from '../../components/Layout';
 
 export default function BacklinksMaker() {
+  const [mode, setMode] = useState('single'); // 'single' or 'bulk'
   const [url, setUrl] = useState('');
   const [anchorText, setAnchorText] = useState('');
+  const [bulkUrls, setBulkUrls] = useState('');
   const [generated, setGenerated] = useState(null);
+  const [bulkGenerated, setBulkGenerated] = useState([]);
 
   const handleGenerate = () => {
     if (!url.trim() || !anchorText.trim()) {
@@ -21,11 +24,72 @@ export default function BacklinksMaker() {
       markdown: markdownCode,
       preview: { text: anchorText, href: url }
     });
+    setBulkGenerated([]);
+  };
+
+  const handleBulkGenerate = () => {
+    if (!bulkUrls.trim()) {
+      alert('Please enter URLs (one per line)');
+      return;
+    }
+
+    const urls = bulkUrls.split('\n').filter(line => line.trim());
+    if (urls.length === 0) {
+      alert('Please enter at least one valid URL');
+      return;
+    }
+
+    const results = urls.map((line, index) => {
+      const trimmedLine = line.trim();
+      // Try to parse URL and anchor text (format: URL|anchor or just URL)
+      let targetUrl, anchor;
+      
+      if (trimmedLine.includes('|')) {
+        const parts = trimmedLine.split('|');
+        targetUrl = parts[0].trim();
+        anchor = parts[1] ? parts[1].trim() : targetUrl;
+      } else {
+        targetUrl = trimmedLine;
+        // Extract domain as anchor text
+        try {
+          const urlObj = new URL(targetUrl);
+          anchor = urlObj.hostname.replace('www.', '');
+        } catch {
+          anchor = targetUrl;
+        }
+      }
+
+      const htmlCode = `<a href="${targetUrl}" title="${anchor}">${anchor}</a>`;
+      const markdownCode = `[${anchor}](${targetUrl})`;
+
+      return {
+        id: index + 1,
+        url: targetUrl,
+        anchor: anchor,
+        html: htmlCode,
+        markdown: markdownCode
+      };
+    });
+
+    setBulkGenerated(results);
+    setGenerated(null);
   };
 
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text);
     alert('Copied to clipboard!');
+  };
+
+  const copyAllHtml = () => {
+    const allHtml = bulkGenerated.map(item => item.html).join('\n');
+    navigator.clipboard.writeText(allHtml);
+    alert('All HTML codes copied to clipboard!');
+  };
+
+  const copyAllMarkdown = () => {
+    const allMarkdown = bulkGenerated.map(item => item.markdown).join('\n');
+    navigator.clipboard.writeText(allMarkdown);
+    alert('All Markdown codes copied to clipboard!');
   };
 
   return (
@@ -36,76 +100,197 @@ export default function BacklinksMaker() {
       </Head>
       <section className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-emerald-800 mb-6">Backlinks Maker</h1>
-        <p className="text-gray-600 mb-8">Generate HTML and Markdown backlink code for easy sharing and embedding.</p>
+        <p className="text-gray-600 mb-8">Generate HTML and Markdown backlink code for easy sharing and embedding. Single or bulk mode available.</p>
+
+        {/* Mode Toggle */}
+        <div className="flex gap-4 mb-6">
+          <button
+            onClick={() => setMode('single')}
+            className={`px-6 py-3 rounded-lg font-semibold transition ${
+              mode === 'single'
+                ? 'bg-emerald-600 text-white'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            Single URL
+          </button>
+          <button
+            onClick={() => setMode('bulk')}
+            className={`px-6 py-3 rounded-lg font-semibold transition ${
+              mode === 'bulk'
+                ? 'bg-emerald-600 text-white'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            Bulk URLs
+          </button>
+        </div>
 
         <div className="bg-white p-8 rounded-lg shadow-md border border-emerald-100 mb-8">
-          <div className="space-y-6">
-            <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">URL</label>
-              <input
-                type="url"
-                placeholder="https://example.com"
-                value={url}
-                onChange={(e) => setUrl(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-emerald-500"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">Anchor Text</label>
-              <input
-                type="text"
-                placeholder="Click here"
-                value={anchorText}
-                onChange={(e) => setAnchorText(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-emerald-500"
-              />
-            </div>
-
-            <button
-              onClick={handleGenerate}
-              className="btn btn-primary px-8 py-3 w-full"
-            >
-              Generate Backlink
-            </button>
-
-            {generated && (
-              <div className="space-y-6 mt-8">
-                <div className="bg-emerald-50 p-6 rounded-lg border border-emerald-200">
-                  <h3 className="font-semibold text-emerald-800 mb-3">Preview</h3>
-                  <a href={generated.preview.href} className="text-emerald-600 hover:underline">
-                    {generated.preview.text}
-                  </a>
-                </div>
-
-                <div>
-                  <h3 className="font-semibold text-gray-800 mb-2">HTML Code</h3>
-                  <div className="bg-gray-900 text-gray-100 p-4 rounded-lg flex justify-between items-start gap-4">
-                    <code className="text-sm font-mono break-all flex-1">{generated.html}</code>
-                    <button
-                      onClick={() => copyToClipboard(generated.html)}
-                      className="btn btn-sm bg-emerald-600 text-white hover:bg-emerald-700 whitespace-nowrap"
-                    >
-                      Copy
-                    </button>
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="font-semibold text-gray-800 mb-2">Markdown Code</h3>
-                  <div className="bg-gray-900 text-gray-100 p-4 rounded-lg flex justify-between items-start gap-4">
-                    <code className="text-sm font-mono break-all flex-1">{generated.markdown}</code>
-                    <button
-                      onClick={() => copyToClipboard(generated.markdown)}
-                      className="btn btn-sm bg-emerald-600 text-white hover:bg-emerald-700 whitespace-nowrap"
-                    >
-                      Copy
-                    </button>
-                  </div>
-                </div>
+          {mode === 'single' ? (
+            // Single URL Mode
+            <div className="space-y-6">
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">URL</label>
+                <input
+                  type="url"
+                  placeholder="https://example.com"
+                  value={url}
+                  onChange={(e) => setUrl(e.target.value)}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-emerald-500"
+                />
               </div>
-            )}
-          </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Anchor Text</label>
+                <input
+                  type="text"
+                  placeholder="Click here"
+                  value={anchorText}
+                  onChange={(e) => setAnchorText(e.target.value)}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-emerald-500"
+                />
+              </div>
+
+              <button
+                onClick={handleGenerate}
+                className="btn btn-primary px-8 py-3 w-full"
+              >
+                Generate Backlink
+              </button>
+
+              {generated && (
+                <div className="space-y-6 mt-8">
+                  <div className="bg-emerald-50 p-6 rounded-lg border border-emerald-200">
+                    <h3 className="font-semibold text-emerald-800 mb-3">Preview</h3>
+                    <a href={generated.preview.href} className="text-emerald-600 hover:underline">
+                      {generated.preview.text}
+                    </a>
+                  </div>
+
+                  <div>
+                    <h3 className="font-semibold text-gray-800 mb-2">HTML Code</h3>
+                    <div className="bg-gray-900 text-gray-100 p-4 rounded-lg flex justify-between items-start gap-4">
+                      <code className="text-sm font-mono break-all flex-1">{generated.html}</code>
+                      <button
+                        onClick={() => copyToClipboard(generated.html)}
+                        className="btn btn-sm bg-emerald-600 text-white hover:bg-emerald-700 whitespace-nowrap"
+                      >
+                        Copy
+                      </button>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="font-semibold text-gray-800 mb-2">Markdown Code</h3>
+                    <div className="bg-gray-900 text-gray-100 p-4 rounded-lg flex justify-between items-start gap-4">
+                      <code className="text-sm font-mono break-all flex-1">{generated.markdown}</code>
+                      <button
+                        onClick={() => copyToClipboard(generated.markdown)}
+                        className="btn btn-sm bg-emerald-600 text-white hover:bg-emerald-700 whitespace-nowrap"
+                      >
+                        Copy
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          ) : (
+            // Bulk URLs Mode
+            <div className="space-y-6">
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Enter URLs (one per line)
+                </label>
+                <p className="text-sm text-gray-500 mb-2">
+                  Format: <code className="bg-gray-100 px-2 py-1 rounded">URL|Anchor Text</code> or just <code className="bg-gray-100 px-2 py-1 rounded">URL</code>
+                </p>
+                <textarea
+                  value={bulkUrls}
+                  onChange={(e) => setBulkUrls(e.target.value)}
+                  rows="10"
+                  placeholder={'https://example.com|Example Website\nhttps://google.com|Google\nhttps://github.com'}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-emerald-500 font-mono text-sm"
+                />
+              </div>
+
+              <button
+                onClick={handleBulkGenerate}
+                className="btn btn-primary px-8 py-3 w-full"
+              >
+                Generate Bulk Backlinks
+              </button>
+
+              {bulkGenerated.length > 0 && (
+                <div className="space-y-6 mt-8">
+                  <div className="flex justify-between items-center">
+                    <h3 className="font-semibold text-gray-800">Generated {bulkGenerated.length} Backlinks</h3>
+                    <div className="flex gap-2">
+                      <button
+                        onClick={copyAllHtml}
+                        className="btn btn-sm bg-emerald-600 text-white hover:bg-emerald-700"
+                      >
+                        Copy All HTML
+                      </button>
+                      <button
+                        onClick={copyAllMarkdown}
+                        className="btn btn-sm bg-blue-600 text-white hover:bg-blue-700"
+                      >
+                        Copy All Markdown
+                      </button>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4 max-h-[600px] overflow-y-auto">
+                    {bulkGenerated.map((item) => (
+                      <div key={item.id} className="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                        <div className="flex items-start justify-between mb-3">
+                          <div>
+                            <span className="text-xs font-semibold text-gray-500">#{item.id}</span>
+                            <p className="text-sm text-gray-700 mt-1">
+                              <strong>URL:</strong> {item.url}
+                            </p>
+                            <p className="text-sm text-gray-700">
+                              <strong>Anchor:</strong> {item.anchor}
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="space-y-3">
+                          <div>
+                            <label className="text-xs font-semibold text-gray-600 block mb-1">HTML</label>
+                            <div className="bg-gray-900 text-gray-100 p-3 rounded flex justify-between items-start gap-2">
+                              <code className="text-xs font-mono break-all flex-1">{item.html}</code>
+                              <button
+                                onClick={() => copyToClipboard(item.html)}
+                                className="btn btn-sm bg-emerald-600 text-white hover:bg-emerald-700 text-xs px-2 py-1"
+                              >
+                                Copy
+                              </button>
+                            </div>
+                          </div>
+
+                          <div>
+                            <label className="text-xs font-semibold text-gray-600 block mb-1">Markdown</label>
+                            <div className="bg-gray-900 text-gray-100 p-3 rounded flex justify-between items-start gap-2">
+                              <code className="text-xs font-mono break-all flex-1">{item.markdown}</code>
+                              <button
+                                onClick={() => copyToClipboard(item.markdown)}
+                                className="btn btn-sm bg-blue-600 text-white hover:bg-blue-700 text-xs px-2 py-1"
+                              >
+                                Copy
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
         </div>
 
         {/* SEO Content Section */}
