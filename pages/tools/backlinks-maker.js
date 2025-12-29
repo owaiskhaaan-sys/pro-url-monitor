@@ -297,10 +297,10 @@ export default function BacklinksMaker() {
         <div className="prose prose-emerald max-w-none mt-16">
           <h2 className="text-2xl font-bold text-emerald-700 mb-4">What is a Backlinks Maker Tool?</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            A backlinks maker is a free online tool that helps you quickly generate properly formatted backlink code in HTML, Markdown, or other formats. Instead of manually writing anchor tag syntax or struggling with proper link formatting, our backlinks maker instantly creates clean, SEO-friendly backlink code that you can copy and paste into your website, blog posts, forum signatures, social media profiles, or guest articles.
+            A backlinks maker is a free online tool that helps you quickly generate properly formatted backlink code in HTML, Markdown, or other formats. Instead of manually writing anchor tag syntax or struggling with proper link formatting, our backlinks maker instantly creates clean, SEO-friendly backlink code that you can copy and paste into your website, blog posts, forum signatures, social media profiles, or guest articles. Our tool supports both single URL and bulk URL processing, allowing you to generate backlinks for one URL at a time or process dozens of URLs simultaneously for maximum efficiency.
           </p>
           <p className="text-gray-700 leading-relaxed mb-6">
-            Backlinks—also known as inbound links or external links—are hyperlinks from one website to another. They're one of the most important ranking factors in SEO because search engines like Google view backlinks as "votes of confidence." When authoritative websites link to your content, it signals to search engines that your website provides valuable, trustworthy information worthy of higher rankings. Our backlinks maker tool simplifies the technical process of creating these crucial links while ensuring they follow best practices for SEO and accessibility.
+            Backlinks—also known as inbound links or external links—are hyperlinks from one website to another. They're one of the most important ranking factors in SEO because search engines like Google view backlinks as "votes of confidence." When authoritative websites link to your content, it signals to search engines that your website provides valuable, trustworthy information worthy of higher rankings. Our backlinks maker tool simplifies the technical process of creating these crucial links while ensuring they follow best practices for SEO and accessibility. Whether you need a single backlink or bulk backlinks for multiple pages, our tool handles both scenarios with ease.
           </p>
 
           <h2 className="text-2xl font-bold text-emerald-700 mb-4">Why Backlinks Are Critical for SEO Success</h2>
@@ -330,8 +330,10 @@ export default function BacklinksMaker() {
 
           <h2 className="text-2xl font-bold text-emerald-700 mb-4">How to Use Our Free Backlinks Maker Tool</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Creating professional backlinks with our tool takes just seconds. Follow these simple steps:
+            Creating professional backlinks with our tool takes just seconds. We offer two convenient modes:
           </p>
+          
+          <h3 className="text-xl font-semibold text-emerald-600 mb-3">Single URL Mode (For Individual Links)</h3>
           <ol className="list-decimal pl-6 mb-6 text-gray-700 space-y-2">
             <li><strong>Enter Your Target URL:</strong> Paste the complete URL you want people to link to (e.g., https://www.yourwebsite.com/page)</li>
             <li><strong>Add Anchor Text:</strong> Type the clickable text that will display as the link (e.g., "best SEO tools" or "click here for guide")</li>
@@ -339,8 +341,22 @@ export default function BacklinksMaker() {
             <li><strong>Copy and Use:</strong> Select the format you need (HTML for websites, Markdown for GitHub/forums), click "Copy," and paste it wherever you're building links</li>
             <li><strong>Preview Before Publishing:</strong> Check the preview to ensure the link appears exactly as intended before publishing</li>
           </ol>
+
+          <h3 className="text-xl font-semibold text-emerald-600 mb-3">Bulk URLs Mode (For Multiple Links)</h3>
+          <ol className="list-decimal pl-6 mb-6 text-gray-700 space-y-2">
+            <li><strong>Switch to Bulk Mode:</strong> Click the "Bulk URLs" button at the top of the tool</li>
+            <li><strong>Enter Multiple URLs:</strong> Paste your URLs in the textarea, one per line. You can use two formats:
+              <ul className="list-disc pl-6 mt-2 space-y-1">
+                <li><code className="bg-gray-100 px-2 py-1 rounded text-sm">URL|Custom Anchor Text</code> - Specify custom anchor text for each URL</li>
+                <li><code className="bg-gray-100 px-2 py-1 rounded text-sm">URL</code> - Tool automatically uses domain name as anchor text</li>
+              </ul>
+            </li>
+            <li><strong>Generate All Backlinks:</strong> Click "Generate Bulk Backlinks" to process all URLs at once</li>
+            <li><strong>Copy Individual or All:</strong> Use individual copy buttons for specific links, or "Copy All HTML"/"Copy All Markdown" buttons to copy all generated codes at once</li>
+            <li><strong>Review Results:</strong> Each result is numbered and displays the URL, anchor text, HTML code, and Markdown code for easy reference</li>
+          </ol>
           <p className="text-gray-700 leading-relaxed mb-6">
-            Our tool automatically formats your backlinks with proper syntax, including title attributes for better SEO and accessibility. You don't need any coding knowledge—just enter your URL and anchor text, and we handle the technical details.
+            Our tool automatically formats your backlinks with proper syntax, including title attributes for better SEO and accessibility. You don't need any coding knowledge—just enter your URL and anchor text, and we handle the technical details. The bulk mode is especially useful for SEO professionals, digital marketers, and webmasters who need to generate backlinks for multiple pages quickly and efficiently.
           </p>
 
           <h2 className="text-2xl font-bold text-emerald-700 mb-4">Backlink Formats: HTML vs. Markdown</h2>
@@ -362,6 +378,23 @@ export default function BacklinksMaker() {
           <h3 className="text-xl font-semibold text-emerald-600 mb-3">Markdown Backlinks</h3>
           <p className="text-gray-700 leading-relaxed mb-6">
             Markdown format is perfect for GitHub repositories, Reddit posts, Stack Overflow answers, Slack messages, Discord channels, and many modern documentation platforms. Markdown provides clean, readable syntax that automatically converts to HTML when rendered. This format is especially popular among developers and technical communities.
+          </p>
+
+          <h2 className="text-2xl font-bold text-emerald-700 mb-4">Benefits of Bulk Backlinks Generation</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Our bulk mode feature is a game-changer for SEO professionals and digital marketers who need to generate multiple backlinks efficiently. Here's why bulk processing saves time and improves productivity:
+          </p>
+          <ul className="list-disc pl-6 mb-4 text-gray-700 space-y-2">
+            <li><strong>Time Efficiency:</strong> Generate backlinks for 10, 50, or even 100+ URLs in seconds instead of processing them one by one</li>
+            <li><strong>Batch Processing:</strong> Perfect for site-wide link building campaigns, directory submissions, or managing multiple client websites</li>
+            <li><strong>Flexible Input Formats:</strong> Use custom anchor text for each URL or let the tool auto-generate appropriate anchor text from domain names</li>
+            <li><strong>Copy All Feature:</strong> Export all HTML or Markdown codes at once for quick pasting into spreadsheets, documents, or CMS platforms</li>
+            <li><strong>Individual Control:</strong> Still maintains the ability to copy individual backlinks when you need specific links</li>
+            <li><strong>Perfect for Link Building Campaigns:</strong> Streamline outreach by preparing all backlink codes in advance before contacting webmasters</li>
+            <li><strong>Consistency:</strong> Ensures all backlinks follow the same formatting standards and include proper attributes</li>
+          </ul>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Common bulk mode use cases include: creating backlinks for all product pages on an ecommerce site, generating links for blog post submissions to multiple directories, preparing backlinks for guest post author bios across various publications, and managing link building campaigns for multiple clients simultaneously. The bulk feature transforms a manual, time-consuming process into an automated workflow that frees you to focus on strategy and relationship building.
           </p>
 
           <h2 className="text-2xl font-bold text-emerald-700 mb-4">Best Practices for Building Quality Backlinks</h2>
