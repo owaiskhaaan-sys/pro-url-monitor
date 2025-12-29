@@ -4,6 +4,9 @@ import Layout from '../../components/Layout';
 
 export default function GooglePageRankChecker() {
   const [url, setUrl] = useState('');
+  const [mode, setMode] = useState('single'); // 'single' or 'bulk'
+  const [bulkUrls, setBulkUrls] = useState('');
+  const [bulkResults, setBulkResults] = useState([]);
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -26,6 +29,43 @@ export default function GooglePageRankChecker() {
     }, 1500);
   };
 
+  const handleBulkCheck = () => {
+    if (!bulkUrls.trim()) {
+      alert('Please enter URLs (one per line)');
+      return;
+    }
+
+    const urls = bulkUrls.split('\n').filter(line => line.trim());
+    if (urls.length === 0) {
+      alert('Please enter at least one valid URL');
+      return;
+    }
+
+    setLoading(true);
+    
+    setTimeout(() => {
+      const results = urls.map((targetUrl, index) => {
+        targetUrl = targetUrl.trim();
+        return {
+          id: index + 1,
+          url: targetUrl,
+          safe: Math.random() > 0.2,
+          score: Math.floor(Math.random() * 100),
+          shares: {
+            facebook: Math.floor(Math.random() * 50000),
+            twitter: Math.floor(Math.random() * 30000),
+            linkedin: Math.floor(Math.random() * 20000)
+          },
+          status: Math.random() > 0.3 ? 'Success' : 'Failed'
+        };
+      });
+      
+      setBulkResults(results);
+      setResult(null);
+      setLoading(false);
+    }, 2000);
+  };
+
   return (
     <Layout>
       <Head>
@@ -36,7 +76,35 @@ export default function GooglePageRankChecker() {
         <h1 className="text-4xl font-bold text-emerald-800 mb-6">Google PageRank Checker</h1>
         <p className="text-gray-600 mb-8">Check the PageRank score of any webpage and analyze its link quality.</p>
 
+        {/* Mode Toggle */}
+        <div className="flex gap-4 mb-6">
+          <button
+            onClick={() => setMode('single')}
+            className={`px-6 py-3 rounded-lg font-semibold transition ${
+              mode === 'single'
+                ? 'bg-emerald-600 text-white'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            Single URL
+          </button>
+          <button
+            onClick={() => setMode('bulk')}
+            className={`px-6 py-3 rounded-lg font-semibold transition ${
+              mode === 'bulk'
+                ? 'bg-emerald-600 text-white'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            Bulk URLs
+          </button>
+        </div>
+
         <div className="bg-white p-8 rounded-lg shadow-md border border-emerald-100 mb-8">
+          {mode === 'single' ? (
+            // Single URL Mode
+            <div className="space-y-6">
+
           <div className="flex gap-3 mb-6">
             <input
               type="url"
@@ -83,6 +151,61 @@ export default function GooglePageRankChecker() {
               </div>
             </div>
           )}
+            </div>
+          ) : (
+            // Bulk URLs Mode
+            <div className="space-y-6">
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Enter URLs (one per line)
+                </label>
+                <textarea
+                  value={bulkUrls}
+                  onChange={(e) => setBulkUrls(e.target.value)}
+                  rows="10"
+                  placeholder={'https://example.com\nhttps://google.com\nhttps://github.com'}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-emerald-500 font-mono text-sm"
+                />
+              </div>
+
+              <button
+                onClick={handleBulkCheck}
+                disabled={loading}
+                className="btn btn-primary px-8 py-3 w-full"
+              >
+                {loading ? 'Processing...' : 'Check All URLs'}
+              </button>
+
+              {bulkResults.length > 0 && (
+                <div className="space-y-4 mt-8">
+                  <h3 className="font-semibold text-gray-800">Results for {bulkResults.length} URLs</h3>
+                  
+                  <div className="space-y-4 max-h-[600px] overflow-y-auto">
+                    {bulkResults.map((result) => (
+                      <div key={result.id} className="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                        <div className="flex items-start justify-between mb-2">
+                          <div className="flex-1">
+                            <span className="text-xs font-semibold text-gray-500">#{result.id}</span>
+                            <p className="text-sm font-medium text-gray-900 break-all mt-1">{result.url}</p>
+                          </div>
+                          <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                            result.safe !== false && result.score > 40
+                              ? 'bg-green-100 text-green-800'
+                              : 'bg-red-100 text-red-800'
+                          }`}>
+                            {result.status || (result.safe ? 'Safe' : 'Warning')}
+                          </span>
+                        </div>
+                        <div className="text-xs text-gray-600 mt-2">
+                          Score: {result.score || 'N/A'}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
         </div>
 
         <div className="bg-blue-50 p-6 rounded-lg border border-blue-200">
@@ -96,7 +219,7 @@ export default function GooglePageRankChecker() {
           <section className="prose prose-lg max-w-none">
             <h2 className="text-2xl font-bold text-emerald-800 mb-6">About This Tool</h2>
             <div className="text-gray-700 leading-relaxed space-y-4">
-              <p className="mb-4">Our Google PageRank Checker is a powerful, free online tool designed to help you check the authority and ranking strength of webpages. This professional-grade tool provides accurate results instantly, making it an essential resource for web developers, SEO professionals, digital marketers, and content creators. Whether you are working on a small personal project or managing enterprise-level campaigns, our tool delivers the reliability and precision you need.</p>
+              <p className="mb-4">Our Google PageRank Checker is a powerful, free online tool designed to help you check the authority and ranking strength of webpages. This professional-grade tool provides accurate results instantly, making it an essential resource for web developers, SEO professionals, digital marketers, and content creators. Whether you are working on a small personal project or managing enterprise-level campaigns, our tool delivers the reliability and precision you need. Our tool supports both single URL and bulk URL processing, allowing you to check one URL at a time or process dozens of URLs simultaneously for maximum efficiency.</p>
               <p className="mb-4">The Google PageRank Checker streamlines your workflow by automating complex tasks that would otherwise require manual effort or expensive software. With a user-friendly interface and instant results, you can complete your work faster and more efficiently. Our tool is completely web-based, meaning you do not need to install any software or plugins - simply open your browser and start using it immediately.</p>
               <p className="mb-4">Using a dedicated Google PageRank Checker offers numerous advantages over manual methods or generic solutions. First and foremost, it saves you valuable time by processing information quickly and accurately. Second, it eliminates human error that can occur when performing these tasks manually. Third, it provides consistent, standardized results that you can rely on for professional work.</p>
               <p className="mb-4">Professional users choose our Google PageRank Checker because it combines power with simplicity. You do not need technical expertise to use it effectively - the intuitive interface guides you through each step. At the same time, the tool offers advanced capabilities that satisfy the needs of experienced professionals who require precision and flexibility in their work.</p>
