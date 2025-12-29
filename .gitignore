@@ -4,3 +4,12 @@ node_modules/
 *.zip
 .DS_Store
 .vercel
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Google Service Account (Private Keys)
+service-account.json
+failed-urls.txt
