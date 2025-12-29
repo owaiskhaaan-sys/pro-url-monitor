@@ -20,6 +20,7 @@ export async function getServerSideProps({ res }) {
     'internal-linking-assistant',
     'content-readability-optimizer',
     'google-index-checker',
+    'ai-search-ranking-checker',
     
     // HTTP & Network Tools
     'http-status-checker',

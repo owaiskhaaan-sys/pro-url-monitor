@@ -418,27 +418,37 @@ export default function AISearchRankingChecker() {
               <p>Our tool helps you track rankings across five major AI search platforms:</p>
               
               <div className="bg-gray-50 p-4 rounded-lg">
-                <h4 className="font-semibold text-lg text-gray-800 mb-2">🤖 ChatGPT (OpenAI)</h4>
+                <h4 className="font-semibold text-lg text-gray-800 mb-2">
+                  🤖 <a href="https://chat.openai.com/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 hover:underline">ChatGPT (OpenAI)</a>
+                </h4>
                 <p>The world's most popular AI chatbot with over 200 million users. ChatGPT can browse the web and cite sources in its responses. It's widely used for research, problem-solving, and information discovery.</p>
               </div>
 
               <div className="bg-gray-50 p-4 rounded-lg">
-                <h4 className="font-semibold text-lg text-gray-800 mb-2">🔍 Perplexity AI</h4>
+                <h4 className="font-semibold text-lg text-gray-800 mb-2">
+                  🔍 <a href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 hover:underline">Perplexity AI</a>
+                </h4>
                 <p>Designed specifically as an AI search engine, Perplexity excels at providing sourced answers with clear citations. It's particularly popular among researchers and professionals seeking verified information.</p>
               </div>
 
               <div className="bg-gray-50 p-4 rounded-lg">
-                <h4 className="font-semibold text-lg text-gray-800 mb-2">✨ Google Gemini</h4>
+                <h4 className="font-semibold text-lg text-gray-800 mb-2">
+                  ✨ <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 hover:underline">Google Gemini</a>
+                </h4>
                 <p>Google's advanced AI model with deep integration into search. Gemini represents Google's vision for the future of search and is becoming increasingly prominent in search results.</p>
               </div>
 
               <div className="bg-gray-50 p-4 rounded-lg">
-                <h4 className="font-semibold text-lg text-gray-800 mb-2">💬 Bing Copilot (Microsoft)</h4>
+                <h4 className="font-semibold text-lg text-gray-800 mb-2">
+                  💬 <a href="https://www.bing.com/chat" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 hover:underline">Bing Copilot (Microsoft)</a>
+                </h4>
                 <p>Microsoft's AI-powered search assistant integrated into Bing. With Microsoft's investment in OpenAI, Copilot offers powerful conversational search capabilities and citation features.</p>
               </div>
 
               <div className="bg-gray-50 p-4 rounded-lg">
-                <h4 className="font-semibold text-lg text-gray-800 mb-2">🧠 Claude (Anthropic)</h4>
+                <h4 className="font-semibold text-lg text-gray-800 mb-2">
+                  🧠 <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 hover:underline">Claude (Anthropic)</a>
+                </h4>
                 <p>Known for providing thoughtful, nuanced responses with strong reasoning capabilities. Claude is increasingly used for research and analysis, making it valuable for B2B and professional content.</p>
               </div>
             </div>
@@ -477,7 +487,7 @@ export default function AISearchRankingChecker() {
 
             <h4 className="text-xl font-semibold text-emerald-700 mt-6 mb-3">1. Create Comprehensive, Authoritative Content</h4>
             <ul className="list-disc pl-6 space-y-2">
-              <li><strong>Depth Over Breadth:</strong> AI platforms favor detailed, comprehensive content that thoroughly covers topics. Aim for 2000+ words on pillar topics.</li>
+              <li><strong>Depth Over Breadth:</strong> AI platforms favor detailed, comprehensive content that thoroughly covers topics. Aim for 2000+ words on pillar topics. Check your content with our <a href="/tools/word-counter" className="text-emerald-600 hover:underline">Word Counter</a>.</li>
               <li><strong>Original Research:</strong> Include unique data, case studies, surveys, or experiments. AI platforms love citing original sources.</li>
               <li><strong>Expert Authorship:</strong> Clearly display author credentials and expertise. E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) matters even more for AI.</li>
               <li><strong>Up-to-Date Information:</strong> Regularly update content with current information. AI platforms prefer recent, relevant data.</li>
@@ -486,7 +496,7 @@ export default function AISearchRankingChecker() {
 
             <h4 className="text-xl font-semibold text-emerald-700 mt-6 mb-3">2. Optimize Content Structure for AI</h4>
             <ul className="list-disc pl-6 space-y-2">
-              <li><strong>Use Descriptive Headings:</strong> Clear H2 and H3 headings help AI understand content structure and extract relevant sections.</li>
+              <li><strong>Use Descriptive Headings:</strong> Clear H2 and H3 headings help AI understand content structure and extract relevant sections. Analyze your heading structure with our <a href="/tools/heading-analyzer" className="text-emerald-600 hover:underline">Heading Analyzer</a>.</li>
               <li><strong>Bullet Points and Lists:</strong> AI platforms love structured information. Use lists to present key points clearly.</li>
               <li><strong>Short Paragraphs:</strong> Keep paragraphs concise (3-5 sentences) for better readability and extraction.</li>
               <li><strong>Definition Boxes:</strong> Use callout boxes or special formatting for definitions and key concepts.</li>
@@ -503,11 +513,11 @@ export default function AISearchRankingChecker() {
 
             <h4 className="text-xl font-semibold text-emerald-700 mt-6 mb-3">4. Technical Optimization</h4>
             <ul className="list-disc pl-6 space-y-2">
-              <li><strong>Schema Markup:</strong> Implement structured data (Article, HowTo, FAQ schemas) to help AI understand content context.</li>
-              <li><strong>Clean HTML:</strong> Well-structured, semantic HTML makes content easier for AI to parse and extract.</li>
+              <li><strong>Schema Markup:</strong> Implement structured data (Article, HowTo, FAQ schemas) to help AI understand content context. Use our <a href="/tools/schema-generator" className="text-emerald-600 hover:underline">Schema Generator</a> and <a href="/tools/faq-schema-generator" className="text-emerald-600 hover:underline">FAQ Schema Generator</a> tools.</li>
+              <li><strong>Clean HTML:</strong> Well-structured, semantic HTML makes content easier for AI to parse and extract. Try our <a href="/tools/html-beautifier-minifier" className="text-emerald-600 hover:underline">HTML Beautifier</a> tool.</li>
               <li><strong>Fast Loading:</strong> Page speed affects crawlability and user experience, indirectly impacting AI visibility.</li>
               <li><strong>Mobile Optimization:</strong> Ensure content is accessible and readable across all devices.</li>
-              <li><strong>XML Sitemaps:</strong> Help AI crawlers discover and index your content efficiently.</li>
+              <li><strong>XML Sitemaps:</strong> Help AI crawlers discover and index your content efficiently. Generate one with our <a href="/tools/xml-html-sitemap-generator" className="text-emerald-600 hover:underline">Sitemap Generator</a>.</li>
             </ul>
 
             <h4 className="text-xl font-semibold text-emerald-700 mt-6 mb-3">5. Focus on Factual Accuracy</h4>
@@ -595,6 +605,35 @@ export default function AISearchRankingChecker() {
             <p className="font-semibold text-emerald-800 mt-4">
               Remember: AI search is not a passing trend—it's the future of information discovery. Start optimizing today to stay ahead of competitors and secure your position in the AI-powered search landscape.
             </p>
+
+            <h3 className="text-2xl font-bold text-emerald-800 mt-8 mb-4">Related SEO Tools</h3>
+            <p className="mb-4">Enhance your SEO strategy with our other powerful tools:</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <a href="/tools/seo-audit" className="block p-4 bg-white border border-gray-200 rounded-lg hover:border-emerald-500 hover:shadow-md transition">
+                <h4 className="font-semibold text-emerald-700 mb-2">SEO Audit Tool</h4>
+                <p className="text-sm text-gray-600">Complete website SEO analysis with 18+ checks</p>
+              </a>
+              <a href="/tools/keyword-density-checker" className="block p-4 bg-white border border-gray-200 rounded-lg hover:border-emerald-500 hover:shadow-md transition">
+                <h4 className="font-semibold text-emerald-700 mb-2">Keyword Density Checker</h4>
+                <p className="text-sm text-gray-600">Analyze keyword frequency and optimize content</p>
+              </a>
+              <a href="/tools/meta-generator" className="block p-4 bg-white border border-gray-200 rounded-lg hover:border-emerald-500 hover:shadow-md transition">
+                <h4 className="font-semibold text-emerald-700 mb-2">Meta Tag Generator</h4>
+                <p className="text-sm text-gray-600">Generate SEO-friendly meta tags</p>
+              </a>
+              <a href="/tools/google-index-checker" className="block p-4 bg-white border border-gray-200 rounded-lg hover:border-emerald-500 hover:shadow-md transition">
+                <h4 className="font-semibold text-emerald-700 mb-2">Google Index Checker</h4>
+                <p className="text-sm text-gray-600">Check if your pages are indexed by Google</p>
+              </a>
+              <a href="/tools/semantic-keyword-finder" className="block p-4 bg-white border border-gray-200 rounded-lg hover:border-emerald-500 hover:shadow-md transition">
+                <h4 className="font-semibold text-emerald-700 mb-2">Semantic Keyword Finder</h4>
+                <p className="text-sm text-gray-600">Find related keywords for better content</p>
+              </a>
+              <a href="/tools/content-readability-optimizer" className="block p-4 bg-white border border-gray-200 rounded-lg hover:border-emerald-500 hover:shadow-md transition">
+                <h4 className="font-semibold text-emerald-700 mb-2">Content Readability Optimizer</h4>
+                <p className="text-sm text-gray-600">Improve content readability and engagement</p>
+              </a>
+            </div>
           </div>
         </div>
       </section>

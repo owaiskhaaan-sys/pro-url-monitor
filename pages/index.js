@@ -24,6 +24,7 @@ export default function Home() {
     { title: 'Internal Linking Assistant', href: '/tools/internal-linking-assistant', desc: 'Optimize internal links', category: 'SEO' },
     { title: 'Content Readability Optimizer', href: '/tools/content-readability-optimizer', desc: 'Improve readability', category: 'SEO' },
     { title: 'Google Index Checker', href: '/tools/google-index-checker', desc: 'Check Google indexing', category: 'SEO' },
+    { title: 'AI Search Ranking Checker', href: '/tools/ai-search-ranking-checker', desc: 'Track rankings in ChatGPT, Perplexity, Gemini', category: 'SEO' },
     
     // HTTP & Network Tools
     { title: 'HTTP Status Checker', href: '/tools/http-status-checker', desc: 'Check 200, 301, 404, 500 codes', category: 'Network' },

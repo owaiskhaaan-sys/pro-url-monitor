@@ -87,6 +87,7 @@ export default function Header() {
     { title: 'Content Readability Optimizer', href: '/tools/content-readability-optimizer' },
     { title: 'Semantic Keyword Finder', href: '/tools/semantic-keyword-finder' },
     { title: 'Internal Linking Assistant', href: '/tools/internal-linking-assistant' },
+    { title: 'AI Search Ranking Checker', href: '/tools/ai-search-ranking-checker' },
     { title: 'DNS Records Checker', href: '/tools/dns-records-checker' },
     { title: 'DNS Report Checker', href: '/tools/dns-report-checker' },
     { title: 'DNS Propagation Checker', href: '/tools/dns-propagation-checker' },
