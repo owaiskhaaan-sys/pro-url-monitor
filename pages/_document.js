@@ -28,6 +28,9 @@ export default function Document() {
         {/* Google Search Console Verification */}
         <meta name="google-site-verification" content="2tgob67uTDkdiRiOs0DXG0wsgNQhVAcbhkhVMfqWmec" />
         
+        {/* Bing Webmaster Tools Verification */}
+        <meta name="msvalidate.01" content="316058EE0783F93821FCFF3C2D97AB81" />
+        
         {/* Cloudflare Turnstile */}
         <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
       </Head>
