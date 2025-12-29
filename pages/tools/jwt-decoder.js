@@ -144,10 +144,11 @@ export default function JWTDecoder() {
   };
 
   return (
-    <Layout
-      title="JWT Decoder - Decode JSON Web Tokens Online"
-      description="Free online JWT decoder. Decode and analyze JSON Web Tokens (JWT) to view header, payload, and signature. Perfect for debugging authentication tokens."
-    >
+    <Layout>
+      <Head>
+        <title>JWT Decoder - Decode JSON Web Tokens Online</title>
+        <meta name="description" content="Decode and verify JSON Web Tokens (JWT) online. Free JWT decoder tool to inspect token headers, payloads, and signatures instantly." />
+      </Head>
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}

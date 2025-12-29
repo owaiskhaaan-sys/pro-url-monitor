@@ -195,10 +195,12 @@ export default function SHA256Generator() {
   };
 
   return (
-    <Layout
-      title="SHA-256 Hash Generator - Create SHA256 Hashes Online"
-      description="Free online SHA-256 hash generator. Create secure SHA256 hashes from text for cryptographic applications, digital signatures, and data integrity verification."
-    >
+    <Layout>
+      <Head>
+        <title>SHA256 Hash Generator - Generate SHA256 Checksums</title>
+        <meta name="description" content="Generate SHA256 hash checksums for secure encryption. Free SHA256 generator tool to create cryptographic hashes for passwords, files, and data verification." />
+      </Head>
+      
       <div className="min-h-screen bg-gradient-to-br from-cyan-50 to-blue-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}

@@ -85,10 +85,11 @@ export default function TextReverser() {
   const outputStats = getStats(output);
 
   return (
-    <Layout
-      title="Text Reverser - Reverse Text & Words Online Free"
-      description="Free online text reverser tool. Reverse entire text, reverse words, flip text upside down, and more. Fast and easy text manipulation."
-    >
+    <Layout>
+      <Head>
+        <title>Text Reverser - Reverse Words and Letters Online</title>
+        <meta name="description" content="Reverse text, words, or letters instantly. Free online text reverser tool to flip text backwards, create mirror text, and reverse strings." />
+      </Head>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-cyan-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}

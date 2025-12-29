@@ -255,10 +255,11 @@ if __name__ == "__main__":
   };
 
   return (
-    <Layout
-      title="Python Formatter - Format Python Code Online with PEP 8 Standards"
-      description="Free online Python formatter and beautifier. Format Python code following PEP 8 standards with proper indentation. Perfect for Python developers and data scientists."
-    >
+    <Layout>
+      <Head>
+        <title>Python Formatter - Format Python Code Online</title>
+        <meta name="description" content="Format Python code according to PEP 8 standards. Free online Python formatter and beautifier tool to clean up code and fix indentation." />
+      </Head>
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-teal-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}

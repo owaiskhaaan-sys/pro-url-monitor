@@ -270,10 +270,11 @@ export default function XMLBeautifierValidator() {
   };
 
   return (
-    <Layout
-      title="XML Beautifier & Validator - Format, Minify & Validate XML Online"
-      description="Free online XML beautifier, minifier, and validator. Format XML with proper indentation, minify for production, validate well-formedness, and identify errors instantly."
-    >
+    <Layout>
+      <Head>
+        <title>XML Beautifier & Validator - Format XML Online</title>
+        <meta name="description" content="Beautify, format, and validate XML code online. Free XML beautifier tool to format minified XML, check syntax errors instantly." />
+      </Head>
       <div className="min-h-screen bg-gradient-to-br from-orange-50 to-red-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}

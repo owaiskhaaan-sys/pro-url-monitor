@@ -98,10 +98,11 @@ export default function URLEncoderDecoder() {
   };
 
   return (
-    <Layout
-      title="URL Encoder/Decoder - Encode & Decode URLs Online"
-      description="Free online URL encoder and decoder. Convert URLs and text to percent-encoded format or decode encoded URLs. Perfect for web development and API work."
-    >
+    <Layout>
+      <Head>
+        <title>URL Encoder & Decoder - Encode/Decode URLs Online</title>
+        <meta name="description" content="Encode and decode URLs online. Free URL encoder/decoder tool to convert special characters, spaces, and symbols for web-safe URLs." />
+      </Head>
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}

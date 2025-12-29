@@ -236,10 +236,11 @@ ORDER BY total_orders DESC;`,
   };
 
   return (
-    <Layout
-      title="Code Syntax Highlighter - Add Syntax Highlighting to Code Blocks"
-      description="Free online code syntax highlighter. Add beautiful syntax highlighting to your code snippets for blogs, documentation, and websites. Supports JavaScript, Python, HTML, CSS, SQL."
-    >
+    <Layout>
+      <Head>
+        <title>Code Syntax Highlighter - Highlight Code Online</title>
+        <meta name="description" content="Highlight code syntax for multiple programming languages. Free online syntax highlighter supporting Python, JavaScript, PHP, HTML, CSS." />
+      </Head>
       <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-orange-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}

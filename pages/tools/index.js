@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Head from 'next/head';
 import Layout from '../../components/Layout';
 
 export default function ToolsIndex() {
@@ -30,6 +31,10 @@ export default function ToolsIndex() {
 
   return (
     <Layout>
+      <Head>
+        <title>SEO Tools - Free Online Tools for Webmasters</title>
+        <meta name="description" content="Access 100+ free SEO tools for website optimization. Check URLs, analyze domains, generate meta tags, and improve your website performance." />
+      </Head>
       <section className="max-w-6xl mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold text-emerald-800 mb-2">All Tools</h1>
         <p className="text-gray-600 mb-12">Complete suite of domain, link, and SEO monitoring tools. Most tools run directly in your browser.</p>

@@ -119,10 +119,11 @@ export default function Base64EncoderDecoder() {
   };
 
   return (
-    <Layout
-      title="Base64 Encoder/Decoder - Convert Text to Base64 Online"
-      description="Free online Base64 encoder and decoder. Convert text to Base64 encoding or decode Base64 strings back to text. Supports UTF-8, Unicode, and special characters."
-    >
+    <Layout>
+      <Head>
+        <title>Base64 Encoder & Decoder - Encode/Decode Online</title>
+        <meta name="description" content="Encode and decode Base64 strings online. Free Base64 encoder/decoder tool for text, images, and files. Convert to/from Base64." />
+      </Head>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}

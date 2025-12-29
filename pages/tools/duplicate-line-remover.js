@@ -144,10 +144,11 @@ banana`);
   const outputStats = output ? getStats(output) : null;
 
   return (
-    <Layout
-      title="Duplicate Line Remover - Remove Duplicate Lines Online"
-      description="Free duplicate line remover tool. Remove duplicate lines from text, keep unique lines, remove empty lines. Fast and easy text cleaning."
-    >
+    <Layout>
+      <Head>
+        <title>Duplicate Line Remover - Remove Duplicate Text</title>
+        <meta name="description" content="Remove duplicate lines from text instantly. Free duplicate line remover tool to clean text, eliminate repeated lines, and organize content." />
+      </Head>
       <div className="min-h-screen bg-gradient-to-br from-red-50 to-rose-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}

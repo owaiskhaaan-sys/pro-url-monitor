@@ -241,10 +241,11 @@ export default function PHPBeautifier() {
   };
 
   return (
-    <Layout
-      title="PHP Beautifier & Formatter - Format PHP Code Online"
-      description="Free online PHP beautifier and formatter. Format PHP code with PSR standards, proper indentation, and minify for production. Perfect for PHP developers."
-    >
+    <Layout>
+      <Head>
+        <title>PHP Beautifier - Format PHP Code Online Free</title>
+        <meta name="description" content="Beautify and format PHP code online. Free PHP formatter tool to clean up code, add proper indentation, and improve readability." />
+      </Head>
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}

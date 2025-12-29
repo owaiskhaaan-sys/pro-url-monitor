@@ -191,10 +191,11 @@ export default function SHA512Generator() {
   ];
 
   return (
-    <Layout
-      title="SHA-512 Hash Generator - Free Online SHA512 Tool"
-      description="Free online SHA-512 hash generator. Create secure 512-bit cryptographic hashes for passwords, files, and data integrity. Supports hex and base64 output formats."
-    >
+    <Layout>
+      <Head>
+        <title>SHA512 Hash Generator - Generate SHA512 Checksums</title>
+        <meta name="description" content="Generate SHA512 hash checksums for maximum security. Free SHA512 generator tool to create strong cryptographic hashes for sensitive data." />
+      </Head>
       <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}

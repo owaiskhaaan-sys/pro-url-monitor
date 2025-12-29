@@ -179,10 +179,11 @@ export default function BinaryConverter() {
   };
 
   return (
-    <Layout
-      title="Binary Encoder/Decoder - Text to Binary Converter"
-      description="Free online binary converter. Convert text to binary and binary to text. Supports UTF-8, ASCII, and Unicode encoding. Perfect for programming and data analysis."
-    >
+    <Layout>
+      <Head>
+        <title>Binary Converter - Convert Binary to Decimal & Hex</title>
+        <meta name="description" content="Convert binary numbers to decimal, hexadecimal, and octal. Free binary converter tool for number system conversions and binary math." />
+      </Head>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}

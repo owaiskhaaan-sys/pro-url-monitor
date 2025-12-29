@@ -90,10 +90,11 @@ export default function TextToSlugGenerator() {
   };
 
   return (
-    <Layout
-      title="Text to Slug Generator - Create URL Friendly Slugs"
-      description="Free online slug generator tool. Convert text to URL-friendly slugs for SEO, WordPress, GitHub, and more. Fast and customizable slug creation."
-    >
+    <Layout>
+      <Head>
+        <title>Text to Slug Converter - Create SEO-Friendly URLs</title>
+        <meta name="description" content="Convert text to SEO-friendly URL slugs instantly. Remove special characters, convert spaces to hyphens, and create clean, readable URLs." />
+      </Head>
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}

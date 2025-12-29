@@ -116,10 +116,11 @@ export default function ROT13Cipher() {
   };
 
   return (
-    <Layout
-      title="ROT13 & Caesar Cipher - Free Online Encoder/Decoder"
-      description="Free online ROT13 and Caesar cipher encoder/decoder. Encode and decode messages with customizable shift values. Includes brute force decoder for cryptanalysis."
-    >
+    <Layout>
+      <Head>
+        <title>ROT13 Cipher - Encrypt/Decrypt Text with ROT13</title>
+        <meta name="description" content="Encrypt and decrypt text using ROT13 cipher. Free ROT13 encoder/decoder tool for simple text obfuscation. Apply Caesar cipher rotation." />
+      </Head>
       <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}

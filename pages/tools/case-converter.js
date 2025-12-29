@@ -79,10 +79,11 @@ export default function CaseConverter() {
   const outputStats = getStats(output);
 
   return (
-    <Layout
-      title="Case Converter - Change Text Case Online Free"
-      description="Free online case converter tool. Convert text to uppercase, lowercase, title case, sentence case, and more. Fast and easy text transformation."
-    >
+    <Layout>
+      <Head>
+        <title>Case Converter - Change Text Case Online Free</title>
+        <meta name="description" content="Convert text to uppercase, lowercase, title case, sentence case, and more. Free online case converter tool for text formatting instantly." />
+      </Head>
       <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}

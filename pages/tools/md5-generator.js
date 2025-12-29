@@ -243,10 +243,11 @@ export default function MD5Generator() {
   };
 
   return (
-    <Layout
-      title="MD5 Hash Generator - Create MD5 Hashes Online"
-      description="Free online MD5 hash generator. Create MD5 hashes from text for checksums, data integrity verification, and password hashing. Supports hex and base64 output."
-    >
+    <Layout>
+      <Head>
+        <title>MD5 Hash Generator - Generate MD5 Checksums</title>
+        <meta name="description" content="Generate MD5 hash checksums for text and files. Free MD5 generator tool to create cryptographic hashes for password encryption and verification." />
+      </Head>
       <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}

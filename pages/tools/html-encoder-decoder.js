@@ -155,10 +155,11 @@ export default function HTMLEncoderDecoder() {
   };
 
   return (
-    <Layout
-      title="HTML Encoder/Decoder - Encode & Decode HTML Entities Online"
-      description="Free online HTML encoder and decoder. Convert special characters to HTML entities or decode HTML entities back to text. Prevent XSS attacks and display HTML safely."
-    >
+    <Layout>
+      <Head>
+        <title>HTML Encoder & Decoder - Convert HTML Entities</title>
+        <meta name="description" content="Encode and decode HTML entities online. Free HTML encoder/decoder to convert special characters, prevent XSS attacks display HTML safely." />
+      </Head>
       <div className="min-h-screen bg-gradient-to-br from-orange-50 to-red-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}

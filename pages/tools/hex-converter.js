@@ -155,10 +155,11 @@ export default function HexConverter() {
   };
 
   return (
-    <Layout
-      title="Hex Encoder/Decoder - Text to Hexadecimal Converter"
-      description="Free online hexadecimal converter. Convert text to hex and hex to text. Supports multiple output formats. Perfect for programming, debugging, and data analysis."
-    >
+    <Layout>
+      <Head>
+        <title>Hex Converter - Convert Hexadecimal to Decimal</title>
+        <meta name="description" content="Convert hexadecimal numbers to decimal, binary, and octal. Free hex converter tool for number system conversions and color codes." />
+      </Head>
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-teal-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}

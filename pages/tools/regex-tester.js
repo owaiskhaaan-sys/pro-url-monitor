@@ -165,10 +165,11 @@ export default function RegexTester() {
   };
 
   return (
-    <Layout
-      title="Regex Tester - Test Regular Expressions Online"
-      description="Free online regex tester and debugger. Test regular expressions with real-time highlighting, match details, and pattern explanations. Supports JavaScript regex syntax."
-    >
+    <Layout>
+      <Head>
+        <title>Regex Tester - Test Regular Expressions Online</title>
+        <meta name="description" content="Test and debug regular expressions online. Free regex tester with real-time matching, explanations, and support for multiple languages." />
+      </Head>
       <div className="min-h-screen bg-gradient-to-br from-red-50 to-pink-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}

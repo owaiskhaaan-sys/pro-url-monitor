@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import Layout from '../components/Layout';
 import CloudflareTurnstile from '../components/CloudflareTurnstile';
 
@@ -29,6 +30,11 @@ export default function Contact() {
 
   return (
     <Layout>
+      <Head>
+        <title>Contact Us - Pro URL Monitor Support</title>
+        <meta name="description" content="Contact Pro URL Monitor for support, questions, or feedback. Get help with SEO tools, website monitoring, and URL checking. We reply within 24 hours." />
+      </Head>
+      
       <section className="max-w-4xl mx-auto px-4 py-16">
         <p className="text-sm uppercase tracking-wide text-emerald-600 font-semibold mb-2">Contact</p>
         <h1 className="text-4xl font-bold text-emerald-800 mb-3">Contact ProURLMonitor</h1>

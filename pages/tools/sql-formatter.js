@@ -259,10 +259,11 @@ export default function SQLFormatter() {
   };
 
   return (
-    <Layout
-      title="SQL Formatter & Beautifier - Format SQL Queries Online"
-      description="Free online SQL formatter and beautifier. Format SQL queries with proper indentation, capitalize keywords, and minify for production. Supports MySQL, PostgreSQL, SQL Server."
-    >
+    <Layout>
+      <Head>
+        <title>SQL Formatter - Format SQL Queries Online Free</title>
+        <meta name="description" content="Format and beautify SQL queries instantly. Free SQL formatter tool to indent SQL code, improve readability, and standardize query formatting for databases." />
+      </Head>
       <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}

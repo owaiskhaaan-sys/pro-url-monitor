@@ -182,10 +182,11 @@ export default function JSONBeautifierValidator() {
   };
 
   return (
-    <Layout
-      title="JSON Beautifier & Validator - Format, Minify & Validate JSON Online"
-      description="Free online JSON beautifier, minifier, and validator. Format JSON with proper indentation, minify for production, validate syntax, and identify errors instantly."
-    >
+    <Layout>
+      <Head>
+        <title>JSON Beautifier & Validator - Format JSON Online</title>
+        <meta name="description" content="Beautify, format, and validate JSON data online. Free JSON beautifier tool to format minified JSON, check syntax errors instantly." />
+      </Head>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}

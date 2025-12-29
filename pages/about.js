@@ -1,9 +1,14 @@
 import Link from 'next/link';
+import Head from 'next/head';
 import Layout from '../components/Layout';
 
 export default function About() {
   return (
     <Layout>
+      <Head>
+        <title>About Us - Pro URL Monitor Team & Mission</title>
+        <meta name="description" content="Learn about Pro URL Monitor. We provide free SEO tools, website monitoring, and URL checking services to help businesses improve online presence." />
+      </Head>
       <section className="max-w-6xl mx-auto px-4 py-16">
         {/* Header */}
         <div className="mb-16">
