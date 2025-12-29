@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import Layout from '../../components/Layout';
 
 export default function SubmitTool() {
@@ -29,6 +30,10 @@ export default function SubmitTool() {
 
   return (
     <Layout>
+      <Head>
+        <title>Submit URL - Add Your Website to Our Directory</title>
+        <meta name="description" content="Submit your website URL to get indexed faster. Free URL submission tool to add your website to search engines and directories for better SEO." />
+      </Head>
       <div className="max-w-3xl mx-auto px-4 py-16">
         <h1 className="text-2xl font-bold mb-4">Submit URL</h1>
         <p className="text-gray-600 mb-6">Enter your URL here to submit it for indexing</p>

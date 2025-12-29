@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import Layout from '../../components/Layout';
 
 export default function DomainIPHistoryChecker() {
@@ -28,6 +29,10 @@ export default function DomainIPHistoryChecker() {
 
   return (
     <Layout>
+      <Head>
+        <title>Domain IP History Checker - Track IP Changes</title>
+        <meta name="description" content="Check domain IP history and track IP address changes over time. Analyze DNS history, hosting changes, and server migrations for any domain." />
+      </Head>
       <section className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-emerald-800 mb-6">Domain IP History Checker</h1>
         <p className="text-gray-600 mb-8">View the IP address history and current IP of any domain.</p>

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import Layout from '../../components/Layout';
 
 export default function BacklinksMaker() {
@@ -29,6 +30,10 @@ export default function BacklinksMaker() {
 
   return (
     <Layout>
+      <Head>
+        <title>Backlinks Maker - Free Instant Backlink Generator</title>
+        <meta name="description" content="Create instant backlinks to boost your SEO rankings. Free backlink maker tool to generate quality backlinks automatically. Submit to 1000+ platforms." />
+      </Head>
       <section className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-emerald-800 mb-6">Backlinks Maker</h1>
         <p className="text-gray-600 mb-8">Generate HTML and Markdown backlink code for easy sharing and embedding.</p>

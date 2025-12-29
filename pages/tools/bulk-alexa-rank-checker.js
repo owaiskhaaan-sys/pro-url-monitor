@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import Layout from '../../components/Layout';
 
 export default function BulkAlexaRankChecker() {
@@ -27,6 +28,10 @@ export default function BulkAlexaRankChecker() {
 
   return (
     <Layout>
+      <Head>
+        <title>Bulk Alexa Rank Checker - Check Multiple Ranks</title>
+        <meta name="description" content="Check Alexa rank for multiple websites at once. Free bulk Alexa ranking checker to analyze website traffic and popularity. Compare performance." />
+      </Head>
       <section className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-emerald-800 mb-6">Bulk Alexa Rank Checker</h1>
         <p className="text-gray-600 mb-8">Check Alexa ranking for multiple domains at once.</p>

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import Layout from '../../components/Layout';
 
 export default function ReverseWhoisChecker() {
@@ -29,6 +30,10 @@ export default function ReverseWhoisChecker() {
 
   return (
     <Layout>
+      <Head>
+        <title>Reverse WHOIS Checker - Find Domains by Owner</title>
+        <meta name="description" content="Search domains by owner name or email using reverse WHOIS lookup. Find all domains registered under the same owner. Track domain portfolios." />
+      </Head>
       <section className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-emerald-800 mb-6">Reverse WHOIS Checker</h1>
         <p className="text-gray-600 mb-8">Find all domains registered by a specific person or email address.</p>

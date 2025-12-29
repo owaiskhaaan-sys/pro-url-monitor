@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import Layout from '../../components/Layout';
 import VerifiedButton from '../../components/VerifiedButton';
 import RelatedTools from '../../components/RelatedTools';
@@ -92,10 +93,12 @@ export default function DomainAuthorityChecker() {
   };
 
   return (
-    <Layout
-      title="Domain Authority Checker - Check DA PA Free Online"
-      description="Free bulk domain authority checker. Check domain authority (DA), page authority (PA), and page rank for multiple URLs instantly using OpenPageRank API."
-    >
+    <Layout>
+      <Head>
+        <title>Domain Authority Checker - Check DA/PA Free</title>
+        <meta name="description" content="Check domain authority (DA) and page authority (PA) scores instantly. Free bulk domain authority checker using OpenPageRank API. Analyze website credibility and SEO strength." />
+      </Head>
+      
       <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-teal-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}

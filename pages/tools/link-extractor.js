@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import Layout from '../../components/Layout';
 
 export default function LinkExtractor() {
@@ -34,6 +35,10 @@ export default function LinkExtractor() {
 
   return (
     <Layout>
+      <Head>
+        <title>Link Extractor - Extract All Links from Webpage</title>
+        <meta name="description" content="Extract all links from any webpage instantly. Get internal links, external links, and backlinks in one click. Free URL link extractor tool for SEO." />
+      </Head>
       <section className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-emerald-800 mb-6">Link Extractor</h1>
         <p className="text-gray-600 mb-8">Extract all links from text, HTML, or web content quickly and easily.</p>

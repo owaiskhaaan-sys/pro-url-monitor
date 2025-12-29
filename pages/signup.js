@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import Head from 'next/head';
 import Layout from '../components/Layout';
 import CloudflareTurnstile from '../components/CloudflareTurnstile';
 
@@ -81,6 +82,11 @@ export default function Signup() {
 
   return (
     <Layout>
+      <Head>
+        <title>Sign Up - Create Your Pro URL Monitor Account</title>
+        <meta name="description" content="Create a free Pro URL Monitor account. Get access to 100+ SEO tools, monitor website performance, check URLs, and manage your SEO campaigns. Sign up now!" />
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
       <div className="min-h-screen flex items-center justify-center px-4 py-20">
         <div className="w-full max-w-md">
           <div className="text-center mb-8">

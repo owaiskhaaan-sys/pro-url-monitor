@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import Layout from '../../components/Layout';
 
 export default function ImageCompress() {
@@ -32,6 +33,10 @@ export default function ImageCompress() {
 
   return (
     <Layout>
+      <Head>
+        <title>Image Compressor - Compress Images Online Free</title>
+        <meta name="description" content="Compress images without losing quality. Free online image compressor for JPEG, PNG, WebP. Reduce image size for faster website loading." />
+      </Head>
       <section className="max-w-3xl mx-auto px-4 py-12">
         <h1 className="text-2xl font-bold text-emerald-700 mb-3">Image Compressor</h1>
         <p className="text-gray-600 mb-4">Upload an image and compress it in your browser (JPEG output).</p>

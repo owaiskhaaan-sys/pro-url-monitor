@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import Layout from '../../components/Layout';
 
 export default function AlexaRankComparison() {
@@ -26,6 +27,10 @@ export default function AlexaRankComparison() {
 
   return (
     <Layout>
+      <Head>
+        <title>Alexa Rank Comparison - Compare Website Traffic</title>
+        <meta name="description" content="Compare Alexa rankings of multiple websites side by side. Analyze traffic comparison, rank trends, and website popularity rankings." />
+      </Head>
       <section className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-emerald-800 mb-6">Alexa Rank Comparison</h1>
         <p className="text-gray-600 mb-8">Compare Alexa rankings for multiple domains side-by-side.</p>

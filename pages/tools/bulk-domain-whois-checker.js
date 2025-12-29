@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import Layout from '../../components/Layout';
 
 export default function BulkDomainWhoisChecker() {
@@ -28,6 +29,10 @@ export default function BulkDomainWhoisChecker() {
 
   return (
     <Layout>
+      <Head>
+        <title>Bulk WHOIS Checker - Domain Information Lookup</title>
+        <meta name="description" content="Check WHOIS information for multiple domains at once. Get domain registration details, owner information, expiry dates, and registrar data instantly." />
+      </Head>
       <section className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-emerald-800 mb-6">Bulk Domain WHOIS Checker</h1>
         <p className="text-gray-600 mb-8">Retrieve WHOIS information for multiple domains in batch.</p>

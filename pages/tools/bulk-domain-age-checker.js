@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import Layout from '../../components/Layout';
 
 export default function BulkDomainAgeChecker() {
@@ -27,6 +28,10 @@ export default function BulkDomainAgeChecker() {
 
   return (
     <Layout>
+      <Head>
+        <title>Bulk Domain Age Checker - Check Multiple Domains</title>
+        <meta name="description" content="Check domain age for multiple websites instantly. Free bulk domain age checker tool to verify registration date, domain history, and website age for SEO analysis." />
+      </Head>
       <section className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-emerald-800 mb-6">Bulk Domain Age Checker</h1>
         <p className="text-gray-600 mb-8">Check the age and creation date of multiple domains at once.</p>

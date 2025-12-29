@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import Layout from '../../components/Layout';
 
 export default function LinkSearch() {
@@ -28,6 +29,10 @@ export default function LinkSearch() {
 
   return (
     <Layout>
+      <Head>
+        <title>Link Search Tool - Find Backlinks & Link Opportunities</title>
+        <meta name="description" content="Search and analyze backlinks for any website. Find link building opportunities, check competitor backlinks, and discover high-quality link sources." />
+      </Head>
       <section className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-emerald-800 mb-6">Link Search</h1>
         <p className="text-gray-600 mb-8">Find and analyze links for a specific search query or domain.</p>

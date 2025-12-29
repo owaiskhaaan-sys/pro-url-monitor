@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import Layout from '../../components/Layout';
 
 export default function GooglePageRankChecker() {
@@ -27,6 +28,10 @@ export default function GooglePageRankChecker() {
 
   return (
     <Layout>
+      <Head>
+        <title>Google PageRank Checker - Check PR Score Free</title>
+        <meta name="description" content="Check Google PageRank score for any website. Free PR checker tool to analyze website authority and Google ranking. Get accurate PageRank data." />
+      </Head>
       <section className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-emerald-800 mb-6">Google PageRank Checker</h1>
         <p className="text-gray-600 mb-8">Check the PageRank score of any webpage and analyze its link quality.</p>

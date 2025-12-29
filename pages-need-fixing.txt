@@ -1,0 +1,451 @@
+https://www.prourlmonitor.com/
+  ⚠️ Title too long (71 chars)
+  ⚠️ Description too long (236 chars)
+
+https://www.prourlmonitor.com/login
+  ❌ No meta title
+  ❌ No meta description
+  ❌ No H1 tag
+  ⚠️ Low word count (26 words, need 1000+)
+
+https://www.prourlmonitor.com/signup
+  ❌ No meta title
+  ❌ No meta description
+  ❌ No H1 tag
+  ⚠️ Low word count (27 words, need 1000+)
+
+https://www.prourlmonitor.com/app/dashboard
+  ❌ No meta title
+  ❌ No meta description
+  ❌ No H1 tag
+  ⚠️ Low word count (1 words, need 1000+)
+
+https://www.prourlmonitor.com/blog
+  ⚠️ Low word count (163 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/seo-audit
+  ⚠️ Title too long (62 chars)
+  ⚠️ Low word count (945 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/meta-generator
+  ⚠️ Title too long (78 chars)
+
+https://www.prourlmonitor.com/tools/schema-generator
+  ⚠️ Title too long (92 chars)
+
+https://www.prourlmonitor.com/tools/faq-schema-generator
+  ⚠️ Title too long (69 chars)
+
+https://www.prourlmonitor.com/tools/keyword-density-checker
+  ⚠️ Title too long (74 chars)
+
+https://www.prourlmonitor.com/tools/heading-analyzer
+  ⚠️ Title too long (74 chars)
+
+https://www.prourlmonitor.com/tools/robots-txt-generator
+  ⚠️ Title too long (70 chars)
+  ⚠️ Low word count (555 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/xml-html-sitemap-generator
+  ❌ No meta title
+  ❌ No meta description
+
+https://www.prourlmonitor.com/tools/meta-description-generator
+  ⚠️ Title too long (64 chars)
+  ⚠️ Description too long (164 chars)
+
+https://www.prourlmonitor.com/tools/seo-title-generator
+  ⚠️ Title too long (68 chars)
+  ⚠️ Description too long (161 chars)
+
+https://www.prourlmonitor.com/tools/alt-text-generator
+  ⚠️ Title too long (75 chars)
+
+https://www.prourlmonitor.com/tools/semantic-keyword-finder
+  ⚠️ Title too long (70 chars)
+
+https://www.prourlmonitor.com/tools/internal-linking-assistant
+  ⚠️ Title too long (67 chars)
+
+https://www.prourlmonitor.com/tools/content-readability-optimizer
+  ⚠️ Title too long (75 chars)
+
+https://www.prourlmonitor.com/tools/google-index-checker
+  ⚠️ Title too long (64 chars)
+
+https://www.prourlmonitor.com/tools/http-status-checker
+  ⚠️ Title too long (75 chars)
+  ⚠️ Description too short (114 chars)
+
+https://www.prourlmonitor.com/tools/ping-multiple-urls-online
+  ⚠️ Title too long (68 chars)
+
+https://www.prourlmonitor.com/tools/server-status-checker
+  ⚠️ Title too long (68 chars)
+  ⚠️ Low word count (493 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/server-port-scanner
+  ⚠️ Title too long (61 chars)
+  ⚠️ Low word count (507 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/traceroute
+  ⚠️ Title too long (70 chars)
+  ⚠️ Low word count (542 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/different-locations-ping
+  ⚠️ Title too long (69 chars)
+  ⚠️ Low word count (537 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/dns-records-checker
+  ⚠️ Title too long (66 chars)
+  ⚠️ Low word count (513 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/dns-propagation-checker
+  ⚠️ Title too long (75 chars)
+  ⚠️ Low word count (581 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/dns-report-checker
+  ⚠️ Title too long (65 chars)
+  ⚠️ Low word count (466 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/reverse-ns-checker
+  ⚠️ Title too long (63 chars)
+  ⚠️ Low word count (621 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/domain-authority-checker
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (574 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/bulk-domain-age-checker
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (21 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/bulk-domain-whois-checker
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (17 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/domain-ip-history-checker
+  ❌ No meta title
+  ❌ No meta description
+
+https://www.prourlmonitor.com/tools/reverse-ip-domain-checker
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (47 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/reverse-whois-checker
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (14 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/class-c-ip-checker
+  ⚠️ Title too long (67 chars)
+  ⚠️ Low word count (671 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/ip-location
+  ⚠️ Title too long (63 chars)
+  ⚠️ Low word count (570 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/link-extractor
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (16 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/backlinks-maker
+  ❌ No meta title
+  ❌ No meta description
+
+https://www.prourlmonitor.com/tools/link-search
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (13 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/social-media-counter
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (17 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/google-malware-checker
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (41 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/google-pagerank-checker
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (55 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/bulk-alexa-rank-checker
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (18 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/alexa-rank-comparison
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (21 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/word-counter
+  ⚠️ Description too short (103 chars)
+  ⚠️ Low word count (11 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/case-converter
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (600 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/text-cleaner
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (115 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/text-reverser
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (642 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/text-to-slug
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (581 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/find-and-replace
+  ⚠️ Title too long (62 chars)
+  ⚠️ Description too long (186 chars)
+
+https://www.prourlmonitor.com/tools/sort-text-lines
+  ⚠️ Title too long (70 chars)
+  ⚠️ Description too long (171 chars)
+
+https://www.prourlmonitor.com/tools/remove-line-breaks
+  ⚠️ Title too long (65 chars)
+  ⚠️ Description too long (209 chars)
+
+https://www.prourlmonitor.com/tools/duplicate-line-remover
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (679 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/text-diff-checker
+  ⚠️ Title too long (63 chars)
+  ⚠️ Description too long (210 chars)
+
+https://www.prourlmonitor.com/tools/character-frequency-counter
+  ⚠️ Title too long (72 chars)
+  ⚠️ Description too long (193 chars)
+
+https://www.prourlmonitor.com/tools/lorem-ipsum-generator
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (596 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/paraphraser
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (73 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/plagiarism
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (96 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/html-beautifier-minifier
+  ⚠️ Title too long (79 chars)
+  ⚠️ Description too long (161 chars)
+  ⚠️ Low word count (506 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/css-beautifier-minifier
+  ⚠️ Title too long (77 chars)
+  ⚠️ Low word count (512 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/json-beautifier-validator
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (575 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/xml-beautifier-validator
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (646 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/sql-formatter
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (538 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/php-beautifier
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (566 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/python-formatter
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (532 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/code-syntax-highlighter
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (536 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/regex-tester
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (497 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/base64-encoder-decoder
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (471 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/url-encoder-decoder
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (521 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/html-encoder-decoder
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (632 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/jwt-decoder
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (623 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/ascii-converter
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (640 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/binary-translator
+  ⚠️ Description too short (86 chars)
+  ⚠️ Low word count (913 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/rot13-cipher
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (856 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/md5-generator
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (496 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/sha256-generator
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (668 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/sha512-generator
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (783 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/hex-to-rgb
+  ⚠️ Title too long (70 chars)
+  ⚠️ Description too long (171 chars)
+  ⚠️ Low word count (950 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/rgb-to-hex
+  ⚠️ Title too long (70 chars)
+
+https://www.prourlmonitor.com/tools/hsl-to-rgb
+  ⚠️ Title too long (70 chars)
+  ⚠️ Description too long (170 chars)
+
+https://www.prourlmonitor.com/tools/rgb-to-hsl
+  ⚠️ Title too long (70 chars)
+  ⚠️ Description too long (161 chars)
+
+https://www.prourlmonitor.com/tools/cmyk-to-rgb
+  ⚠️ Title too long (72 chars)
+  ⚠️ Description too long (163 chars)
+
+https://www.prourlmonitor.com/tools/rgb-to-cmyk
+  ⚠️ Title too long (72 chars)
+  ⚠️ Description too long (161 chars)
+
+https://www.prourlmonitor.com/tools/color-palette-generator
+  ⚠️ Title too long (80 chars)
+  ⚠️ Description too long (169 chars)
+
+https://www.prourlmonitor.com/tools/color-shades-generator
+  ⚠️ Title too long (76 chars)
+
+https://www.prourlmonitor.com/tools/color-name-finder
+  ⚠️ Title too long (71 chars)
+  ⚠️ Low word count (945 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/binary-converter
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (581 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/binary-calculator
+  ⚠️ Title too long (83 chars)
+  ⚠️ Description too long (161 chars)
+
+https://www.prourlmonitor.com/tools/binary-to-decimal
+  ⚠️ Title too long (62 chars)
+  ⚠️ Description too long (184 chars)
+
+https://www.prourlmonitor.com/tools/binary-to-hex
+  ⚠️ Description too long (184 chars)
+
+https://www.prourlmonitor.com/tools/binary-to-octal
+  ⚠️ Description too long (180 chars)
+
+https://www.prourlmonitor.com/tools/decimal-to-binary
+  ⚠️ Title too long (62 chars)
+  ⚠️ Description too long (183 chars)
+
+https://www.prourlmonitor.com/tools/decimal-to-hex
+  ⚠️ Description too long (177 chars)
+  ⚠️ Low word count (996 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/hex-converter
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (537 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/hex-to-binary
+  ⚠️ Description too long (179 chars)
+
+https://www.prourlmonitor.com/tools/hex-to-decimal
+  ⚠️ Description too long (173 chars)
+
+https://www.prourlmonitor.com/tools/octal-to-binary
+  ⚠️ Description too long (181 chars)
+
+https://www.prourlmonitor.com/tools/octal-to-decimal
+  ⚠️ Title too long (61 chars)
+  ⚠️ Description too long (183 chars)
+
+https://www.prourlmonitor.com/tools/bitwise-operations
+  ⚠️ Title too long (65 chars)
+  ⚠️ Description too long (174 chars)
+  ⚠️ Low word count (942 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/twos-complement-calculator
+  ⚠️ Title too long (62 chars)
+  ⚠️ Description too long (201 chars)
+
+https://www.prourlmonitor.com/tools/image-compress
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (138 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/submit
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (10 words, need 1000+)
+
+https://www.prourlmonitor.com/tools/bulk
+  ❌ No meta title
+  ❌ No meta description
+  ⚠️ Low word count (31 words, need 1000+)
+

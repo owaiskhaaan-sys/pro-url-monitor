@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import Layout from '../../components/Layout';
 
 export default function ReverseIPDomainChecker() {
@@ -29,6 +30,10 @@ export default function ReverseIPDomainChecker() {
 
   return (
     <Layout>
+      <Head>
+        <title>Reverse IP Domain Checker - Find Websites on IP</title>
+        <meta name="description" content="Find all websites hosted on the same IP address. Reverse IP lookup tool to discover domains sharing the same server. Check IP neighbors." />
+      </Head>
       <section className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-emerald-800 mb-6">Reverse IP Domain Checker</h1>
         <p className="text-gray-600 mb-8">Find all domains hosted on a specific IP address.</p>

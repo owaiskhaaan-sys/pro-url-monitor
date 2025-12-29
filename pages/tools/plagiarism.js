@@ -1,8 +1,13 @@
+import Head from 'next/head';
 import Layout from '../../components/Layout';
 
 export default function Plagiarism() {
   return (
     <Layout>
+      <Head>
+        <title>Plagiarism Checker - Free Online Detector</title>
+        <meta name="description" content="Check plagiarism online for free. Detect copied content, find duplicate text, and ensure originality. Accurate plagiarism checker." />
+      </Head>
       <section className="max-w-3xl mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold text-emerald-700 mb-3">Plagiarism Checker (Coming Soon)</h1>
         <p className="text-gray-700 mb-6">Full plagiarism detection requires server-side indexing and external APIs. This page outlines planned capabilities and interim guidance.</p>

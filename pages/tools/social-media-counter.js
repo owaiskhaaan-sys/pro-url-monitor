@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import Layout from '../../components/Layout';
 
 export default function SocialMediaCounter() {
@@ -27,6 +28,10 @@ export default function SocialMediaCounter() {
 
   return (
     <Layout>
+      <Head>
+        <title>Social Media Share Counter - Check Social Signals</title>
+        <meta name="description" content="Count social media shares for any URL. Check Facebook likes, Twitter shares, Pinterest pins, and LinkedIn shares. Free social share counter tool." />
+      </Head>
       <section className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-emerald-800 mb-6">Social Media Counter</h1>
         <p className="text-gray-600 mb-8">Check how many times a URL has been shared on social media platforms.</p>

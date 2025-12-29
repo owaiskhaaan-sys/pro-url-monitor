@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import Head from 'next/head';
 import Layout from '../../components/Layout';
 
 export default function BulkUpload() {
@@ -89,6 +90,10 @@ export default function BulkUpload() {
 
   return (
     <Layout>
+      <Head>
+        <title>Bulk SEO Tools - Check Multiple URLs at Once</title>
+        <meta name="description" content="Access bulk SEO tools to check multiple URLs simultaneously. Batch process domain authority, WHOIS lookups, Alexa ranks, and more." />
+      </Head>
       <div className="max-w-4xl mx-auto px-4 py-16">
         <h1 className="text-2xl font-bold mb-4">Bulk Upload</h1>
         <p className="text-gray-600 mb-6">Upload a CSV or TXT file with one URL per line, or paste URLs below.</p>

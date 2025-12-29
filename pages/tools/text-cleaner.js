@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import Layout from '../../components/Layout';
 
 export default function TextCleaner() {
@@ -12,6 +13,10 @@ export default function TextCleaner() {
 
   return (
     <Layout>
+      <Head>
+        <title>Text Cleaner - Remove Extra Spaces & Format Text</title>
+        <meta name="description" content="Clean and format text by removing extra spaces, line breaks, and special characters. Free text cleaning tool to sanitize your content." />
+      </Head>
       <section className="max-w-3xl mx-auto px-4 py-12">
         <h1 className="text-2xl font-bold text-emerald-700 mb-3">Text Cleaner</h1>
         <p className="text-gray-600 mb-4">Remove extra spaces, normalize line breaks, and tidy up copy for publishing.</p>

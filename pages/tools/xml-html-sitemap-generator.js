@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import Layout from '../../components/Layout';
 
 export default function XMLHTMLSitemapGenerator() {
@@ -45,6 +46,10 @@ ${urlList.map(url => `  <url>
 
   return (
     <Layout>
+      <Head>
+        <title>Sitemap Generator - Create XML & HTML Sitemaps Free</title>
+        <meta name="description" content="Generate XML and HTML sitemaps for your website automatically. Free sitemap generator tool to create SEO-friendly sitemaps for Google, Bing, and other search engines." />
+      </Head>
       <section className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-emerald-800 mb-6">XML & HTML Sitemap Generator</h1>
         <p className="text-gray-600 mb-8">Generate XML or HTML sitemaps for your website to improve SEO.</p>
