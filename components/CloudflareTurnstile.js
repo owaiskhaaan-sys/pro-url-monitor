@@ -6,7 +6,11 @@ export default function CloudflareTurnstile({ onVerify, onError, onExpire }) {
 
   // Replace this with your actual Cloudflare Turnstile site key
   // Get it from: https://dash.cloudflare.com/?to=/:account/turnstile
-  const SITE_KEY = '0x4AAAAAACJefAMC1oY_DaBk'; // Demo key - replace with your actual key
+  // Testing key (works on all domains): 1x00000000000000000000AA
+  // Production key: 0x4AAAAAACJefAMC1oY_DaBk
+  const SITE_KEY = process.env.NODE_ENV === 'production' 
+    ? '0x4AAAAAACJefAMC1oY_DaBk' 
+    : '1x00000000000000000000AA'; // Cloudflare's test key
 
   useEffect(() => {
     let mounted = true;
