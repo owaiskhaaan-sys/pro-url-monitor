@@ -220,7 +220,7 @@ export default function ColorMixer() {
         <title>Color Mixer - Mix Two Colors Online | ProURLMonitor</title>
         <meta name="description" content="Free color mixer tool. Mix two colors with RGB or HSL blending modes. Create color gradients and find intermediate colors between any two colors." />
         <meta name="keywords" content="color mixer, blend colors, mix colors, color blending, rgb mixing, hsl mixing, color gradient, intermediate colors" />
-        <link rel="canonical" href="https://prourlmonitor.com/tools/color-mixer" />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/color-mixer" />
         
         <meta property="og:title" content="Color Mixer - Mix Two Colors Online" />
         <meta property="og:description" content="Mix two colors with RGB or HSL blending. Create beautiful gradients and find perfect intermediate colors." />

@@ -117,7 +117,7 @@ export default function RgbToHexConverter() {
         <title>RGB to HEX Converter - Convert RGB Color to HEX Online | ProURLMonitor</title>
         <meta name="description" content="Free RGB to HEX converter. Convert RGB color values to hexadecimal color codes instantly. Supports alpha channel, shorthand notation, and CSS format output." />
         <meta name="keywords" content="rgb to hex, color converter, rgb color, hex color, color code converter, css color, hex generator" />
-        <link rel="canonical" href="https://prourlmonitor.com/tools/rgb-to-hex" />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/rgb-to-hex" />
         
         <meta property="og:title" content="RGB to HEX Converter - Convert RGB Color to HEX Online" />
         <meta property="og:description" content="Free RGB to HEX converter. Convert RGB color values to hexadecimal color codes instantly. Supports alpha channel, shorthand notation, and CSS format." />

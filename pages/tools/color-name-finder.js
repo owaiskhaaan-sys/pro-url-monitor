@@ -208,7 +208,7 @@ export default function ColorNameFinder() {
         <title>Color Name Finder - Identify Color Names from HEX Codes | ProURLMonitor</title>
         <meta name="description" content="Free color name finder. Identify color names from HEX codes. Find similar colors and explore color categories. Perfect for designers and developers." />
         <meta name="keywords" content="color name finder, hex to color name, identify color, color names, web colors, css colors, color identification" />
-        <link rel="canonical" href="https://prourlmonitor.com/tools/color-name-finder" />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/color-name-finder" />
         
         <meta property="og:title" content="Color Name Finder - Identify Color Names from HEX Codes" />
         <meta property="og:description" content="Find color names from HEX codes. Discover similar colors and explore web color categories." />

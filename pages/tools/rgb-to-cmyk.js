@@ -121,7 +121,7 @@ export default function RgbToCmykConverter() {
         <title>RGB to CMYK Converter - Convert RGB Color to CMYK Online | ProURLMonitor</title>
         <meta name="description" content="Free RGB to CMYK converter. Convert RGB (Red, Green, Blue) screen colors to CMYK (Cyan, Magenta, Yellow, Black) print colors instantly. Check Total Ink Coverage." />
         <meta name="keywords" content="rgb to cmyk, color converter, rgb color, cmyk color, digital to print, color conversion, print preparation" />
-        <link rel="canonical" href="https://prourlmonitor.com/tools/rgb-to-cmyk" />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/rgb-to-cmyk" />
         
         <meta property="og:title" content="RGB to CMYK Converter - Convert RGB Color to CMYK Online" />
         <meta property="og:description" content="Free RGB to CMYK converter. Convert digital screen colors to print colors instantly with TIC warning." />

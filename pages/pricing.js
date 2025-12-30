@@ -7,7 +7,7 @@ export default function Pricing() {
       <Head>
         <title>Pricing - Coming Soon | ProURLMonitor</title>
         <meta name="description" content="ProURLMonitor pricing plans coming soon. All tools are currently free to use. Stay tuned for premium features and plans." />
-        <link rel="canonical" href="https://prourlmonitor.com/pricing" />
+        <link rel="canonical" href="https://www.prourlmonitor.com/pricing" />
       </Head>
 
       <div className="max-w-4xl mx-auto px-4 py-16 text-center">
