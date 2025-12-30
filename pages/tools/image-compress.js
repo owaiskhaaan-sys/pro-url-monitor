@@ -3,9 +3,15 @@ import Head from 'next/head';
 import Layout from '../../components/Layout';
 
 export default function ImageCompress() {
+  const [mode, setMode] = useState('single'); // 'single' or 'bulk'
   const [file, setFile] = useState(null);
   const [preview, setPreview] = useState(null);
   const [resultUrl, setResultUrl] = useState(null);
+  
+  // Bulk mode states
+  const [files, setFiles] = useState([]);
+  const [compressedFiles, setCompressedFiles] = useState([]);
+  const [processing, setProcessing] = useState(false);
 
   function handleFileChange(e) {
     const f = e.target.files[0];
@@ -13,6 +19,12 @@ export default function ImageCompress() {
     setFile(f);
     const url = URL.createObjectURL(f);
     setPreview(url);
+  }
+
+  function handleBulkFileChange(e) {
+    const selectedFiles = Array.from(e.target.files);
+    setFiles(selectedFiles);
+    setCompressedFiles([]);
   }
 
   async function compress() {
@@ -31,6 +43,59 @@ export default function ImageCompress() {
     setResultUrl(compressed);
   }
 
+  async function compressBulk() {
+    if (files.length === 0) return;
+    setProcessing(true);
+    const results = [];
+
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i];
+      const url = URL.createObjectURL(file);
+      const img = new Image();
+      img.src = url;
+      
+      try {
+        await img.decode();
+        const canvas = document.createElement('canvas');
+        const maxW = 1200;
+        const scale = Math.min(1, maxW / img.width);
+        canvas.width = Math.round(img.width * scale);
+        canvas.height = Math.round(img.height * scale);
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        const compressed = canvas.toDataURL('image/jpeg', 0.7);
+        
+        results.push({
+          name: file.name,
+          originalSize: (file.size / 1024).toFixed(2) + ' KB',
+          url: compressed,
+          compressedSize: ((compressed.length * 0.75) / 1024).toFixed(2) + ' KB'
+        });
+      } catch (error) {
+        results.push({
+          name: file.name,
+          error: 'Failed to compress'
+        });
+      }
+      
+      URL.revokeObjectURL(url);
+    }
+
+    setCompressedFiles(results);
+    setProcessing(false);
+  }
+
+  function downloadAll() {
+    compressedFiles.forEach((file, index) => {
+      if (!file.error) {
+        const link = document.createElement('a');
+        link.href = file.url;
+        link.download = `compressed-${index + 1}-${file.name.replace(/\.[^.]+$/, '.jpg')}`;
+        link.click();
+      }
+    });
+  }
+
   return (
     <Layout>
       <Head>
@@ -40,27 +105,121 @@ export default function ImageCompress() {
       </Head>
       <section className="max-w-3xl mx-auto px-4 py-12">
         <h1 className="text-2xl font-bold text-emerald-700 mb-3">Image Compressor</h1>
-        <p className="text-gray-600 mb-4">Upload an image and compress it in your browser (JPEG output).</p>
+        <p className="text-gray-600 mb-4">Compress images online - Single or Bulk mode (JPEG output).</p>
 
-        <input type="file" accept="image/*" onChange={handleFileChange} />
-        {preview && <div className="mt-4">
-          <div className="text-sm text-gray-500 mb-2">Preview</div>
-          <img src={preview} alt="preview" style={{maxWidth: '100%'}} />
-        </div>}
-
-        <div className="flex gap-2 mt-4">
-          <button onClick={compress} className="btn btn-primary">Compress</button>
-          <button onClick={() => { setFile(null); setPreview(null); setResultUrl(null); }} className="btn btn-secondary">Reset</button>
+        {/* Mode Toggle */}
+        <div className="flex gap-4 mb-6">
+          <button 
+            onClick={() => setMode('single')}
+            className={`px-6 py-2 rounded-lg font-semibold transition ${mode === 'single' ? 'bg-emerald-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
+          >
+            Single Image
+          </button>
+          <button 
+            onClick={() => setMode('bulk')}
+            className={`px-6 py-2 rounded-lg font-semibold transition ${mode === 'bulk' ? 'bg-emerald-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
+          >
+            Bulk Images
+          </button>
         </div>
 
-        {resultUrl && (
-          <div className="mt-6">
-            <div className="text-sm text-gray-500 mb-2">Compressed Result</div>
-            <img src={resultUrl} alt="result" style={{maxWidth: '100%'}} />
-            <div className="mt-2">
-              <a href={resultUrl} download="compressed.jpg" className="btn btn-primary">Download</a>
+        {/* Single Mode */}
+        {mode === 'single' && (
+          <>
+            <input type="file" accept="image/*" onChange={handleFileChange} className="mb-4" />
+            {preview && <div className="mt-4">
+              <div className="text-sm text-gray-500 mb-2">Preview</div>
+              <img src={preview} alt="preview" style={{maxWidth: '100%'}} className="rounded-lg border" />
+            </div>}
+
+            <div className="flex gap-2 mt-4">
+              <button onClick={compress} className="btn btn-primary">Compress</button>
+              <button onClick={() => { setFile(null); setPreview(null); setResultUrl(null); }} className="btn btn-secondary">Reset</button>
             </div>
-          </div>
+
+            {resultUrl && (
+              <div className="mt-6">
+                <div className="text-sm text-gray-500 mb-2">Compressed Result</div>
+                <img src={resultUrl} alt="result" style={{maxWidth: '100%'}} className="rounded-lg border" />
+                <div className="mt-2">
+                  <a href={resultUrl} download="compressed.jpg" className="btn btn-primary">Download</a>
+                </div>
+              </div>
+            )}
+          </>
+        )}
+
+        {/* Bulk Mode */}
+        {mode === 'bulk' && (
+          <>
+            <input 
+              type="file" 
+              accept="image/*" 
+              multiple 
+              onChange={handleBulkFileChange} 
+              className="mb-4"
+            />
+            
+            {files.length > 0 && (
+              <div className="mb-4 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                <p className="text-sm text-blue-800">
+                  <strong>{files.length}</strong> images selected
+                </p>
+              </div>
+            )}
+
+            <div className="flex gap-2 mt-4">
+              <button 
+                onClick={compressBulk} 
+                disabled={processing || files.length === 0}
+                className="btn btn-primary disabled:opacity-50"
+              >
+                {processing ? 'Processing...' : 'Compress All'}
+              </button>
+              <button 
+                onClick={() => { setFiles([]); setCompressedFiles([]); }} 
+                className="btn btn-secondary"
+              >
+                Reset
+              </button>
+            </div>
+
+            {compressedFiles.length > 0 && (
+              <div className="mt-6">
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="text-lg font-bold text-emerald-700">Compressed Images ({compressedFiles.length})</h3>
+                  <button onClick={downloadAll} className="btn btn-primary">Download All</button>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {compressedFiles.map((file, index) => (
+                    <div key={index} className="border rounded-lg p-4 bg-white shadow-sm">
+                      {file.error ? (
+                        <div className="text-red-600">
+                          <p className="font-semibold">{file.name}</p>
+                          <p className="text-sm">{file.error}</p>
+                        </div>
+                      ) : (
+                        <>
+                          <img src={file.url} alt={file.name} className="w-full h-40 object-cover rounded mb-2" />
+                          <p className="text-sm font-semibold truncate">{file.name}</p>
+                          <p className="text-xs text-gray-600">Original: {file.originalSize}</p>
+                          <p className="text-xs text-gray-600">Compressed: {file.compressedSize}</p>
+                          <a 
+                            href={file.url} 
+                            download={`compressed-${file.name.replace(/\.[^.]+$/, '.jpg')}`}
+                            className="mt-2 inline-block text-emerald-600 hover:underline text-sm"
+                          >
+                            Download
+                          </a>
+                        </>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </>
         )}
       </section>
 
@@ -73,12 +232,31 @@ export default function ImageCompress() {
 
         <section>
           <h3 className="text-2xl font-bold text-emerald-800 mb-4">How to Compress</h3>
-          <ol className="list-decimal pl-6 space-y-3 text-gray-700">
+          <div className="mb-4 p-4 bg-amber-50 rounded-lg border border-amber-200">
+            <p className="text-amber-800 font-semibold mb-2">Two Modes Available:</p>
+            <ul className="text-amber-800 space-y-1">
+              <li>• <strong>Single Mode:</strong> Compress one image at a time</li>
+              <li>• <strong>Bulk Mode:</strong> Compress multiple images at once</li>
+            </ul>
+          </div>
+          
+          <h4 className="font-bold text-emerald-700 mb-2">Single Image Mode:</h4>
+          <ol className="list-decimal pl-6 space-y-3 text-gray-700 mb-4">
+            <li>Click "Single Image" button</li>
             <li>Upload an image (PNG, JPG, or WebP)</li>
             <li>Preview the original image</li>
             <li>Click "Compress" to optimize size</li>
             <li>Download the compressed JPEG</li>
-            <li>Use optimized images on your site for faster loads</li>
+          </ol>
+
+          <h4 className="font-bold text-emerald-700 mb-2">Bulk Images Mode:</h4>
+          <ol className="list-decimal pl-6 space-y-3 text-gray-700">
+            <li>Click "Bulk Images" button</li>
+            <li>Select multiple images (hold Ctrl/Cmd to select multiple)</li>
+            <li>Click "Compress All" to process all images</li>
+            <li>Preview all compressed images with size comparison</li>
+            <li>Download individually or click "Download All"</li>
+            <li>All images are compressed to JPEG format at 70% quality</li>
           </ol>
         </section>
 
