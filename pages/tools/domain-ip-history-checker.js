@@ -32,6 +32,7 @@ export default function DomainIPHistoryChecker() {
       <Head>
         <title>Domain IP History Checker - Track IP Changes</title>
         <meta name="description" content="Check domain IP history and track IP address changes over time. Analyze DNS history, hosting changes, and server migrations for any domain." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/domain-ip-history-checker" />
       </Head>
       <section className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-emerald-800 mb-6">Domain IP History Checker</h1>

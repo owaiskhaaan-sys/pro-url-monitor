@@ -72,6 +72,7 @@ export default function KeywordDensityChecker() {
         <title>Keyword Density Checker - Analyze Content Keywords for SEO | ProURLMonitor</title>
         <meta name="description" content="Free keyword density checker tool. Analyze keyword frequency, find over-optimization, and improve your content's SEO with detailed keyword analysis." />
         <meta name="keywords" content="keyword density checker, keyword frequency tool, SEO content analyzer, keyword stuffing detector, content optimization tool" />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/keyword-density-checker" />
       </Head>
 
       <div className="max-w-5xl mx-auto px-4 py-8">

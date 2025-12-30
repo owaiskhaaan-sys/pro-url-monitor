@@ -102,6 +102,7 @@ export default function URLEncoderDecoder() {
       <Head>
         <title>URL Encoder & Decoder - Encode/Decode URLs Online</title>
         <meta name="description" content="Encode and decode URLs online. Free URL encoder/decoder tool to convert special characters, spaces, and symbols for web-safe URLs." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/url-encoder-decoder" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">

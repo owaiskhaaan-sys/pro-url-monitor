@@ -186,6 +186,7 @@ export default function JSONBeautifierValidator() {
       <Head>
         <title>JSON Beautifier & Validator - Format JSON Online</title>
         <meta name="description" content="Beautify, format, and validate JSON data online. Free JSON beautifier tool to format minified JSON, check syntax errors instantly." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/json-beautifier-validator" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">

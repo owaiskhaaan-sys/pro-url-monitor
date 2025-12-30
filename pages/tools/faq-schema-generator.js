@@ -130,6 +130,7 @@ ${JSON.stringify(schemaData, null, 2)}
       <Head>
         <title>FAQ Schema Generator - Create FAQPage Structured Data | ProURLMonitor</title>
         <meta name="description" content="Generate FAQ schema markup for rich snippets in Google search. Create JSON-LD and Microdata FAQPage structured data instantly for better SEO visibility." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/faq-schema-generator" />
       </Head>
 
       <div className="max-w-6xl mx-auto px-4 py-8">

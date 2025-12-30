@@ -126,6 +126,7 @@ export default function BitwiseOperations() {
       <Head>
         <title>Bitwise Operations Calculator - AND, OR, XOR, NOT | ProURLMonitor</title>
         <meta name="description" content="Free online bitwise operations calculator. Perform AND, OR, XOR, NOT, NAND, NOR, XNOR operations on binary numbers with step-by-step bit-by-bit breakdown and instant results." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/bitwise-operations" />
       </Head>
 
       <div className="max-w-6xl mx-auto px-4 py-8">

@@ -71,6 +71,7 @@ export default function GooglePageRankChecker() {
       <Head>
         <title>Google PageRank Checker - Check PR Score Free</title>
         <meta name="description" content="Check Google PageRank score for any website. Free PR checker tool to analyze website authority and Google ranking. Get accurate PageRank data." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/google-pagerank-checker" />
       </Head>
       <section className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-emerald-800 mb-6">Google PageRank Checker</h1>

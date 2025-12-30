@@ -50,6 +50,7 @@ export default function BinaryToDecimal() {
       <Head>
         <title>Binary to Decimal Converter - Free Online Tool | ProURLMonitor</title>
         <meta name="description" content="Convert binary numbers to decimal instantly with our free online binary to decimal converter. Get results in decimal, hexadecimal, and octal formats with step-by-step conversion guide." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/binary-to-decimal" />
       </Head>
 
       <div className="max-w-6xl mx-auto px-4 py-8">

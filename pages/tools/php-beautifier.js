@@ -245,6 +245,7 @@ export default function PHPBeautifier() {
       <Head>
         <title>PHP Beautifier - Format PHP Code Online Free</title>
         <meta name="description" content="Beautify and format PHP code online. Free PHP formatter tool to clean up code, add proper indentation, and improve readability." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/php-beautifier" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">

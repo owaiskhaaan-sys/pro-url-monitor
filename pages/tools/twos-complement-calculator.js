@@ -89,6 +89,7 @@ export default function TwosComplementCalculator() {
       <Head>
         <title>Two's Complement Calculator - Free Online Tool | ProURLMonitor</title>
         <meta name="description" content="Calculate two's complement of binary numbers instantly with our free online calculator. Convert positive and negative binary numbers with step-by-step explanation for 8-bit, 16-bit, and 32-bit systems." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/twos-complement-calculator" />
       </Head>
 
       <div className="max-w-6xl mx-auto px-4 py-8">

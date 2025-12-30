@@ -144,6 +144,7 @@ export default function CSSBeautifierMinifier() {
       <Head>
         <title>CSS Beautifier & Minifier - Format & Compress CSS Code Online | ProURLMonitor</title>
         <meta name="description" content="Free CSS Beautifier and Minifier Tool. Format messy CSS code with proper indentation or minify to reduce file size. Optimize CSS for production instantly." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/css-beautifier-minifier" />
       </Head>
 
       <div className="max-w-7xl mx-auto px-4 py-8">

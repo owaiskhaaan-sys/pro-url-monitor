@@ -34,6 +34,7 @@ export default function WordCounter() {
       <Head>
         <title>Word Counter - Character & Sentence Counter | ProURLMonitor</title>
         <meta name="description" content="Free word counter tool. Count words, characters, sentences, and paragraphs. Get reading time estimates." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/word-counter" />
       </Head>
 
       <div className="max-w-4xl mx-auto px-4 py-8">

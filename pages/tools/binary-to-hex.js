@@ -50,6 +50,7 @@ export default function BinaryToHex() {
       <Head>
         <title>Binary to Hex Converter - Free Online Tool | ProURLMonitor</title>
         <meta name="description" content="Convert binary numbers to hexadecimal instantly with our free online binary to hex converter. Get results in hexadecimal, decimal, and octal formats with step-by-step conversion guide." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/binary-to-hex" />
       </Head>
 
       <div className="max-w-6xl mx-auto px-4 py-8">

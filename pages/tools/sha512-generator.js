@@ -195,6 +195,7 @@ export default function SHA512Generator() {
       <Head>
         <title>SHA512 Hash Generator - Generate SHA512 Checksums</title>
         <meta name="description" content="Generate SHA512 hash checksums for maximum security. Free SHA512 generator tool to create strong cryptographic hashes for sensitive data." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/sha512-generator" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">

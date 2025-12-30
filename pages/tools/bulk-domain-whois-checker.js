@@ -32,6 +32,7 @@ export default function BulkDomainWhoisChecker() {
       <Head>
         <title>Bulk WHOIS Checker - Domain Information Lookup</title>
         <meta name="description" content="Check WHOIS information for multiple domains at once. Get domain registration details, owner information, expiry dates, and registrar data instantly." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/bulk-domain-whois-checker" />
       </Head>
       <section className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-emerald-800 mb-6">Bulk Domain WHOIS Checker</h1>

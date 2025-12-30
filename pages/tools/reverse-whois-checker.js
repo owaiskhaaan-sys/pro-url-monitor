@@ -33,6 +33,7 @@ export default function ReverseWhoisChecker() {
       <Head>
         <title>Reverse WHOIS Checker - Find Domains by Owner</title>
         <meta name="description" content="Search domains by owner name or email using reverse WHOIS lookup. Find all domains registered under the same owner. Track domain portfolios." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/reverse-whois-checker" />
       </Head>
       <section className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-emerald-800 mb-6">Reverse WHOIS Checker</h1>

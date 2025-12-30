@@ -122,8 +122,7 @@ export default function Base64EncoderDecoder() {
     <Layout>
       <Head>
         <title>Base64 Encoder & Decoder - Encode/Decode Online</title>
-        <meta name="description" content="Encode and decode Base64 strings online. Free Base64 encoder/decoder tool for text, images, and files. Convert to/from Base64." />
-      </Head>
+        <meta name="description" content="Encode and decode Base64 strings online. Free Base64 encoder/decoder tool for text, images, and files. Convert to/from Base64." />        <link rel="canonical" href="https://www.prourlmonitor.com/tools/base64-encoder-decoder" />      </Head>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}

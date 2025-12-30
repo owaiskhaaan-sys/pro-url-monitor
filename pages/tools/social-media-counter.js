@@ -71,6 +71,7 @@ export default function SocialMediaCounter() {
       <Head>
         <title>Social Media Share Counter - Check Social Signals</title>
         <meta name="description" content="Count social media shares for any URL. Check Facebook likes, Twitter shares, Pinterest pins, and LinkedIn shares. Free social share counter tool." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/social-media-counter" />
       </Head>
       <section className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-emerald-800 mb-6">Social Media Counter</h1>

@@ -159,6 +159,7 @@ export default function HexConverter() {
       <Head>
         <title>Hex Converter - Convert Hexadecimal to Decimal</title>
         <meta name="description" content="Convert hexadecimal numbers to decimal, binary, and octal. Free hex converter tool for number system conversions and color codes." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/hex-converter" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-teal-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">

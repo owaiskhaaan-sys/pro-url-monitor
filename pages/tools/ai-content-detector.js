@@ -200,6 +200,7 @@ export default function AIContentDetector() {
       <Head>
         <title>AI Content Detector - Check if Text is AI-Generated or Human-Written | Free Tool</title>
         <meta name="description" content="Free AI Content Detector to check if text is written by ChatGPT, AI, or humans. Detect AI-generated content with accuracy score, detailed analysis, and confidence level. Perfect for teachers, editors, and content reviewers." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/ai-content-detector" />
         <meta name="keywords" content="AI content detector, AI text detector, ChatGPT detector, AI writing detector, detect AI content, AI checker, GPT detector, AI generated content checker" />
         <meta property="og:title" content="AI Content Detector - Detect AI-Generated Text Free" />
         <meta property="og:description" content="Detect AI-generated content instantly. Check if text is written by ChatGPT or humans with detailed analysis." />

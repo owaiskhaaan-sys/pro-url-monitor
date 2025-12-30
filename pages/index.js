@@ -159,6 +159,7 @@ export default function Home() {
       <Head>
         <title>ProURLMonitor - Free SEO Tools, Domain Authority Checker & URL Analysis</title>
         <meta name="description" content="ProURLMonitor offers 17+ free SEO tools including Domain Authority Checker, Broken Links Checker, HTTP Status Checker, Meta Tag Generator, and more. Analyze domains, check backlinks, and optimize your website for better search rankings." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/" />
       </Head>
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 text-center">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-emerald-800 mb-4 leading-tight">Complete Domain & URL Intelligence Tools</h1>

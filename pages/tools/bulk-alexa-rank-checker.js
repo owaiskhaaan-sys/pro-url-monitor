@@ -31,6 +31,7 @@ export default function BulkAlexaRankChecker() {
       <Head>
         <title>Bulk Alexa Rank Checker - Check Multiple Ranks</title>
         <meta name="description" content="Check Alexa rank for multiple websites at once. Free bulk Alexa ranking checker to analyze website traffic and popularity. Compare performance." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/bulk-alexa-rank-checker" />
       </Head>
       <section className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-emerald-800 mb-6">Bulk Alexa Rank Checker</h1>

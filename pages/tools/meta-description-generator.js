@@ -137,6 +137,7 @@ export default function MetaDescriptionGenerator() {
       <Head>
         <title>Meta Description Generator - AI-Powered SEO Tool | ProURLMonitor</title>
         <meta name="description" content="Generate SEO-optimized meta descriptions instantly with our AI-powered tool. Get 5 unique descriptions optimized for 155 characters, keyword-rich, and click-worthy." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/meta-description-generator" />
       </Head>
 
       <div className="max-w-6xl mx-auto px-4 py-8">

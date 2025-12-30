@@ -156,6 +156,7 @@ export default function ServerStatusChecker() {
       <Head>
         <title>Server Status Checker - Monitor Server Uptime Online | ProURLMonitor</title>
         <meta name="description" content="Free Server Status Checker. Monitor server uptime, check response times, SSL status, and HTTP status codes. Bulk check up to 50 servers." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/server-status-checker" />
       </Head>
 
       <div className="max-w-6xl mx-auto px-4 py-8">

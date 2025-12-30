@@ -33,6 +33,7 @@ export default function ReverseIPDomainChecker() {
       <Head>
         <title>Reverse IP Domain Checker - Find Websites on IP</title>
         <meta name="description" content="Find all websites hosted on the same IP address. Reverse IP lookup tool to discover domains sharing the same server. Check IP neighbors." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/reverse-ip-domain-checker" />
       </Head>
       <section className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-emerald-800 mb-6">Reverse IP Domain Checker</h1>

@@ -143,6 +143,7 @@ export default function AISearchRankingChecker() {
       <Head>
         <title>AI Search Ranking Checker - Track Rankings in ChatGPT, Perplexity, Gemini | Free Tool</title>
         <meta name="description" content="Free AI search ranking tracker tool. Monitor how your website ranks in ChatGPT, Perplexity, Google Gemini, Bing Copilot, and Claude. Track 5 keywords, check visibility score, and export reports. No API required - completely free manual tracking." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/ai-search-ranking-checker" />
         <meta name="keywords" content="AI search ranking, ChatGPT ranking, Perplexity ranking, AI visibility, AI SEO, generative engine optimization, AI citations, AI search tracker, free AI ranking tool" />
         <meta property="og:title" content="AI Search Ranking Checker - Track Rankings in ChatGPT, Perplexity, Gemini" />
         <meta property="og:description" content="Free tool to track your website rankings across AI search platforms. Monitor ChatGPT, Perplexity, Gemini, and more." />

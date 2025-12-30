@@ -159,6 +159,7 @@ export default function HTMLEncoderDecoder() {
       <Head>
         <title>HTML Encoder & Decoder - Convert HTML Entities</title>
         <meta name="description" content="Encode and decode HTML entities online. Free HTML encoder/decoder to convert special characters, prevent XSS attacks display HTML safely." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/html-encoder-decoder" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-orange-50 to-red-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">

@@ -50,6 +50,7 @@ export default function BinaryToOctal() {
       <Head>
         <title>Binary to Octal Converter - Free Online Tool | ProURLMonitor</title>
         <meta name="description" content="Convert binary numbers to octal instantly with our free online binary to octal converter. Get results in octal, decimal, and hexadecimal formats with step-by-step conversion guide." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/binary-to-octal" />
       </Head>
 
       <div className="max-w-6xl mx-auto px-4 py-8">

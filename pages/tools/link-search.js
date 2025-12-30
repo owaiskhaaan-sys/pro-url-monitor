@@ -32,6 +32,7 @@ export default function LinkSearch() {
       <Head>
         <title>Link Search Tool - Find Backlinks & Link Opportunities</title>
         <meta name="description" content="Search and analyze backlinks for any website. Find link building opportunities, check competitor backlinks, and discover high-quality link sources." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/link-search" />
       </Head>
       <section className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-emerald-800 mb-6">Link Search</h1>

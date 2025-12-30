@@ -94,6 +94,7 @@ export default function BrokenLinksChecker() {
       <Head>
         <title>Broken Links Checker - Find 404 Errors | ProURLMonitor</title>
         <meta name="description" content="Free broken links checker tool. Scan your website for 404 errors, dead links, and broken URLs. Improve SEO and user experience." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/broken-links-checker" />
       </Head>
 
       <div className="max-w-4xl mx-auto px-4 py-8">

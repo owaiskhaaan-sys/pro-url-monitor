@@ -46,6 +46,7 @@ export default function BinaryTranslator() {
       <Head>
         <title>Binary Translator - Text to Binary Converter | ProURLMonitor</title>
         <meta name="description" content="Free binary translator tool. Convert text to binary code and binary to text instantly." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/binary-translator" />
       </Head>
 
 

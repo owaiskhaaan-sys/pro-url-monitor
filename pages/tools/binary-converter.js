@@ -183,6 +183,7 @@ export default function BinaryConverter() {
       <Head>
         <title>Binary Converter - Convert Binary to Decimal & Hex</title>
         <meta name="description" content="Convert binary numbers to decimal, hexadecimal, and octal. Free binary converter tool for number system conversions and binary math." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/binary-converter" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">

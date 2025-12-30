@@ -97,6 +97,7 @@ export default function BacklinksMaker() {
       <Head>
         <title>Backlinks Maker - Free Instant Backlink Generator</title>
         <meta name="description" content="Create instant backlinks to boost your SEO rankings. Free backlink maker tool to generate quality backlinks automatically. Submit to 1000+ platforms." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/backlinks-maker" />
       </Head>
       <section className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-emerald-800 mb-6">Backlinks Maker</h1>

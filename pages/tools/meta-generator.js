@@ -48,6 +48,7 @@ ${siteName ? `<meta property="og:site_name" content="${siteName}">` : ''}
       <Head>
         <title>Meta Tag Generator - Create SEO Title Tags & Meta Descriptions | ProURLMonitor</title>
         <meta name="description" content="Free meta tag generator tool. Create optimized title tags, meta descriptions, Open Graph tags, and Twitter Cards with character counter for perfect SEO." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/meta-generator" />
         <meta name="keywords" content="meta tag generator, title tag generator, meta description tool, Open Graph generator, Twitter Card generator, SEO meta tags" />
       </Head>
 

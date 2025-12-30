@@ -38,6 +38,7 @@ export default function LinkExtractor() {
       <Head>
         <title>Link Extractor - Extract All Links from Webpage</title>
         <meta name="description" content="Extract all links from any webpage instantly. Get internal links, external links, and backlinks in one click. Free URL link extractor tool for SEO." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/link-extractor" />
       </Head>
       <section className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-emerald-800 mb-6">Link Extractor</h1>

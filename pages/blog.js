@@ -10,6 +10,7 @@ export default function Blog({ allPostsData }) {
       <Head>
         <title>SEO Blog - Tips, Guides & Best Practices | ProURLMonitor</title>
         <meta name="description" content="Learn SEO tips, website optimization techniques, and digital marketing strategies. Free guides on HTTP status codes, broken links, and technical SEO." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/blog" />
       </Head>
 
       <section className="max-w-4xl mx-auto px-4 py-16">

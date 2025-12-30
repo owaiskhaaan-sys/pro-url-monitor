@@ -269,6 +269,7 @@ export default function AITextHumanizer() {
       <Head>
         <title>AI Text Humanizer - Make AI Content Sound Natural & Human | Free Tool</title>
         <meta name="description" content="Free AI Text Humanizer to make AI-generated content sound natural and human-written. Remove robotic phrases, add personality, improve readability. Perfect for making ChatGPT, Claude, and AI text undetectable." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/ai-text-humanizer" />
         <meta name="keywords" content="AI text humanizer, humanize AI text, make AI text human, AI content humanizer, ChatGPT humanizer, AI writing humanizer, undetectable AI text" />
         <meta property="og:title" content="AI Text Humanizer - Make AI Content Sound Natural" />
         <meta property="og:description" content="Transform robotic AI text into natural, human-sounding content instantly. Free humanizer tool." />

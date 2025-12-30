@@ -8,6 +8,7 @@ export default function About() {
       <Head>
         <title>About Us - Pro URL Monitor Team & Mission</title>
         <meta name="description" content="Learn about Pro URL Monitor. We provide free SEO tools, website monitoring, and URL checking services to help businesses improve online presence." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/about" />
       </Head>
       <section className="max-w-6xl mx-auto px-4 py-16">
         {/* Header */}

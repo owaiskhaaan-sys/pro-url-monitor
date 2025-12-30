@@ -169,6 +169,7 @@ export default function RegexTester() {
       <Head>
         <title>Regex Tester - Test Regular Expressions Online</title>
         <meta name="description" content="Test and debug regular expressions online. Free regex tester with real-time matching, explanations, and support for multiple languages." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/regex-tester" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-red-50 to-pink-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">

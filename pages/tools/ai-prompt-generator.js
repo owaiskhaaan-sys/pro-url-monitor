@@ -121,6 +121,7 @@ export default function AIPromptGenerator() {
       <Head>
         <title>AI Prompt Generator - Create Perfect Prompts for ChatGPT, Claude, Gemini | Free</title>
         <meta name="description" content="Free AI Prompt Generator for ChatGPT, Claude, Gemini, and all AI tools. Generate optimized prompts for marketing, coding, writing, business, education, and more. 10+ categories with customizable options." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/ai-prompt-generator" />
         <meta name="keywords" content="AI prompt generator, ChatGPT prompts, Claude prompts, AI writing prompts, prompt engineering, AI tool prompts, free prompt generator" />
         <meta property="og:title" content="AI Prompt Generator - Create Perfect AI Prompts Free" />
         <meta property="og:description" content="Generate optimized AI prompts for any task. 10+ categories including marketing, coding, writing, and business." />

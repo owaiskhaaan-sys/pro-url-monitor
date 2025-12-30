@@ -50,6 +50,7 @@ export default function OctalToDecimal() {
       <Head>
         <title>Octal to Decimal Converter - Free Online Tool | ProURLMonitor</title>
         <meta name="description" content="Convert octal numbers to decimal instantly with our free online octal to decimal converter. Get results in decimal, binary, and hexadecimal formats with step-by-step conversion guide." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/octal-to-decimal" />
       </Head>
 
       <div className="max-w-6xl mx-auto px-4 py-8">

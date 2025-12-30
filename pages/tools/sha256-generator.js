@@ -199,6 +199,7 @@ export default function SHA256Generator() {
       <Head>
         <title>SHA256 Hash Generator - Generate SHA256 Checksums</title>
         <meta name="description" content="Generate SHA256 hash checksums for secure encryption. Free SHA256 generator tool to create cryptographic hashes for passwords, files, and data verification." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/sha256-generator" />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-cyan-50 to-blue-50 py-12 px-4">

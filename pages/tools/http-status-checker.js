@@ -144,6 +144,7 @@ export default function HTTPStatusChecker() {
       <Head>
         <title>HTTP Status Checker - Check 200, 301, 404, 500 Status Codes | ProURLMonitor</title>
         <meta name="description" content="Free HTTP status checker tool. Check multiple URLs for 200, 301, 302, 404, 500 status codes and redirects in bulk." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/http-status-checker" />
       </Head>
 
       <div className="max-w-4xl mx-auto px-4 py-8">

@@ -36,6 +36,7 @@ export default function ImageCompress() {
       <Head>
         <title>Image Compressor - Compress Images Online Free</title>
         <meta name="description" content="Compress images without losing quality. Free online image compressor for JPEG, PNG, WebP. Reduce image size for faster website loading." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/image-compress" />
       </Head>
       <section className="max-w-3xl mx-auto px-4 py-12">
         <h1 className="text-2xl font-bold text-emerald-700 mb-3">Image Compressor</h1>

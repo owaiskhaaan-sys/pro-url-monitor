@@ -327,6 +327,7 @@ export default function SEOAudit() {
       <Head>
         <title>SEO Audit Tool - Complete Website SEO Analysis | ProURLMonitor</title>
         <meta name="description" content="Free SEO audit tool powered by Google PageSpeed Insights. Analyze 18+ SEO factors including Core Web Vitals, mobile-friendliness, and meta tags." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/seo-audit" />
       </Head>
 
       <div className="max-w-4xl mx-auto px-4 py-8">

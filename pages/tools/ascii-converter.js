@@ -184,6 +184,7 @@ export default function ASCIIConverter() {
       <Head>
         <title>ASCII Converter - Text to ASCII Code Converter</title>
         <meta name="description" content="Convert text to ASCII code and vice versa. Free ASCII converter tool to encode/decode characters, get ASCII values, and work with ASCII art." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/ascii-converter" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-cyan-50 to-blue-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">

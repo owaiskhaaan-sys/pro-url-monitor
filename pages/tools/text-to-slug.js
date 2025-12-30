@@ -94,6 +94,7 @@ export default function TextToSlugGenerator() {
       <Head>
         <title>Text to Slug Converter - Create SEO-Friendly URLs</title>
         <meta name="description" content="Convert text to SEO-friendly URL slugs instantly. Remove special characters, convert spaces to hyphens, and create clean, readable URLs." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/text-to-slug" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">

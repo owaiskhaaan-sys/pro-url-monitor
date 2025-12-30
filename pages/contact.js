@@ -33,6 +33,7 @@ export default function Contact() {
       <Head>
         <title>Contact Us - Pro URL Monitor Support</title>
         <meta name="description" content="Contact Pro URL Monitor for support, questions, or feedback. Get help with SEO tools, website monitoring, and URL checking. We reply within 24 hours." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/contact" />
       </Head>
       
       <section className="max-w-4xl mx-auto px-4 py-16">

@@ -93,6 +93,7 @@ export default function BulkUpload() {
       <Head>
         <title>Bulk SEO Tools - Check Multiple URLs at Once</title>
         <meta name="description" content="Access bulk SEO tools to check multiple URLs simultaneously. Batch process domain authority, WHOIS lookups, Alexa ranks, and more." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/bulk" />
       </Head>
       <div className="max-w-4xl mx-auto px-4 py-16">
         <h1 className="text-2xl font-bold mb-4">Bulk Upload</h1>

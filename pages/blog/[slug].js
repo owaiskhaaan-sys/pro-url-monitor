@@ -12,6 +12,7 @@ export default function Post({ postData }) {
         <meta name="description" content={postData.excerpt} />
         <meta name="keywords" content={postData.keywords} />
         <meta name="author" content={postData.author} />
+        <link rel="canonical" href={`https://www.prourlmonitor.com/blog/${postData.slug}`} />
         
         {/* Open Graph */}
         <meta property="og:title" content={postData.title} />

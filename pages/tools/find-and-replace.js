@@ -149,6 +149,7 @@ The dog is not as quick as the fox.`);
         <title>Find and Replace Text Online - Free Text Search & Replace Tool</title>
         <meta name="description" content="Free online find and replace tool. Search and replace text with support for regex patterns, case-sensitive matching, and batch replacements. Perfect for text editing and data processing." />
         <meta name="keywords" content="find and replace, text search, replace text, regex replace, bulk replace, text editor, search and replace, find replace online" />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/find-and-replace" />
       </Head>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

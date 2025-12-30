@@ -141,6 +141,7 @@ export default function ClassCIPChecker() {
       <Head>
         <title>Class C IP Checker - Find Websites on Same IP Range | ProURLMonitor</title>
         <meta name="description" content="Free Class C IP Checker. Find all websites hosted on the same Class C IP range. Identify shared hosting neighbors and IP infrastructure." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/class-c-ip-checker" />
       </Head>
 
       <div className="max-w-6xl mx-auto px-4 py-8">

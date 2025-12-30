@@ -313,6 +313,7 @@ Finally, build quality backlinks. Links from reputable websites signal to search
       <Head>
         <title>Content Readability Optimizer - Flesch Score & SEO Analysis | ProURLMonitor</title>
         <meta name="description" content="Analyze and optimize content readability with Flesch Reading Ease score, grade level, passive voice detection, and actionable suggestions for better SEO." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/content-readability-optimizer" />
       </Head>
 
       <div className="max-w-6xl mx-auto px-4 py-8">

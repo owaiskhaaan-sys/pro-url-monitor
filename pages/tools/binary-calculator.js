@@ -93,6 +93,7 @@ export default function BinaryCalculator() {
       <Head>
         <title>Binary Calculator - Add, Subtract, Multiply & Divide Binary Numbers | ProURLMonitor</title>
         <meta name="description" content="Free online binary calculator for adding, subtracting, multiplying, and dividing binary numbers. Get instant results in binary, decimal, and hexadecimal formats." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/binary-calculator" />
       </Head>
 
       <div className="max-w-6xl mx-auto px-4 py-8">

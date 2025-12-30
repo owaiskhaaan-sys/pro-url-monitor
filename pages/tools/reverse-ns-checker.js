@@ -128,6 +128,7 @@ export default function ReverseNSChecker() {
       <Head>
         <title>Reverse NS Checker - Find Domains by Nameserver | ProURLMonitor</title>
         <meta name="description" content="Free Reverse NS Checker tool. Find all domains using the same nameserver. Discover websites hosted on specific DNS servers." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/reverse-ns-checker" />
       </Head>
 
       <div className="max-w-6xl mx-auto px-4 py-8">

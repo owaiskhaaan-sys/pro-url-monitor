@@ -259,6 +259,7 @@ if __name__ == "__main__":
       <Head>
         <title>Python Formatter - Format Python Code Online</title>
         <meta name="description" content="Format Python code according to PEP 8 standards. Free online Python formatter and beautifier tool to clean up code and fix indentation." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/python-formatter" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-teal-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">

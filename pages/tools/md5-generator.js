@@ -247,6 +247,7 @@ export default function MD5Generator() {
       <Head>
         <title>MD5 Hash Generator - Generate MD5 Checksums</title>
         <meta name="description" content="Generate MD5 hash checksums for text and files. Free MD5 generator tool to create cryptographic hashes for password encryption and verification." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/md5-generator" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">

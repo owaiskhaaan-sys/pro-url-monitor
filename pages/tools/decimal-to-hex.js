@@ -54,6 +54,7 @@ export default function DecimalToHex() {
       <Head>
         <title>Decimal to Hex Converter - Free Online Tool | ProURLMonitor</title>
         <meta name="description" content="Convert decimal numbers to hexadecimal instantly with our free online decimal to hex converter. Get results in hex, binary, and octal formats with step-by-step conversion guide." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/decimal-to-hex" />
       </Head>
 
       <div className="max-w-6xl mx-auto px-4 py-8">

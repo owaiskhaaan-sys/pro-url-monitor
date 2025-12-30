@@ -59,6 +59,7 @@ export default function RobotsTxtGenerator() {
       <Head>
         <title>Robots.txt Generator - Create SEO-Friendly Robots File | ProURLMonitor</title>
         <meta name="description" content="Free robots.txt generator tool. Create custom robots.txt files for your website with sitemap, disallow rules, and crawl delay settings." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/robots-txt-generator" />
       </Head>
 
       <div className="max-w-4xl mx-auto px-4 py-8">

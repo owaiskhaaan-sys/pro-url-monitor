@@ -120,6 +120,7 @@ export default function LoremIpsumGenerator() {
       <Head>
         <title>Lorem Ipsum Generator - Placeholder Text Generator</title>
         <meta name="description" content="Generate Lorem Ipsum dummy text for design mockups and layouts. Free placeholder text generator with customizable paragraphs and words." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/lorem-ipsum-generator" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-orange-50 to-amber-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">

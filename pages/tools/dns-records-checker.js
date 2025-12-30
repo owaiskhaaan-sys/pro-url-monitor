@@ -136,6 +136,7 @@ export default function DNSRecordsChecker() {
       <Head>
         <title>DNS Records Checker - Check A, MX, NS, TXT Records | ProURLMonitor</title>
         <meta name="description" content="Free DNS records checker tool. Check A, AAAA, MX, TXT, NS, CNAME, and SOA records for any domain instantly. DNS lookup and verification tool." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/dns-records-checker" />
       </Head>
 
       <div className="max-w-6xl mx-auto px-4 py-8">

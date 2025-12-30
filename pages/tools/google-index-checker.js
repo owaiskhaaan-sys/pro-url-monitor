@@ -74,6 +74,7 @@ export default function GoogleIndexChecker() {
       <Head>
         <title>Google Index Checker - Check URL Indexing Status | ProURLMonitor</title>
         <meta name="description" content="Free Google index checker tool. Check if your URLs are indexed by Google. Verify up to 1,000 webpages at once. Improve SEO and search visibility." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/google-index-checker" />
       </Head>
 
       <div className="max-w-6xl mx-auto px-4 py-8">

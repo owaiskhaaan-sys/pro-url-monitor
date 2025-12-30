@@ -255,6 +255,7 @@ export default function Traceroute() {
       <Head>
         <title>Traceroute Tool - Network Path Tracer & Route Analyzer | ProURLMonitor</title>
         <meta name="description" content="Free Online Traceroute Tool. Trace network path, view all hops with IP addresses and latency. Identify network bottlenecks and routing issues." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/traceroute" />
       </Head>
 
       <div className="max-w-6xl mx-auto px-4 py-8">
