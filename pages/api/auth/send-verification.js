@@ -15,7 +15,7 @@ export default async function handler(req, res) {
     }
 
     const { data, error } = await resend.emails.send({
-      from: 'ProURLMonitor <noreply@prourlmonitor.com>',
+      from: 'ProURLMonitor <owaiskhaaan@gmail.com>', // Temporary - using verified email
       to: [email],
       subject: 'Verify Your Email - ProURLMonitor',
       html: `

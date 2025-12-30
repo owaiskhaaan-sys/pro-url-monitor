@@ -25,7 +25,7 @@ export default async function handler(req, res) {
 
     // Send password reset email via Resend
     const { data, error } = await resend.emails.send({
-      from: 'ProURLMonitor <noreply@prourlmonitor.com>',
+      from: 'ProURLMonitor <owaiskhaaan@gmail.com>', // Temporary - using verified email
       to: [email],
       subject: 'Reset Your Password - ProURLMonitor',
       html: `
