@@ -23,6 +23,7 @@ export async function getServerSideProps({ res }) {
     'ai-search-ranking-checker',
     'ai-prompt-generator',
     'ai-content-detector',
+    'ai-resume-optimizer',
     
     // HTTP & Network Tools
     'http-status-checker',

@@ -90,6 +90,7 @@ export default function Header() {
     { title: 'AI Search Ranking Checker', href: '/tools/ai-search-ranking-checker' },
     { title: 'AI Prompt Generator', href: '/tools/ai-prompt-generator' },
     { title: 'AI Content Detector', href: '/tools/ai-content-detector' },
+    { title: 'AI Resume Optimizer', href: '/tools/ai-resume-optimizer' },
     { title: 'DNS Records Checker', href: '/tools/dns-records-checker' },
     { title: 'DNS Report Checker', href: '/tools/dns-report-checker' },
     { title: 'DNS Propagation Checker', href: '/tools/dns-propagation-checker' },
