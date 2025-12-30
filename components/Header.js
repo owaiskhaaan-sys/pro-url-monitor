@@ -91,6 +91,8 @@ export default function Header() {
     { title: 'AI Prompt Generator', href: '/tools/ai-prompt-generator' },
     { title: 'AI Content Detector', href: '/tools/ai-content-detector' },
     { title: 'AI Resume Optimizer', href: '/tools/ai-resume-optimizer' },
+    { title: 'ChatGPT Prompt Templates', href: '/tools/chatgpt-prompt-templates' },
+    { title: 'AI Text Humanizer', href: '/tools/ai-text-humanizer' },
     { title: 'DNS Records Checker', href: '/tools/dns-records-checker' },
     { title: 'DNS Report Checker', href: '/tools/dns-report-checker' },
     { title: 'DNS Propagation Checker', href: '/tools/dns-propagation-checker' },

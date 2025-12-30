@@ -24,6 +24,8 @@ export async function getServerSideProps({ res }) {
     'ai-prompt-generator',
     'ai-content-detector',
     'ai-resume-optimizer',
+    'chatgpt-prompt-templates',
+    'ai-text-humanizer',
     
     // HTTP & Network Tools
     'http-status-checker',
