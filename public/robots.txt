@@ -1,5 +1,16 @@
 # robots.txt for ProURLMonitor
 # This file tells search engines which pages to crawl and which to skip
+#
+#  ____            _   _ ____  _       __  __             _ _             
+# |  _ \ _ __ ___ | | | |  _ \| |     |  \/  | ___  _ __ (_) |_ ___  _ __ 
+# | |_) | '__/ _ \| | | | |_) | |     | |\/| |/ _ \| '_ \| | __/ _ \| '__|
+# |  __/| | | (_) | |_| |  _ <| |___  | |  | | (_) | | | | | || (_) | |   
+# |_|   |_|  \___/ \___/|_| \_\_____| |_|  |_|\___/|_| |_|_|\__\___/|_|   
+#                                                                           
+# Professional URL Monitoring & SEO Tools Platform
+# Website: https://www.prourlmonitor.com
+# Built with ❤️ for SEO professionals and developers
+#
 
 User-agent: *
 Allow: /
