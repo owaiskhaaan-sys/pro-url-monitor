@@ -22,6 +22,7 @@ export async function getServerSideProps({ res }) {
     'google-index-checker',
     'ai-search-ranking-checker',
     'ai-prompt-generator',
+    'ai-content-detector',
     
     // HTTP & Network Tools
     'http-status-checker',

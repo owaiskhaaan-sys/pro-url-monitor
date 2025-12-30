@@ -26,6 +26,7 @@ export default function Home() {
     { title: 'Google Index Checker', href: '/tools/google-index-checker', desc: 'Check Google indexing', category: 'SEO' },
     { title: 'AI Search Ranking Checker', href: '/tools/ai-search-ranking-checker', desc: 'Track rankings in ChatGPT, Perplexity, Gemini', category: 'SEO' },
     { title: 'AI Prompt Generator', href: '/tools/ai-prompt-generator', desc: 'Generate perfect prompts for ChatGPT, Claude, Gemini', category: 'SEO' },
+    { title: 'AI Content Detector', href: '/tools/ai-content-detector', desc: 'Detect AI-generated text from ChatGPT & other AI tools', category: 'SEO' },
     
     // HTTP & Network Tools
     { title: 'HTTP Status Checker', href: '/tools/http-status-checker', desc: 'Check 200, 301, 404, 500 codes', category: 'Network' },
