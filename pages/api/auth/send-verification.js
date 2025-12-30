@@ -1,7 +1,3 @@
-import { Resend } from 'resend';
-
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -15,18 +11,25 @@ export default async function handler(req, res) {
     }
 
     // Check if API key exists
-    if (!process.env.RESEND_API_KEY) {
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
       console.error('RESEND_API_KEY is not set');
       return res.status(500).json({ error: 'Email service not configured. Please contact support.' });
     }
 
     console.log('Attempting to send email to:', email);
-    console.log('API Key exists:', !!process.env.RESEND_API_KEY);
 
-    const { data, error } = await resend.emails.send({
-      from: 'ProURLMonitor <owaiskhaaan@gmail.com>', // Temporary - using verified email
-      to: [email],
-      subject: 'Verify Your Email - ProURLMonitor',
+    // Use fetch API directly instead of Resend SDK
+    const response = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${apiKey}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        from: 'ProURLMonitor <owaiskhaaan@gmail.com>',
+        to: [email],
+        subject: 'Verify Your Email - ProURLMonitor',
       html: `
 <!DOCTYPE html>
 <html>
@@ -124,18 +127,20 @@ export default async function handler(req, res) {
 </body>
 </html>
       `
+      })
     });
 
-    if (error) {
-      console.error('Resend error:', error);
-      console.error('Error details:', JSON.stringify(error, null, 2));
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error('Resend API error:', response.status, errorText);
       return res.status(400).json({ 
         error: 'Failed to send email', 
-        details: error.message || 'Unknown error',
+        details: errorText,
         suggestion: 'Please verify email sender in Resend dashboard'
       });
     }
 
+    const data = await response.json();
     console.log('Email sent successfully:', data.id);
     return res.status(200).json({ 
       success: true, 
