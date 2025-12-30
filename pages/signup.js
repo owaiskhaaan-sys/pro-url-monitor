@@ -5,13 +5,16 @@ import Layout from '../components/Layout';
 import CloudflareTurnstile from '../components/CloudflareTurnstile';
 
 export default function Signup() {
+  const [step, setStep] = useState(1); // 1: Signup Form, 2: Email Verification
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     password: '',
     confirmPassword: ''
   });
+  const [verificationCode, setVerificationCode] = useState('');
   const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
   const [loading, setLoading] = useState(false);
   const [verified, setVerified] = useState(false);
   const [turnstileToken, setTurnstileToken] = useState('');
@@ -26,6 +29,7 @@ export default function Signup() {
   const handleSignup = async (e) => {
     e.preventDefault();
     setError('');
+    setSuccess('');
     setLoading(true);
 
     if (!verified) {
@@ -53,28 +57,147 @@ export default function Signup() {
     }
 
     try {
-      // In production, call your signup API
+      // Generate 6-digit verification code
+      const code = Math.floor(100000 + Math.random() * 900000).toString();
+      
+      // Send verification email
+      const emailResponse = await fetch('/api/auth/send-verification', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: formData.email,
+          name: formData.name,
+          code: code
+        })
+      });
+
+      if (emailResponse.ok) {
+        // Store code temporarily (in production, store in backend with expiration)
+        sessionStorage.setItem('signupCode', code);
+        sessionStorage.setItem('signupData', JSON.stringify(formData));
+        sessionStorage.setItem('codeExpiry', Date.now() + 10 * 60 * 1000); // 10 minutes
+        
+        setSuccess('Verification code sent to your email! Check your inbox.');
+        setStep(2);
+      } else {
+        const data = await emailResponse.json();
+        setError(data.error || 'Failed to send verification email');
+      }
+    } catch (err) {
+      setError('An error occurred. Please try again.');
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleVerifyCode = async (e) => {
+    e.preventDefault();
+    setError('');
+    setSuccess('');
+    setLoading(true);
+
+    if (!verificationCode || verificationCode.length !== 6) {
+      setError('Please enter a valid 6-digit code');
+      setLoading(false);
+      return;
+    }
+
+    try {
+      // Verify code
+      const storedCode = sessionStorage.getItem('signupCode');
+      const storedData = sessionStorage.getItem('signupData');
+      const expiry = sessionStorage.getItem('codeExpiry');
+
+      if (!storedCode || !storedData || Date.now() > parseInt(expiry)) {
+        setError('Verification code expired. Please signup again.');
+        setStep(1);
+        setLoading(false);
+        return;
+      }
+
+      if (verificationCode !== storedCode) {
+        setError('Invalid verification code');
+        setLoading(false);
+        return;
+      }
+
+      // Code is correct, now create account
+      const userData = JSON.parse(storedData);
       const response = await fetch('/api/auth/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          password: formData.password
+          name: userData.name,
+          email: userData.email,
+          password: userData.password,
+          verified: true
         })
       });
 
       if (response.ok) {
         const data = await response.json();
+        
+        // Clean up session storage
+        sessionStorage.removeItem('signupCode');
+        sessionStorage.removeItem('signupData');
+        sessionStorage.removeItem('codeExpiry');
+        
+        // Store user data
         localStorage.setItem('token', data.token);
         localStorage.setItem('user', JSON.stringify(data.user));
-        window.location.href = '/app/dashboard';
+        
+        setSuccess('Account created successfully! Redirecting...');
+        setTimeout(() => {
+          window.location.href = '/app/dashboard';
+        }, 1500);
       } else {
         setError('Signup failed. Please try again.');
       }
     } catch (err) {
       setError('An error occurred. Please try again.');
       console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleResendCode = async () => {
+    setError('');
+    setSuccess('');
+    setLoading(true);
+
+    try {
+      const storedData = sessionStorage.getItem('signupData');
+      if (!storedData) {
+        setError('Session expired. Please signup again.');
+        setStep(1);
+        setLoading(false);
+        return;
+      }
+
+      const userData = JSON.parse(storedData);
+      const newCode = Math.floor(100000 + Math.random() * 900000).toString();
+      
+      const response = await fetch('/api/auth/send-verification', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: userData.email,
+          name: userData.name,
+          code: newCode
+        })
+      });
+
+      if (response.ok) {
+        sessionStorage.setItem('signupCode', newCode);
+        sessionStorage.setItem('codeExpiry', Date.now() + 10 * 60 * 1000);
+        setSuccess('New verification code sent!');
+      } else {
+        setError('Failed to resend code');
+      }
+    } catch (err) {
+      setError('An error occurred');
     } finally {
       setLoading(false);
     }
@@ -96,50 +219,114 @@ export default function Signup() {
           </div>
 
           <div className="card">
-            <h2 className="text-2xl font-bold text-center mb-6">Create Your Account</h2>
+            <h2 className="text-2xl font-bold text-center mb-6">
+              {step === 1 ? 'Create Your Account' : 'Verify Your Email'}
+            </h2>
 
             {error && (<div className="mb-4 p-4 bg-red-50 border border-red-200 rounded text-red-700">{error}</div>)}
+            {success && (<div className="mb-4 p-4 bg-green-50 border border-green-200 rounded text-green-700">{success}</div>)}
 
-            <form onSubmit={handleSignup} className="space-y-4">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                <input id="name" name="name" type="text" value={formData.name} onChange={handleChange} placeholder="John Doe" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" />
-              </div>
+            {step === 1 ? (
+              <form onSubmit={handleSignup} className="space-y-4">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                  <input id="name" name="name" type="text" value={formData.name} onChange={handleChange} placeholder="John Doe" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" required />
+                </div>
 
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                <input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="you@example.com" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" />
-              </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                  <input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="you@example.com" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" required />
+                </div>
 
-              <div>
-                <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">Password</label>
-                <input id="password" name="password" type="password" value={formData.password} onChange={handleChange} placeholder="••••••••" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" />
-              </div>
+                <div>
+                  <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                  <input id="password" name="password" type="password" value={formData.password} onChange={handleChange} placeholder="••••••••" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" required />
+                  <p className="text-xs text-gray-500 mt-1">At least 6 characters</p>
+                </div>
 
-              <div>
-                <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700 mb-1">Confirm Password</label>
-                <input id="confirmPassword" name="confirmPassword" type="password" value={formData.confirmPassword} onChange={handleChange} placeholder="••••••••" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" />
-              </div>
+                <div>
+                  <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700 mb-1">Confirm Password</label>
+                  <input id="confirmPassword" name="confirmPassword" type="password" value={formData.confirmPassword} onChange={handleChange} placeholder="••••••••" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" required />
+                </div>
 
-              <div className="pt-2">
-                <CloudflareTurnstile
-                  onVerify={(token) => {
-                    setTurnstileToken(token);
-                    setVerified(true);
-                  }}
-                  onError={() => setVerified(false)}
-                  onExpire={() => setVerified(false)}
-                />
-              </div>
+                <div className="pt-2">
+                  <CloudflareTurnstile
+                    onVerify={(token) => {
+                      setTurnstileToken(token);
+                      setVerified(true);
+                    }}
+                    onError={() => setVerified(false)}
+                    onExpire={() => setVerified(false)}
+                  />
+                </div>
 
-              <button 
-                type="submit" 
-                disabled={loading || !verified} 
-                className="w-full btn btn-primary py-3 font-semibold disabled:opacity-50"
-              >
-                {loading ? 'Creating Account...' : (verified ? 'Create Account' : 'Complete Verification First')}
-              </button>
-            </form>
+                <button 
+                  type="submit" 
+                  disabled={loading || !verified} 
+                  className="w-full btn btn-primary py-3 font-semibold disabled:opacity-50"
+                >
+                  {loading ? 'Sending Code...' : (verified ? 'Send Verification Code' : 'Complete Verification First')}
+                </button>
+              </form>
+            ) : (
+              <form onSubmit={handleVerifyCode} className="space-y-4">
+                <div className="text-center mb-6">
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <p className="text-sm text-gray-600">
+                    We've sent a 6-digit verification code to<br />
+                    <span className="font-semibold text-gray-800">{formData.email}</span>
+                  </p>
+                </div>
+
+                <div>
+                  <label htmlFor="verificationCode" className="block text-sm font-medium text-gray-700 mb-1 text-center">
+                    Enter Verification Code
+                  </label>
+                  <input 
+                    id="verificationCode" 
+                    type="text" 
+                    value={verificationCode} 
+                    onChange={(e) => setVerificationCode(e.target.value.replace(/\D/g, '').slice(0, 6))} 
+                    placeholder="000000" 
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-center text-2xl font-mono tracking-widest" 
+                    maxLength="6"
+                    required 
+                  />
+                  <p className="text-xs text-gray-500 mt-1 text-center">Code expires in 10 minutes</p>
+                </div>
+
+                <button 
+                  type="submit" 
+                  disabled={loading || verificationCode.length !== 6} 
+                  className="w-full btn btn-primary py-3 font-semibold disabled:opacity-50"
+                >
+                  {loading ? 'Verifying...' : 'Verify & Create Account'}
+                </button>
+
+                <div className="text-center space-y-2">
+                  <button 
+                    type="button" 
+                    onClick={handleResendCode} 
+                    disabled={loading}
+                    className="text-sm text-blue-600 hover:text-blue-700 font-medium disabled:opacity-50"
+                  >
+                    Resend Code
+                  </button>
+                  <br />
+                  <button 
+                    type="button" 
+                    onClick={() => setStep(1)}
+                    className="text-sm text-gray-600 hover:text-gray-700"
+                  >
+                    Change Email Address
+                  </button>
+                </div>
+              </form>
+            )}
 
             <p className="text-center text-sm text-gray-600 mt-6">Already have an account? <Link href="/login" className="text-blue-600 hover:text-blue-700 font-semibold">Log in</Link></p>
           </div>
