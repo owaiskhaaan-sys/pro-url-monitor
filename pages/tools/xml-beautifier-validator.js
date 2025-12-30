@@ -274,6 +274,7 @@ export default function XMLBeautifierValidator() {
       <Head>
         <title>XML Beautifier & Validator - Format XML Online</title>
         <meta name="description" content="Beautify, format, and validate XML code online. Free XML beautifier tool to format minified XML, check syntax errors instantly." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/xml-beautifier-validator" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-orange-50 to-red-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">

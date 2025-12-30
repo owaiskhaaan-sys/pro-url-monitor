@@ -120,6 +120,7 @@ export default function IPLocation() {
       <Head>
         <title>IP Location Finder - IP Geolocation Lookup Tool | ProURLMonitor</title>
         <meta name="description" content="Free IP Location Finder. Get IP geolocation with country, city, coordinates, timezone, ISP information. Track IP address locations worldwide." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/ip-location" />
       </Head>
 
       <div className="max-w-6xl mx-auto px-4 py-8">

@@ -113,6 +113,7 @@ export default function CharacterFrequencyCounter() {
       <Head>
         <title>Character Frequency Counter - Analyze Text Character Distribution Online</title>
         <meta name="description" content="Free online character frequency analyzer. Count character occurrences, calculate percentages, and analyze text character distribution. Perfect for cryptography, text analysis, and data science." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/character-frequency-counter" />
         <meta name="keywords" content="character frequency, character counter, frequency analysis, text analysis, character distribution, letter frequency, cryptography analysis" />
       </Head>
 

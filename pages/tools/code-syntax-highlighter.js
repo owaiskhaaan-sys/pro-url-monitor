@@ -240,6 +240,7 @@ ORDER BY total_orders DESC;`,
       <Head>
         <title>Code Syntax Highlighter - Highlight Code Online</title>
         <meta name="description" content="Highlight code syntax for multiple programming languages. Free online syntax highlighter supporting Python, JavaScript, PHP, HTML, CSS." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/code-syntax-highlighter" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-orange-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">

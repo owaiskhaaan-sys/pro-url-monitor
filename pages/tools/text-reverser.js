@@ -89,6 +89,7 @@ export default function TextReverser() {
       <Head>
         <title>Text Reverser - Reverse Words and Letters Online</title>
         <meta name="description" content="Reverse text, words, or letters instantly. Free online text reverser tool to flip text backwards, create mirror text, and reverse strings." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/text-reverser" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-cyan-50 py-12 px-4">
         <div className="max-w-7xl mx-auto">

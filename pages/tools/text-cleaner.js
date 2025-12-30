@@ -16,6 +16,7 @@ export default function TextCleaner() {
       <Head>
         <title>Text Cleaner - Remove Extra Spaces & Format Text</title>
         <meta name="description" content="Clean and format text by removing extra spaces, line breaks, and special characters. Free text cleaning tool to sanitize your content." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/text-cleaner" />
       </Head>
       <section className="max-w-3xl mx-auto px-4 py-12">
         <h1 className="text-2xl font-bold text-emerald-700 mb-3">Text Cleaner</h1>

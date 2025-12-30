@@ -89,6 +89,7 @@ This is line five after multiple empty lines.`);
       <Head>
         <title>Remove Line Breaks Online - Join Text Lines & Remove Extra Spaces</title>
         <meta name="description" content="Free online tool to remove line breaks from text. Join multiple lines into one, remove empty lines, clean up formatting, and replace line breaks with custom separators. Perfect for text cleanup and formatting." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/remove-line-breaks" />
         <meta name="keywords" content="remove line breaks, join lines, remove empty lines, text formatting, line break remover, clean text, join text, remove newlines" />
       </Head>
 

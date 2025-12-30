@@ -159,6 +159,7 @@ export default function ServerPortScanner() {
       <Head>
         <title>Server Port Scanner - Check Open Ports Online | ProURLMonitor</title>
         <meta name="description" content="Free Server Port Scanner. Check 21 common ports including HTTP, HTTPS, FTP, SSH, MySQL, PostgreSQL, MongoDB, RDP. Security analysis included." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/server-port-scanner" />
       </Head>
 
       <div className="max-w-6xl mx-auto px-4 py-8">

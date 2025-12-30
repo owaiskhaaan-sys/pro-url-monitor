@@ -170,6 +170,7 @@ export default function HeadingAnalyzer() {
       <Head>
         <title>Heading Tag Analyzer (H1-H6) - Check SEO Heading Structure | ProURLMonitor</title>
         <meta name="description" content="Free heading tag analyzer tool. Check your H1-H6 heading structure, find SEO issues, and optimize your content hierarchy for better rankings." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/heading-analyzer" />
         <meta name="keywords" content="heading tag analyzer, H1 checker, heading structure SEO, H1-H6 analysis, content hierarchy tool" />
       </Head>
 

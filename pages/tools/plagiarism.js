@@ -7,6 +7,7 @@ export default function Plagiarism() {
       <Head>
         <title>Plagiarism Checker - Free Online Detector</title>
         <meta name="description" content="Check plagiarism online for free. Detect copied content, find duplicate text, and ensure originality. Accurate plagiarism checker." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/plagiarism" />
       </Head>
       <section className="max-w-3xl mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold text-emerald-700 mb-3">Plagiarism Checker (Coming Soon)</h1>

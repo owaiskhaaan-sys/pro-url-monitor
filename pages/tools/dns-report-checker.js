@@ -326,6 +326,7 @@ export default function DNSReportChecker() {
       <Head>
         <title>DNS Report Checker - Complete DNS Health Analysis | ProURLMonitor</title>
         <meta name="description" content="Free DNS Report Checker. Comprehensive DNS health analysis with scores, issues, warnings, and recommendations. Check DNS configuration quality." />
+        <link rel="canonical" href="https://www.prourlmonitor.com/tools/dns-report-checker" />
       </Head>
 
       <div className="max-w-6xl mx-auto px-4 py-8">
