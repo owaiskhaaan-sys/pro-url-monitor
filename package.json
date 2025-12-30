@@ -21,7 +21,8 @@
     "rehype-stringify": "^10.0.1",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
-    "remark-rehype": "^11.1.2"
+    "remark-rehype": "^11.1.2",
+    "resend": "^6.6.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
