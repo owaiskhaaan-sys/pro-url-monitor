@@ -14,6 +14,15 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Email and code are required' });
     }
 
+    // Check if API key exists
+    if (!process.env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY is not set');
+      return res.status(500).json({ error: 'Email service not configured. Please contact support.' });
+    }
+
+    console.log('Attempting to send email to:', email);
+    console.log('API Key exists:', !!process.env.RESEND_API_KEY);
+
     const { data, error } = await resend.emails.send({
       from: 'ProURLMonitor <owaiskhaaan@gmail.com>', // Temporary - using verified email
       to: [email],
@@ -119,9 +128,15 @@ export default async function handler(req, res) {
 
     if (error) {
       console.error('Resend error:', error);
-      return res.status(400).json({ error: 'Failed to send email', details: error });
+      console.error('Error details:', JSON.stringify(error, null, 2));
+      return res.status(400).json({ 
+        error: 'Failed to send email', 
+        details: error.message || 'Unknown error',
+        suggestion: 'Please verify email sender in Resend dashboard'
+      });
     }
 
+    console.log('Email sent successfully:', data.id);
     return res.status(200).json({ 
       success: true, 
       message: 'Verification email sent successfully',
@@ -130,6 +145,11 @@ export default async function handler(req, res) {
 
   } catch (error) {
     console.error('Send verification error:', error);
-    return res.status(500).json({ error: 'Internal server error', details: error.message });
+    console.error('Error stack:', error.stack);
+    return res.status(500).json({ 
+      error: 'Internal server error', 
+      details: error.message,
+      suggestion: 'Check server logs for details'
+    });
   }
 }
