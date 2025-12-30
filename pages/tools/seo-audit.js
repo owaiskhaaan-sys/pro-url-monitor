@@ -113,19 +113,21 @@ export default function SEOAudit() {
 
       // 5. Title Tag
       const titleAudit = desktopData.lighthouseResult.audits['document-title'];
+      const hasTitleTag = titleAudit && (titleAudit.score === 1 || titleAudit.score === null || titleAudit.displayValue);
       checks.push({
         item: 'Title Tag',
-        details: titleAudit?.score === 1 ? 'Title tag found ✓' : 'Missing or empty title tag',
-        status: titleAudit?.score === 1 ? 'PASS' : 'FAIL',
+        details: hasTitleTag ? 'Title tag found ✓' : 'Missing or empty title tag',
+        status: hasTitleTag ? 'PASS' : 'FAIL',
         suggestion: 'Keep title between 50-60 characters with primary keyword'
       });
 
       // 6. Meta Description
       const metaAudit = desktopData.lighthouseResult.audits['meta-description'];
+      const hasMetaDesc = metaAudit && (metaAudit.score === 1 || metaAudit.score === null || metaAudit.displayValue);
       checks.push({
         item: 'Meta Description',
-        details: metaAudit?.score === 1 ? 'Meta description found ✓' : 'Missing meta description',
-        status: metaAudit?.score === 1 ? 'PASS' : 'FAIL',
+        details: hasMetaDesc ? 'Meta description found ✓' : 'Missing meta description',
+        status: hasMetaDesc ? 'PASS' : 'FAIL',
         suggestion: 'Add unique meta description (150-160 characters)'
       });
 
@@ -184,7 +186,7 @@ export default function SEOAudit() {
 
       // 11. Canonical URL - CHECK FROM PAGESPEED
       const canonicalAudit = desktopData.lighthouseResult.audits['canonical'];
-      const canonicalPass = canonicalAudit?.score === 1;
+      const canonicalPass = canonicalAudit && (canonicalAudit.score === 1 || canonicalAudit.score === null || !canonicalAudit.details?.items || canonicalAudit.details?.items?.length === 0);
       checks.push({
         item: 'Canonical URL',
         details: canonicalPass ? 'Canonical tag found ✓' : 'No canonical tag detected',
@@ -267,10 +269,11 @@ export default function SEOAudit() {
 
       // 17. Link Health
       const crawlableLinksAudit = desktopData.lighthouseResult.audits['crawlable-anchors'];
+      const allLinksCrawlable = crawlableLinksAudit && (crawlableLinksAudit.score === 1 || crawlableLinksAudit.score === null || !crawlableLinksAudit.details?.items || crawlableLinksAudit.details?.items?.length === 0);
       checks.push({
         item: 'Crawlable Links',
-        details: crawlableLinksAudit?.score === 1 ? 'All links are crawlable ✓' : 'Some links may not be crawlable',
-        status: crawlableLinksAudit?.score === 1 ? 'PASS' : 'FAIL',
+        details: allLinksCrawlable ? 'All links are crawlable ✓' : 'Some links may not be crawlable',
+        status: allLinksCrawlable ? 'PASS' : 'FAIL',
         suggestion: 'Use proper <a> tags with href attributes'
       });
 
