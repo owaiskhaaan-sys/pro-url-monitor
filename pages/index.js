@@ -69,6 +69,10 @@ export default function Home() {
             title: 'Link Extractor',
             href: '/tools/link-extractor',
             desc: 'Extract and download all links from text or HTML.'
+          },{
+            title: 'Voice to Text Converter',
+            href: '/tools/voice-to-text',
+            desc: 'Convert speech to text in real-time. Supports multiple languages including English and Urdu.'
           }].map((t, i) => (
             <div key={i} className="card">
               <h3 className="text-xl font-semibold mb-2 text-emerald-700">{t.title}</h3>

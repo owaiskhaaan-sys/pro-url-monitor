@@ -25,7 +25,8 @@ export default function Header() {
     { title: 'Google PageRank Checker', href: '/tools/google-pagerank-checker' },
     { title: 'Link Extractor', href: '/tools/link-extractor' },
     { title: 'Ping Multiple URLs', href: '/tools/ping-multiple-urls-online' },
-    { title: 'Binary Translator', href: '/tools/binary-translator' }
+    { title: 'Binary Translator', href: '/tools/binary-translator' },
+    { title: 'Voice to Text', href: '/tools/voice-to-text' }
   ];
 
   return (

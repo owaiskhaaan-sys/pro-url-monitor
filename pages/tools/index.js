@@ -25,7 +25,8 @@ export default function ToolsIndex() {
     { title: 'Ping Multiple URLs', href: '/tools/ping-multiple-urls-online', category: 'Tools' },
     
     // Utility & Text Tools
-    { title: 'Binary Translator', href: '/tools/binary-translator', category: 'Utilities' }
+    { title: 'Binary Translator', href: '/tools/binary-translator', category: 'Utilities' },
+    { title: 'Voice to Text Converter', href: '/tools/voice-to-text', category: 'Utilities' }
   ];
 
   return (
