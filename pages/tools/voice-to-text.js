@@ -19,68 +19,98 @@ export default function VoiceToText() {
         return;
       }
 
-      // Initialize Speech Recognition
-      const recognition = new SpeechRecognition();
-      recognition.continuous = true;
-      recognition.interimResults = true;
-      recognition.lang = language;
+      // Don't reinitialize if already exists
+      if (!recognitionRef.current) {
+        // Initialize Speech Recognition
+        const recognition = new SpeechRecognition();
+        recognition.continuous = true;
+        recognition.interimResults = true;
+        recognition.lang = language;
 
-      recognition.onresult = (event) => {
-        let interimTranscript = '';
-        let finalTranscript = '';
+        recognition.onstart = () => {
+          console.log('Recognition started successfully');
+          setIsListening(true);
+        };
 
-        for (let i = event.resultIndex; i < event.results.length; i++) {
-          const transcript = event.results[i][0].transcript;
-          if (event.results[i].isFinal) {
-            finalTranscript += transcript + ' ';
-          } else {
-            interimTranscript += transcript;
+        recognition.onresult = (event) => {
+          let interimTranscript = '';
+          let finalTranscript = '';
+
+          for (let i = event.resultIndex; i < event.results.length; i++) {
+            const transcript = event.results[i][0].transcript;
+            if (event.results[i].isFinal) {
+              finalTranscript += transcript + ' ';
+            } else {
+              interimTranscript += transcript;
+            }
           }
-        }
 
-        if (finalTranscript) {
-          setText((prev) => prev + finalTranscript);
+          if (finalTranscript) {
+            setText((prev) => prev + finalTranscript);
+            setInterimText('');
+          } else {
+            setInterimText(interimTranscript);
+          }
+        };
+
+        recognition.onerror = (event) => {
+          console.error('Speech recognition error:', event.error);
+          if (event.error === 'no-speech') {
+            console.log('No speech detected. Please try again.');
+          } else if (event.error === 'not-allowed') {
+            alert('Microphone access denied. Please allow microphone access in your browser settings.');
+          }
+          setIsListening(false);
+        };
+
+        recognition.onend = () => {
+          console.log('Recognition ended');
+          setIsListening(false);
           setInterimText('');
-        } else {
-          setInterimText(interimTranscript);
-        }
-      };
+        };
 
-      recognition.onerror = (event) => {
-        console.error('Speech recognition error:', event.error);
-        if (event.error === 'no-speech') {
-          console.log('No speech detected. Please try again.');
-        }
-        setIsListening(false);
-      };
-
-      recognition.onend = () => {
-        setIsListening(false);
-        setInterimText('');
-      };
-
-      recognitionRef.current = recognition;
+        recognitionRef.current = recognition;
+      } else {
+        // Just update language if recognition already exists
+        recognitionRef.current.lang = language;
+      }
     }
 
     return () => {
-      if (recognitionRef.current) {
-        recognitionRef.current.stop();
+      if (recognitionRef.current && isListening) {
+        try {
+          recognitionRef.current.stop();
+        } catch (e) {
+          console.log('Error stopping recognition:', e);
+        }
       }
     };
-  }, [language]);
+  }, [language, isListening]);
 
   const startListening = () => {
     if (recognitionRef.current && !isListening) {
-      recognitionRef.current.lang = language;
-      recognitionRef.current.start();
-      setIsListening(true);
+      try {
+        recognitionRef.current.lang = language;
+        recognitionRef.current.start();
+        setIsListening(true);
+        console.log('Started listening in language:', language);
+      } catch (error) {
+        console.error('Error starting recognition:', error);
+        alert('Failed to start voice recognition. Please make sure microphone access is allowed and try again.');
+      }
     }
   };
 
   const stopListening = () => {
     if (recognitionRef.current && isListening) {
-      recognitionRef.current.stop();
-      setIsListening(false);
+      try {
+        recognitionRef.current.stop();
+        setIsListening(false);
+        console.log('Stopped listening');
+      } catch (error) {
+        console.error('Error stopping recognition:', error);
+        setIsListening(false);
+      }
     }
   };
 
