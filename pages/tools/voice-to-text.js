@@ -4,12 +4,15 @@ import Layout from '../../components/Layout';
 
 export default function VoiceToText() {
   const [isListening, setIsListening] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
   const [transcript, setTranscript] = useState('');
   const [interimTranscript, setInterimTranscript] = useState('');
   const [language, setLanguage] = useState('en-US');
   const [isSupported, setIsSupported] = useState(true);
   const [error, setError] = useState('');
+  const [isEditing, setIsEditing] = useState(false);
   const recognitionRef = useRef(null);
+  const textareaRef = useRef(null);
 
   useEffect(() => {
     // Check if browser supports Speech Recognition
@@ -164,6 +167,8 @@ export default function VoiceToText() {
   const stopListening = () => {
     console.log('Stopping listening...');
     setIsListening(false);
+    setIsPaused(false);
+    setIsEditing(true);
     setInterimTranscript('');
     if (recognitionRef.current) {
       try {
@@ -173,6 +178,42 @@ export default function VoiceToText() {
         console.error('Error stopping recognition:', err);
       }
     }
+  };
+
+  const pauseListening = () => {
+    console.log('Pausing listening...');
+    setIsPaused(true);
+    setIsEditing(true);
+    setInterimTranscript('');
+    if (recognitionRef.current) {
+      try {
+        recognitionRef.current.stop();
+        console.log('Recognition paused successfully');
+      } catch (err) {
+        console.error('Error pausing recognition:', err);
+      }
+    }
+  };
+
+  const resumeListening = () => {
+    console.log('Resuming listening...');
+    setIsPaused(false);
+    setIsEditing(false);
+    setError('');
+    
+    if (recognitionRef.current) {
+      try {
+        recognitionRef.current.start();
+        console.log('Recognition resumed successfully');
+      } catch (err) {
+        console.error('Error resuming recognition:', err);
+        setError('Failed to resume speech recognition. Please try again.');
+      }
+    }
+  };
+
+  const handleTranscriptEdit = (e) => {
+    setTranscript(e.target.value);
   };
 
   const clearTranscript = () => {
@@ -292,15 +333,51 @@ export default function VoiceToText() {
                     Start Recording
                   </button>
                 ) : (
-                  <button
-                    onClick={stopListening}
-                    className="flex-1 min-w-[200px] bg-gradient-to-r from-red-500 to-red-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-red-600 hover:to-red-700 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 animate-pulse"
-                  >
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 7a1 1 0 00-1 1v4a1 1 0 001 1h4a1 1 0 001-1V8a1 1 0 00-1-1H8z" clipRule="evenodd" />
-                    </svg>
-                    Stop Recording
-                  </button>
+                  <>
+                    {!isPaused ? (
+                      <>
+                        <button
+                          onClick={pauseListening}
+                          className="flex-1 min-w-[150px] bg-gradient-to-r from-yellow-500 to-yellow-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-yellow-600 hover:to-yellow-700 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                        >
+                          <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
+                          </svg>
+                          Pause
+                        </button>
+                        <button
+                          onClick={stopListening}
+                          className="flex-1 min-w-[150px] bg-gradient-to-r from-red-500 to-red-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-red-600 hover:to-red-700 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                        >
+                          <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 7a1 1 0 00-1 1v4a1 1 0 001 1h4a1 1 0 001-1V8a1 1 0 00-1-1H8z" clipRule="evenodd" />
+                          </svg>
+                          Stop
+                        </button>
+                      </>
+                    ) : (
+                      <>
+                        <button
+                          onClick={resumeListening}
+                          className="flex-1 min-w-[150px] bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-green-600 hover:to-green-700 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                        >
+                          <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                          </svg>
+                          Resume
+                        </button>
+                        <button
+                          onClick={stopListening}
+                          className="flex-1 min-w-[150px] bg-gradient-to-r from-red-500 to-red-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-red-600 hover:to-red-700 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                        >
+                          <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 7a1 1 0 00-1 1v4a1 1 0 001 1h4a1 1 0 001-1V8a1 1 0 00-1-1H8z" clipRule="evenodd" />
+                          </svg>
+                          Stop
+                        </button>
+                      </>
+                    )}
+                  </>
                 )}
 
                 <button
@@ -323,7 +400,7 @@ export default function VoiceToText() {
               )}
 
               {/* Status Indicator */}
-              {isListening && (
+              {isListening && !isPaused && (
                 <div className="mb-6 bg-green-50 border border-green-200 rounded-lg p-4 flex items-center gap-3">
                   <div className="flex space-x-1">
                     <div className="w-2 h-2 bg-green-500 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
@@ -334,26 +411,59 @@ export default function VoiceToText() {
                 </div>
               )}
 
+              {/* Paused Indicator */}
+              {isPaused && (
+                <div className="mb-6 bg-yellow-50 border border-yellow-200 rounded-lg p-4 flex items-center gap-3">
+                  <svg className="w-5 h-5 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
+                  </svg>
+                  <p className="text-yellow-700 font-semibold">Recording Paused - You can edit the text below</p>
+                </div>
+              )}
+
               {/* Transcript Display */}
               <div className="mb-6">
                 <label className="block text-gray-700 font-semibold mb-2">
                   Transcript:
+                  {(isPaused || isEditing) && (
+                    <span className="ml-2 text-sm text-blue-600 font-normal">
+                      (Editable - Click to edit)
+                    </span>
+                  )}
                 </label>
-                <div className="min-h-[300px] max-h-[500px] overflow-y-auto p-4 border-2 border-gray-300 rounded-lg bg-gray-50">
-                  <p className="text-gray-800 whitespace-pre-wrap leading-relaxed">
-                    {transcript}
-                    {interimTranscript && (
-                      <span className="text-gray-500 italic">{interimTranscript}</span>
-                    )}
-                    {!transcript && !interimTranscript && (
-                      <span className="text-gray-400">Your transcribed text will appear here...</span>
-                    )}
-                  </p>
-                </div>
-                <div className="mt-2 text-sm text-gray-500">
-                  Words: {transcript.trim().split(/\s+/).filter(word => word.length > 0).length} | 
-                  Characters: {transcript.length}
-                  {isListening && <span className="ml-2 text-green-600">● REC</span>}
+                {(isPaused || isEditing) && !isListening ? (
+                  <textarea
+                    ref={textareaRef}
+                    value={transcript}
+                    onChange={handleTranscriptEdit}
+                    className="w-full min-h-[300px] max-h-[500px] p-4 border-2 border-blue-300 rounded-lg bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-gray-800 leading-relaxed resize-y"
+                    placeholder="Your transcribed text will appear here..."
+                  />
+                ) : (
+                  <div className="min-h-[300px] max-h-[500px] overflow-y-auto p-4 border-2 border-gray-300 rounded-lg bg-gray-50">
+                    <p className="text-gray-800 whitespace-pre-wrap leading-relaxed">
+                      {transcript}
+                      {interimTranscript && (
+                        <span className="text-gray-500 italic">{interimTranscript}</span>
+                      )}
+                      {!transcript && !interimTranscript && (
+                        <span className="text-gray-400">Your transcribed text will appear here...</span>
+                      )}
+                    </p>
+                  </div>
+                )}
+                <div className="mt-2 text-sm text-gray-500 flex items-center justify-between">
+                  <div>
+                    Words: {transcript.trim().split(/\s+/).filter(word => word.length > 0).length} | 
+                    Characters: {transcript.length}
+                    {isListening && !isPaused && <span className="ml-2 text-green-600">● REC</span>}
+                    {isPaused && <span className="ml-2 text-yellow-600">⏸ PAUSED</span>}
+                  </div>
+                  {(isPaused || isEditing) && (
+                    <div className="text-blue-600 text-xs">
+                      💡 Tip: Edit text, remove mistakes, then click Resume to continue
+                    </div>
+                  )}
                 </div>
               </div>
 
