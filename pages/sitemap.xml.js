@@ -77,6 +77,7 @@ export async function getServerSideProps({ res }) {
     'lorem-ipsum-generator',
     'paraphraser',
     'plagiarism',
+    'voice-to-text',
     
     // Code Beautifiers
     'html-beautifier-minifier',

@@ -68,6 +68,7 @@ export default function Home() {
     
     // Text Tools
     { title: 'Word Counter', href: '/tools/word-counter', desc: 'Count words and characters', category: 'Text' },
+    { title: 'Voice to Text Converter', href: '/tools/voice-to-text', desc: 'Convert speech to text in 15+ languages', category: 'Text' },
     { title: 'Case Converter', href: '/tools/case-converter', desc: 'Convert text case', category: 'Text' },
     { title: 'Text Cleaner', href: '/tools/text-cleaner', desc: 'Clean text', category: 'Text' },
     { title: 'Text Reverser', href: '/tools/text-reverser', desc: 'Reverse text', category: 'Text' },
