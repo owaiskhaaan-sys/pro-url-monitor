@@ -34,30 +34,6 @@ export default function VoiceToText() {
         console.log('Speech recognition started');
       };
 
-      recognition.onaudiostart = () => {
-        console.log('🔊 Audio capturing started');
-      };
-
-      recognition.onaudioend = () => {
-        console.log('🔇 Audio capturing ended');
-      };
-
-      recognition.onsoundstart = () => {
-        console.log('🎵 Sound detected');
-      };
-
-      recognition.onsoundend = () => {
-        console.log('🔕 Sound ended');
-      };
-
-      recognition.onspeechstart = () => {
-        console.log('🗣️ Speech detected');
-      };
-
-      recognition.onspeechend = () => {
-        console.log('🤐 Speech ended');
-      };
-
       recognition.onresult = (event) => {
         console.log('🎯 Recognition result received!');
         console.log('Event:', event);
@@ -98,22 +74,15 @@ export default function VoiceToText() {
       };
 
       recognition.onerror = (event) => {
-        console.error('❌ Speech recognition error:', event.error);
-        console.error('Error event:', event);
+        console.error('Speech recognition error:', event.error);
         if (event.error === 'not-allowed' || event.error === 'permission-denied') {
           setError('Microphone access denied. Please allow microphone permission.');
           setIsListening(false);
         } else if (event.error === 'no-speech') {
-          console.log('⚠️ No speech detected, continuing...');
+          console.log('No speech detected, continuing...');
           // Don't show error for no-speech, just continue listening
         } else if (event.error === 'aborted') {
-          console.log('⚠️ Recognition aborted');
-        } else if (event.error === 'network') {
-          setError('Network error. Speech recognition requires internet connection.');
-          setIsListening(false);
-        } else if (event.error === 'audio-capture') {
-          setError('Audio capture failed. Please check your microphone and try again.');
-          setIsListening(false);
+          console.log('Recognition aborted');
         } else {
           setError(`Error: ${event.error}`);
           setIsListening(false);
@@ -355,35 +324,29 @@ export default function VoiceToText() {
 
               {/* Status Indicator */}
               {isListening && (
-                <div className="mb-6 bg-green-50 border border-green-200 rounded-lg p-4">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="flex space-x-1">
-                      <div className="w-2 h-2 bg-green-500 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
-                      <div className="w-2 h-2 bg-green-500 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
-                      <div className="w-2 h-2 bg-green-500 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
-                    </div>
-                    <p className="text-green-700 font-semibold">🎤 Listening... Speak now (selected language: {languages.find(l => l.code === language)?.name})</p>
+                <div className="mb-6 bg-green-50 border border-green-200 rounded-lg p-4 flex items-center gap-3">
+                  <div className="flex space-x-1">
+                    <div className="w-2 h-2 bg-green-500 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
+                    <div className="w-2 h-2 bg-green-500 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
+                    <div className="w-2 h-2 bg-green-500 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
                   </div>
-                  <p className="text-sm text-green-600">Try saying: "Hello, this is a test" or "Testing one two three"</p>
+                  <p className="text-green-700 font-semibold">Listening... Speak now</p>
                 </div>
               )}
 
               {/* Transcript Display */}
               <div className="mb-6">
                 <label className="block text-gray-700 font-semibold mb-2">
-                  Transcript: {isListening && <span className="text-green-600 text-sm">(Recording active - Console logs should show results)</span>}
+                  Transcript:
                 </label>
-                <div 
-                  className="min-h-[300px] max-h-[500px] overflow-y-auto p-4 border-2 border-gray-300 rounded-lg bg-gray-50"
-                  onClick={() => console.log('Current transcript:', transcript, 'Interim:', interimTranscript)}
-                >
+                <div className="min-h-[300px] max-h-[500px] overflow-y-auto p-4 border-2 border-gray-300 rounded-lg bg-gray-50">
                   <p className="text-gray-800 whitespace-pre-wrap leading-relaxed">
                     {transcript}
                     {interimTranscript && (
                       <span className="text-gray-500 italic">{interimTranscript}</span>
                     )}
                     {!transcript && !interimTranscript && (
-                      <span className="text-gray-400">Your transcribed text will appear here... (Click here to see current state in console)</span>
+                      <span className="text-gray-400">Your transcribed text will appear here...</span>
                     )}
                   </p>
                 </div>
