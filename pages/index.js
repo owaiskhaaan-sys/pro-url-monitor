@@ -159,7 +159,7 @@ export default function Home() {
     <Layout>
       <Head>
         <title>ProURLMonitor - Free SEO Tools, Domain Authority Checker & URL Analysis</title>
-        <meta name="description" content="ProURLMonitor offers 17+ free SEO tools including Domain Authority Checker, Broken Links Checker, HTTP Status Checker, Meta Tag Generator, and more. Analyze domains, check backlinks, and optimize your website for better search rankings." />
+        <meta name="description" content="ProURLMonitor offers 140+ free SEO tools including Domain Authority Checker, Broken Links Checker, HTTP Status Checker, Meta Tag Generator, AI Content Detector, and more. Analyze domains, check backlinks, and optimize your website for better search rankings." />
         <link rel="canonical" href="https://www.prourlmonitor.com/" />
       </Head>
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 text-center">
@@ -275,7 +275,7 @@ export default function Home() {
           
           <div className="text-gray-700 leading-relaxed space-y-4">
             <p>
-              ProURLMonitor is your all-in-one platform for <strong>professional SEO analysis and domain intelligence</strong>. Whether you're an SEO specialist, digital marketer, web developer, or website owner, our suite of 17+ free tools helps you optimize your online presence, monitor website health, and improve search engine rankings.
+              ProURLMonitor is your all-in-one platform for <strong>professional SEO analysis and domain intelligence</strong>. Whether you're an SEO specialist, digital marketer, web developer, or website owner, our suite of <strong>140+ free tools</strong> helps you optimize your online presence, monitor website health, and improve search engine rankings. From AI-powered content detection to binary converters, we provide comprehensive tools for every digital need.
             </p>
             
             <p>
@@ -300,9 +300,11 @@ export default function Home() {
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Why ProURLMonitor?</h2>
         <ul className="list-disc pl-5 sm:pl-6 text-gray-700 space-y-2 text-sm sm:text-base">
-          <li>17 professional domain, link, and SEO analysis tools.</li>
-          <li>Fast, secure, and most tools run fully in your browser — no uploads.</li>
-          <li>Monitor domain health, track backlinks, check rankings, and verify URL safety.</li>
+          <li><strong>140+ professional SEO, domain, text, and developer tools</strong> - Complete toolkit for all your needs</li>
+          <li><strong>100% free, no registration required</strong> - All tools work instantly without sign-up</li>
+          <li><strong>Privacy-focused</strong> - Most tools run in your browser, no data uploaded to servers</li>
+          <li><strong>Complete SEO suite</strong> - From keyword research to schema markup generation</li>
+          <li><strong>Developer utilities</strong> - Code formatters, converters, encoders & more</li>
         </ul>
       </section>
     </Layout>
