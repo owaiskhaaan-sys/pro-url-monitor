@@ -285,16 +285,23 @@ export default function VoiceToText() {
   return (
     <Layout>
       <Head>
-        <title>Free Voice to Text Converter Online - | ProURLMonitor</title>
+        <title>Voice to Text Converter Free - Speech Recognition Tool 2026</title>
         <meta
           name="description"
-          content="Convert voice to text instantly with our free online speech-to-text converter. Real-time transcription in 15+ languages including English, Urdu, Hindi,..."
+          content="Free voice to text converter with real-time speech recognition. Support 15+ languages including English, Urdu, Hindi. Pause, edit & download transcripts instantly."
         />
         <meta
           name="keywords"
-          content="voice to text, speech to text, voice recognition, transcription tool, audio to text, free voice converter"
+          content="voice to text, speech to text, voice recognition, transcription tool, audio to text, free voice converter, speech recognition, dictation tool"
         />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/voice-to-text" />
+        <meta property="og:title" content="Voice to Text Converter - Free Speech Recognition Tool" />
+        <meta property="og:description" content="Convert speech to text in real-time with 15+ language support. Free, accurate, and works on mobile & desktop." />
+        <meta property="og:url" content="https://www.prourlmonitor.com/tools/voice-to-text" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Voice to Text Converter - Free Tool" />
+        <meta name="twitter:description" content="Free voice to text converter with real-time speech recognition in 15+ languages." />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 py-12 px-4">
@@ -306,6 +313,21 @@ export default function VoiceToText() {
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Convert your speech to text in real-time. Supports 15+ languages with high accuracy transcription.
             </p>
+          </div>
+
+          {/* Table of Contents */}
+          <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+              <span className="mr-2">📑</span> Table of Contents
+            </h2>
+            <div className="grid md:grid-cols-2 gap-3">
+              <a href="#how-to-use" className="text-emerald-600 hover:text-emerald-700 hover:underline text-sm">→ How to Use Voice to Text</a>
+              <a href="#key-features" className="text-emerald-600 hover:text-emerald-700 hover:underline text-sm">→ Key Features</a>
+              <a href="#why-use" className="text-emerald-600 hover:text-emerald-700 hover:underline text-sm">→ Why Use Voice to Text</a>
+              <a href="#best-practices" className="text-emerald-600 hover:text-emerald-700 hover:underline text-sm">→ Best Practices</a>
+              <a href="#use-cases" className="text-emerald-600 hover:text-emerald-700 hover:underline text-sm">→ Popular Use Cases</a>
+              <a href="#troubleshooting" className="text-emerald-600 hover:text-emerald-700 hover:underline text-sm">→ Troubleshooting Guide</a>
+            </div>
           </div>
 
           {!isSupported ? (
@@ -444,7 +466,7 @@ export default function VoiceToText() {
         {/* Comprehensive Content Section */}
         <div className="max-w-4xl mx-auto mt-12 space-y-8">
           {/* How to Use */}
-          <div className="card">
+          <div id="how-to-use" className="card">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">How to Use Voice to Text Converter</h2>
             <div className="space-y-4 text-gray-700">
               <p>
@@ -465,7 +487,7 @@ export default function VoiceToText() {
           </div>
 
           {/* Key Features */}
-          <div className="card">
+          <div id="key-features" className="card">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">Key Features of Our Voice to Text Tool</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
@@ -504,7 +526,7 @@ export default function VoiceToText() {
           </div>
 
           {/* Why Use Voice to Text */}
-          <div className="card">
+          <div id="why-use" className="card">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">Why Use Voice to Text Technology?</h2>
             <div className="space-y-4 text-gray-700">
               <p>
@@ -549,7 +571,7 @@ export default function VoiceToText() {
           </div>
 
           {/* Best Practices */}
-          <div className="card">
+          <div id="best-practices" className="card">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">Best Practices for Accurate Voice Transcription</h2>
             <div className="space-y-4 text-gray-700">
               <p>
@@ -593,7 +615,7 @@ export default function VoiceToText() {
           </div>
 
           {/* Common Use Cases */}
-          <div className="card">
+          <div id="use-cases" className="card">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">Popular Use Cases for Voice to Text</h2>
             <div className="space-y-4 text-gray-700">
               <div className="grid md:grid-cols-2 gap-6">
@@ -650,7 +672,7 @@ export default function VoiceToText() {
           </div>
 
           {/* Troubleshooting */}
-          <div className="card">
+          <div id="troubleshooting" className="card">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">Troubleshooting Common Issues</h2>
             <div className="space-y-4 text-gray-700">
               <div className="bg-gray-50 p-4 rounded-lg">
