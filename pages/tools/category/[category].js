@@ -307,3 +307,24 @@ export default function CategoryPage() {
     </Layout>
   );
 }
+
+// Generate static paths for all category pages
+export async function getStaticPaths() {
+  const categories = ['seo', 'domain', 'network', 'text', 'code', 'image', 'converter', 'ai', 'security'];
+  
+  return {
+    paths: categories.map(category => ({
+      params: { category }
+    })),
+    fallback: false
+  };
+}
+
+// Generate static props for each category page
+export async function getStaticProps({ params }) {
+  return {
+    props: {
+      category: params.category
+    }
+  };
+}
