@@ -105,8 +105,8 @@ export default function CmykToRgbConverter() {
   return (
     <Layout>
       <Head>
-        <title>CMYK to RGB Converter - Convert CMYK Color to RGB Online | ProURLMonitor</title>
-        <meta name="description" content="Free CMYK to RGB converter. Convert CMYK (Cyan, Magenta, Yellow, Black) print colors to RGB screen colors instantly. Perfect for print to digital color conversion." />
+        <title>CMYK to RGB Converter - Convert CMYK | ProURLMonitor</title>
+        <meta name="description" content="Free CMYK to RGB converter. Convert CMYK (Cyan, Magenta, Yellow, Black) print colors to RGB screen colors instantly. Perfect for print to digital color..." />
         <meta name="keywords" content="cmyk to rgb, color converter, cmyk color, rgb color, print to digital, color conversion, cmyk converter" />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/cmyk-to-rgb" />
         

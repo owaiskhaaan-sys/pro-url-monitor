@@ -127,7 +127,7 @@ export default function HTMLBeautifierMinifier() {
     <Layout>
       <Head>
         <title>HTML Beautifier & Minifier - Format & Compress HTML Code Online | ProURLMonitor</title>
-        <meta name="description" content="Free HTML Beautifier and Minifier Tool. Format messy HTML code with proper indentation or minify to reduce file size. Online HTML formatter with instant results." />
+        <meta name="description" content="Free HTML Beautifier and Minifier Tool. Format messy HTML code with proper indentation or minify to reduce file size. Online HTML formatter with..." />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/html-beautifier-minifier" />
       </Head>
 

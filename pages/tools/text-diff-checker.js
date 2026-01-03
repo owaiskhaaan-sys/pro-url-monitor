@@ -164,8 +164,8 @@ Nothing has changed here.`);
   return (
     <Layout>
       <Head>
-        <title>Text Diff Checker - Compare Two Texts Online & Find Differences</title>
-        <meta name="description" content="Free online text comparison tool. Compare two texts side-by-side and highlight differences. Perfect for finding changes, comparing documents, and reviewing edits with line, word, and character-level comparison." />
+        <title>Text Diff Checker - Compare Two Texts | ProURLMonitor</title>
+        <meta name="description" content="Free online text comparison tool. Compare two texts side-by-side and highlight differences. Perfect for finding changes, comparing documents, and..." />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/text-diff-checker" />
         <meta name="keywords" content="text diff, compare text, text comparison, diff checker, find differences, text compare online, diff tool, compare documents" />
       </Head>

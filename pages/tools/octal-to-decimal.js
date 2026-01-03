@@ -49,7 +49,7 @@ export default function OctalToDecimal() {
     <Layout>
       <Head>
         <title>Octal to Decimal Converter - Free Online Tool | ProURLMonitor</title>
-        <meta name="description" content="Convert octal numbers to decimal instantly with our free online octal to decimal converter. Get results in decimal, binary, and hexadecimal formats with step-by-step conversion guide." />
+        <meta name="description" content="Convert octal numbers to decimal instantly with our free online octal to decimal converter. Get results in decimal, binary, and hexadecimal formats..." />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/octal-to-decimal" />
       </Head>
 

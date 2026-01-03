@@ -89,7 +89,7 @@ export default function PingMultipleURLs() {
   return (
     <Layout>
       <Head>
-        <title>Ping Multiple URLs Online - Submit to Search Engines | ProURLMonitor</title>
+        <title>Ping Multiple URLs Online - Submit to | ProURLMonitor</title>
         <meta name="description" content="Free ping service to submit your URLs and backlinks to multiple search engines. Ping up to 10 URLs at once to Google, Bing, Yahoo, and more." />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/ping-multiple-urls-online" />
       </Head>

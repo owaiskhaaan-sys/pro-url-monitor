@@ -49,7 +49,7 @@ export default function BinaryToOctal() {
     <Layout>
       <Head>
         <title>Binary to Octal Converter - Free Online Tool | ProURLMonitor</title>
-        <meta name="description" content="Convert binary numbers to octal instantly with our free online binary to octal converter. Get results in octal, decimal, and hexadecimal formats with step-by-step conversion guide." />
+        <meta name="description" content="Convert binary numbers to octal instantly with our free online binary to octal converter. Get results in octal, decimal, and hexadecimal formats with..." />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/binary-to-octal" />
       </Head>
 

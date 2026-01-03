@@ -89,8 +89,8 @@ export default function HexToRgbConverter() {
   return (
     <Layout>
       <Head>
-        <title>HEX to RGB Converter - Convert HEX Color to RGB Online | ProURLMonitor</title>
-        <meta name="description" content="Free HEX to RGB converter. Convert hexadecimal color codes to RGB values instantly. Supports 3, 6, and 8-digit HEX codes with alpha channel. Copy RGB, RGBA, or CSS format." />
+        <title>HEX to RGB Converter - Convert HEX Color | ProURLMonitor</title>
+        <meta name="description" content="Free HEX to RGB converter. Convert hexadecimal color codes to RGB values instantly. Supports 3, 6, and 8-digit HEX codes with alpha channel. Copy RGB,..." />
         <meta name="keywords" content="hex to rgb, color converter, hex color, rgb color, color code converter, css color, rgba converter" />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/hex-to-rgb" />
         

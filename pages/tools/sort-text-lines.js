@@ -145,8 +145,8 @@ Lemon`);
   return (
     <Layout>
       <Head>
-        <title>Sort Text Lines Online - Alphabetical, Numerical & Custom Sorting Tool</title>
-        <meta name="description" content="Free online tool to sort text lines alphabetically, numerically, by length, or randomly. Sort A-Z, Z-A, shuffle lines, and remove duplicates with advanced sorting options." />
+        <title>Sort Text Lines Online - Alphabetical, | ProURLMonitor</title>
+        <meta name="description" content="Free online tool to sort text lines alphabetically, numerically, by length, or randomly. Sort A-Z, Z-A, shuffle lines, and remove duplicates with..." />
         <meta name="keywords" content="sort text lines, alphabetical sort, line sorter, text organizer, sort alphabetically, numerical sort, random shuffle, sort by length" />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/sort-text-lines" />
       </Head>

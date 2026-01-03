@@ -134,7 +134,7 @@ export default function DNSRecordsChecker() {
   return (
     <Layout>
       <Head>
-        <title>DNS Records Checker - Check A, MX, NS, TXT Records | ProURLMonitor</title>
+        <title>DNS Records Checker - Check A, MX, NS, | ProURLMonitor</title>
         <meta name="description" content="Free DNS records checker tool. Check A, AAAA, MX, TXT, NS, CNAME, and SOA records for any domain instantly. DNS lookup and verification tool." />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/dns-records-checker" />
       </Head>

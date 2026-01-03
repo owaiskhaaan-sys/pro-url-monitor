@@ -254,7 +254,7 @@ export default function SchemaGenerator() {
   return (
     <Layout>
       <Head>
-        <title>Schema Markup Generator (JSON-LD) - Create Structured Data for Rich Snippets | ProURLMonitor</title>
+        <title>Schema Markup Generator (JSON-LD) - | ProURLMonitor</title>
         <meta name="description" content="Free schema markup generator. Create JSON-LD structured data for Article, Product, FAQ, Organization, and LocalBusiness to get rich snippets in Google." />
         <meta name="keywords" content="schema markup generator, JSON-LD generator, structured data tool, rich snippets, schema.org generator" />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/schema-generator" />

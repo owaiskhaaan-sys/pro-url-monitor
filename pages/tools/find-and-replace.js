@@ -146,8 +146,8 @@ The dog is not as quick as the fox.`);
   return (
     <Layout>
       <Head>
-        <title>Find and Replace Text Online - Free Text Search & Replace Tool</title>
-        <meta name="description" content="Free online find and replace tool. Search and replace text with support for regex patterns, case-sensitive matching, and batch replacements. Perfect for text editing and data processing." />
+        <title>Find and Replace Text Online - Free Text | ProURLMonitor</title>
+        <meta name="description" content="Free online find and replace tool. Search and replace text with support for regex patterns, case-sensitive matching, and batch replacements. Perfect..." />
         <meta name="keywords" content="find and replace, text search, replace text, regex replace, bulk replace, text editor, search and replace, find replace online" />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/find-and-replace" />
       </Head>

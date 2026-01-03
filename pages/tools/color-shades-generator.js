@@ -194,7 +194,7 @@ export default function ColorShadesGenerator() {
   return (
     <Layout>
       <Head>
-        <title>Color Shades Generator - Create Tints, Shades & Tones Online | ProURLMonitor</title>
+        <title>Color Shades Generator - Create Tints, | ProURLMonitor</title>
         <meta name="description" content="Free color shades generator. Create tints (lighter), shades (darker), and tones (muted) variations of any color. Perfect for creating cohesive color systems." />
         <meta name="keywords" content="color shades, tints and shades, color variations, color tones, color lightness, design system colors, color palette" />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/color-shades-generator" />

@@ -262,8 +262,8 @@ export default function VoiceToText() {
   return (
     <Layout>
       <Head>
-        <title>Free Voice to Text Converter Online - Real-Time Speech Recognition 2026</title>
-        <meta name="description" content="Convert voice to text instantly with our free online speech-to-text converter. Real-time transcription in 15+ languages including English, Urdu, Hindi, Arabic. No sign-up required, 100% private & secure. Perfect for notes, transcription, dictation & more." />
+        <title>Free Voice to Text Converter Online - | ProURLMonitor</title>
+        <meta name="description" content="Convert voice to text instantly with our free online speech-to-text converter. Real-time transcription in 15+ languages including English, Urdu, Hindi,..." />
         <meta name="keywords" content="voice to text, speech to text, voice recognition, transcription tool, audio to text, free voice converter, speech recognition online, dictation software, voice typing, speech transcription, real time transcription" />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/voice-to-text" />
         

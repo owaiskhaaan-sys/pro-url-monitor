@@ -329,7 +329,7 @@ export default function SemanticKeywordFinder() {
   return (
     <Layout>
       <Head>
-        <title>Semantic Keyword Finder - LSI Keywords & Related Terms | ProURLMonitor</title>
+        <title>Semantic Keyword Finder - LSI Keywords & | ProURLMonitor</title>
         <meta name="description" content="Find semantic keywords, LSI terms, related keywords, and question-based keywords. Analyze search intent and discover topical clusters for better SEO." />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/semantic-keyword-finder" />
       </Head>

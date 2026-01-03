@@ -180,7 +180,7 @@ export default function DifferentLocationsPing() {
   return (
     <Layout>
       <Head>
-        <title>Ping from Different Locations - Global Ping Test Tool | ProURLMonitor</title>
+        <title>Ping from Different Locations - Global | ProURLMonitor</title>
         <meta name="description" content="Free Global Ping Test Tool. Test ping from 12 worldwide locations. Check latency, packet loss, and jitter from North America, Europe, Asia, and more." />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/different-locations-ping" />
       </Head>

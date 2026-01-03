@@ -49,7 +49,7 @@ export default function HexToBinary() {
     <Layout>
       <Head>
         <title>Hex to Binary Converter - Free Online Tool | ProURLMonitor</title>
-        <meta name="description" content="Convert hexadecimal numbers to binary instantly with our free online hex to binary converter. Get results in binary, decimal, and octal formats with step-by-step conversion guide." />
+        <meta name="description" content="Convert hexadecimal numbers to binary instantly with our free online hex to binary converter. Get results in binary, decimal, and octal formats with..." />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/hex-to-binary" />
       </Head>
 

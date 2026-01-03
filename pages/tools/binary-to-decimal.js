@@ -48,8 +48,8 @@ export default function BinaryToDecimal() {
   return (
     <Layout>
       <Head>
-        <title>Binary to Decimal Converter - Free Online Tool | ProURLMonitor</title>
-        <meta name="description" content="Convert binary numbers to decimal instantly with our free online binary to decimal converter. Get results in decimal, hexadecimal, and octal formats with step-by-step conversion guide." />
+        <title>Binary to Decimal Converter - Free Online | ProURLMonitor</title>
+        <meta name="description" content="Convert binary numbers to decimal instantly with our free online binary to decimal converter. Get results in decimal, hexadecimal, and octal formats..." />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/binary-to-decimal" />
       </Head>
 

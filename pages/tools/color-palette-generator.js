@@ -231,8 +231,8 @@ export default function ColorPaletteGenerator() {
   return (
     <Layout>
       <Head>
-        <title>Color Palette Generator - Create Harmonious Color Schemes Online | ProURLMonitor</title>
-        <meta name="description" content="Free color palette generator. Create beautiful harmonious color schemes using complementary, triadic, analogous, and more color theory principles. Perfect for designers." />
+        <title>Color Palette Generator - Create | ProURLMonitor</title>
+        <meta name="description" content="Free color palette generator. Create beautiful harmonious color schemes using complementary, triadic, analogous, and more color theory principles...." />
         <meta name="keywords" content="color palette generator, color scheme, harmonious colors, complementary colors, triadic colors, analogous colors, color theory, design colors" />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/color-palette-generator" />
         

@@ -87,8 +87,8 @@ export default function TwosComplementCalculator() {
   return (
     <Layout>
       <Head>
-        <title>Two's Complement Calculator - Free Online Tool | ProURLMonitor</title>
-        <meta name="description" content="Calculate two's complement of binary numbers instantly with our free online calculator. Convert positive and negative binary numbers with step-by-step explanation for 8-bit, 16-bit, and 32-bit systems." />
+        <title>Two's Complement Calculator - Free Online | ProURLMonitor</title>
+        <meta name="description" content="Calculate two's complement of binary numbers instantly with our free online calculator. Convert positive and negative binary numbers with step-by-step..." />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/twos-complement-calculator" />
       </Head>
 

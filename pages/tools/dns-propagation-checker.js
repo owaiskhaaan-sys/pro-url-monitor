@@ -166,7 +166,7 @@ export default function DNSPropagationChecker() {
   return (
     <Layout>
       <Head>
-        <title>DNS Propagation Checker - Check DNS Across Global Locations | ProURLMonitor</title>
+        <title>DNS Propagation Checker - Check DNS | ProURLMonitor</title>
         <meta name="description" content="Free DNS Propagation Checker. Check DNS records propagation across 12 global locations worldwide. Verify A, AAAA, MX, TXT, NS, CNAME records." />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/dns-propagation-checker" />
       </Head>

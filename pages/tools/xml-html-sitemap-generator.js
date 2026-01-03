@@ -48,7 +48,7 @@ ${urlList.map(url => `  <url>
     <Layout>
       <Head>
         <title>Sitemap Generator - Create XML & HTML Sitemaps Free</title>
-        <meta name="description" content="Generate XML and HTML sitemaps for your website automatically. Free sitemap generator tool to create SEO-friendly sitemaps for Google, Bing, and other search engines." />
+        <meta name="description" content="Generate XML and HTML sitemaps for your website automatically. Free sitemap generator tool to create SEO-friendly sitemaps for Google, Bing, and other..." />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/xml-html-sitemap-generator" />
       </Head>
       <section className="max-w-4xl mx-auto px-4 py-12">

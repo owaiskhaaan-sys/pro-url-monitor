@@ -413,7 +413,7 @@ Regular SEO audits help identify issues and opportunities for improvement. Monit
   return (
     <Layout>
       <Head>
-        <title>Internal Linking Assistant - Smart Link Suggestions | ProURLMonitor</title>
+        <title>Internal Linking Assistant - Smart Link | ProURLMonitor</title>
         <meta name="description" content="Optimize internal linking strategy with AI-powered suggestions. Find link opportunities, analyze anchor text, check link density, and improve site structure." />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/internal-linking-assistant" />
       </Head>

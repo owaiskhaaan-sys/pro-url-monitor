@@ -91,8 +91,8 @@ export default function BinaryCalculator() {
   return (
     <Layout>
       <Head>
-        <title>Binary Calculator - Add, Subtract, Multiply & Divide Binary Numbers | ProURLMonitor</title>
-        <meta name="description" content="Free online binary calculator for adding, subtracting, multiplying, and dividing binary numbers. Get instant results in binary, decimal, and hexadecimal formats." />
+        <title>Binary Calculator - Add, Subtract, | ProURLMonitor</title>
+        <meta name="description" content="Free online binary calculator for adding, subtracting, multiplying, and dividing binary numbers. Get instant results in binary, decimal, and..." />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/binary-calculator" />
       </Head>
 

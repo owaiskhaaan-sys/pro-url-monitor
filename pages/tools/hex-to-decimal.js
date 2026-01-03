@@ -47,7 +47,7 @@ export default function HexToDecimal() {
     <Layout>
       <Head>
         <title>Hex to Decimal Converter - Free Online Tool | ProURLMonitor</title>
-        <meta name="description" content="Convert hexadecimal to decimal instantly with our free online hex to decimal converter. Get results in decimal, binary, and octal formats with step-by-step conversion guide." />
+        <meta name="description" content="Convert hexadecimal to decimal instantly with our free online hex to decimal converter. Get results in decimal, binary, and octal formats with..." />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/hex-to-decimal" />
       </Head>
 

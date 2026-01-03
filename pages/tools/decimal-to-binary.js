@@ -49,8 +49,8 @@ export default function DecimalToBinary() {
   return (
     <Layout>
       <Head>
-        <title>Decimal to Binary Converter - Free Online Tool | ProURLMonitor</title>
-        <meta name="description" content="Convert decimal numbers to binary instantly with our free online decimal to binary converter. Get results in binary, hexadecimal, and octal formats with step-by-step conversion guide." />
+        <title>Decimal to Binary Converter - Free Online | ProURLMonitor</title>
+        <meta name="description" content="Convert decimal numbers to binary instantly with our free online decimal to binary converter. Get results in binary, hexadecimal, and octal formats..." />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/decimal-to-binary" />
       </Head>
 

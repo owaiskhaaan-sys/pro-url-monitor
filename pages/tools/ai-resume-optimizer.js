@@ -241,8 +241,8 @@ export default function AIResumeOptimizer() {
   return (
     <Layout>
       <Head>
-        <title>AI Resume Optimizer - ATS Resume Checker & Optimizer Tool | Free</title>
-        <meta name="description" content="Free AI Resume Optimizer to optimize your resume for ATS (Applicant Tracking Systems). Get ATS score, keyword suggestions, formatting tips, and actionable improvements. Beat AI resume screening and get more interviews." />
+        <title>AI Resume Optimizer - ATS Resume Checker | ProURLMonitor</title>
+        <meta name="description" content="Free AI Resume Optimizer to optimize your resume for ATS (Applicant Tracking Systems). Get ATS score, keyword suggestions, formatting tips, and..." />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/ai-resume-optimizer" />
         <meta name="keywords" content="AI resume optimizer, ATS resume checker, resume optimizer, ATS score, resume keywords, resume formatting, applicant tracking system, resume scanner, resume analyzer" />
         <meta property="og:title" content="AI Resume Optimizer - Beat ATS & Get More Interviews" />

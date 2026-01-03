@@ -190,8 +190,8 @@ export default function SEOTitleGenerator() {
   return (
     <Layout>
       <Head>
-        <title>SEO Title Tag Generator - Create Click-Worthy Titles | ProURLMonitor</title>
-        <meta name="description" content="Generate SEO-optimized title tags that rank and get clicks. Get 7 unique title variations with power words, optimal length (50-60 chars), and high CTR potential." />
+        <title>SEO Title Tag Generator - Create | ProURLMonitor</title>
+        <meta name="description" content="Generate SEO-optimized title tags that rank and get clicks. Get 7 unique title variations with power words, optimal length (50-60 chars), and high CTR..." />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/seo-title-generator" />
       </Head>
 

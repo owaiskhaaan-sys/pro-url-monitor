@@ -308,7 +308,7 @@ export default function AltTextGenerator() {
   return (
     <Layout>
       <Head>
-        <title>Bulk Alt Text Generator - Upload Images & Generate Alt Text | ProURLMonitor</title>
+        <title>Bulk Alt Text Generator - Upload Images & | ProURLMonitor</title>
         <meta name="description" content="Generate alt text for single or bulk images. Upload images or enter URLs to create SEO-optimized, accessible alt text instantly. Bulk image alt text generator." />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/alt-text-generator" />
       </Head>

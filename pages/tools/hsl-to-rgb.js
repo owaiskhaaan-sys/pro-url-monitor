@@ -130,8 +130,8 @@ export default function HslToRgbConverter() {
   return (
     <Layout>
       <Head>
-        <title>HSL to RGB Converter - Convert HSL Color to RGB Online | ProURLMonitor</title>
-        <meta name="description" content="Free HSL to RGB converter. Convert HSL (Hue, Saturation, Lightness) color values to RGB instantly. Interactive sliders with real-time preview and multiple output formats." />
+        <title>HSL to RGB Converter - Convert HSL Color | ProURLMonitor</title>
+        <meta name="description" content="Free HSL to RGB converter. Convert HSL (Hue, Saturation, Lightness) color values to RGB instantly. Interactive sliders with real-time preview and..." />
         <meta name="keywords" content="hsl to rgb, color converter, hsl color, rgb color, color code converter, css color, hsl converter" />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/hsl-to-rgb" />
         

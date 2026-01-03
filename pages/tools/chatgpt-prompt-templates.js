@@ -155,8 +155,8 @@ export default function ChatGPTPromptTemplates() {
   return (
     <Layout>
       <Head>
-        <title>100+ ChatGPT Prompt Templates Library - Ready-to-Use AI Prompts | Free</title>
-        <meta name="description" content="Free library of 100+ ChatGPT prompt templates for writing, marketing, coding, business, education, SEO, and more. Copy-paste ready prompts to get better AI results instantly. No signup required." />
+        <title>100+ ChatGPT Prompt Templates Library - | ProURLMonitor</title>
+        <meta name="description" content="Free library of 100+ ChatGPT prompt templates for writing, marketing, coding, business, education, SEO, and more. Copy-paste ready prompts to get..." />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/chatgpt-prompt-templates" />
         <meta name="keywords" content="ChatGPT prompts, AI prompt templates, ChatGPT examples, prompt library, AI writing prompts, ChatGPT for business, prompt engineering, AI prompts" />
         <meta property="og:title" content="100+ ChatGPT Prompt Templates - Free AI Prompt Library" />

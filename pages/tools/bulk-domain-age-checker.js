@@ -30,7 +30,7 @@ export default function BulkDomainAgeChecker() {
     <Layout>
       <Head>
         <title>Bulk Domain Age Checker - Check Multiple Domains</title>
-        <meta name="description" content="Check domain age for multiple websites instantly. Free bulk domain age checker tool to verify registration date, domain history, and website age for SEO analysis." />
+        <meta name="description" content="Check domain age for multiple websites instantly. Free bulk domain age checker tool to verify registration date, domain history, and website age for..." />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/bulk-domain-age-checker" />
       </Head>
       <section className="max-w-4xl mx-auto px-4 py-12">

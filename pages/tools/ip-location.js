@@ -118,7 +118,7 @@ export default function IPLocation() {
   return (
     <Layout>
       <Head>
-        <title>IP Location Finder - IP Geolocation Lookup Tool | ProURLMonitor</title>
+        <title>IP Location Finder - IP Geolocation | ProURLMonitor</title>
         <meta name="description" content="Free IP Location Finder. Get IP geolocation with country, city, coordinates, timezone, ISP information. Track IP address locations worldwide." />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/ip-location" />
       </Head>

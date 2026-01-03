@@ -96,7 +96,7 @@ export default function DomainAuthorityChecker() {
     <Layout>
       <Head>
         <title>Domain Authority Checker - Check DA/PA Free</title>
-        <meta name="description" content="Check domain authority (DA) and page authority (PA) scores instantly. Free bulk domain authority checker using OpenPageRank API. Analyze website credibility and SEO strength." />
+        <meta name="description" content="Check domain authority (DA) and page authority (PA) scores instantly. Free bulk domain authority checker using OpenPageRank API. Analyze website..." />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/domain-authority-checker" />
       </Head>
       
