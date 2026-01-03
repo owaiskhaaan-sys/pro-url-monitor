@@ -1,7 +1,5 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY);
-
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
@@ -13,7 +11,17 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: "Message is required" });
   }
 
+  // Check if API key exists
+  const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
+  if (!apiKey) {
+    console.error("GEMINI API KEY MISSING!");
+    return res.status(500).json({ 
+      reply: "Sorry, chatbot is temporarily unavailable. Please email us at info@prourlmonitor.com" 
+    });
+  }
+
   try {
+    const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
 
     const systemPrompt = `You are a helpful AI assistant for ProURLMonitor website. You help users with their questions about:
