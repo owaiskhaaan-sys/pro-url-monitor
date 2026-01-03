@@ -1,7 +1,7 @@
 ---
 title: "Meta Tags SEO Guide 2026: How to Write Title Tags and Meta Descriptions That Double Your Click-Through Rate"
 excerpt: "Learn how to write perfect meta tags for SEO. Master title tag optimization, meta description best practices, and Open Graph tags to boost your CTR by 50% or more. Complete guide with examples and free meta tag generator tool."
-date: "2026-12-17"
+date: "2025-12-18"
 author: "ProURLMonitor Team"
 image: "/blog/images/meta-tags-seo-guide.jpg"
 keywords: "meta tags SEO, how to write meta tags, title tag optimization, meta description best practices, Open Graph tags tutorial, meta tag generator free, SEO title examples, meta description length, how to optimize meta tags for Google"
