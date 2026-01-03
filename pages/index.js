@@ -307,6 +307,67 @@ export default function Home() {
           <li><strong>Developer utilities</strong> - Code formatters, converters, encoders & more</li>
         </ul>
       </section>
+
+      {/* AI Comparison Section */}
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 mb-8">
+        <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-3xl p-8 sm:p-12 border-4 border-gray-900 shadow-xl">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-gray-900 text-center mb-4">
+            <span className="bg-yellow-300 px-2">STILL</span> NOT SURE THAT PROURLMONITOR IS RIGHT FOR YOU?
+          </h2>
+          <p className="text-center text-gray-700 text-lg sm:text-xl mb-6">
+            Let ChatGPT, Claude, Gemini, or Perplexity do the thinking for you.
+          </p>
+          <p className="text-center text-gray-700 text-base sm:text-lg mb-8">
+            Click a button and see what your favorite AI says about ProURLMonitor.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a
+              href="https://chat.openai.com/?q=tell+me+why+prourlmonitor.com+is+a+great+choice+for+me"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 px-6 py-4 bg-purple-100 hover:bg-purple-200 border-2 border-gray-900 rounded-2xl font-bold text-gray-900 transition-all hover:scale-105 shadow-md"
+            >
+              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+              </svg>
+              Ask ChatGPT
+            </a>
+            <a
+              href="https://claude.ai/new?q=tell+me+why+prourlmonitor.com+is+a+great+choice+for+me"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 px-6 py-4 bg-orange-100 hover:bg-orange-200 border-2 border-gray-900 rounded-2xl font-bold text-gray-900 transition-all hover:scale-105 shadow-md"
+            >
+              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z"/>
+              </svg>
+              Ask Claude
+            </a>
+            <a
+              href="https://gemini.google.com/?q=tell+me+why+prourlmonitor.com+is+a+great+choice+for+me"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 px-6 py-4 bg-blue-100 hover:bg-blue-200 border-2 border-gray-900 rounded-2xl font-bold text-gray-900 transition-all hover:scale-105 shadow-md"
+            >
+              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+              </svg>
+              Ask Gemini
+            </a>
+            <a
+              href="https://www.perplexity.ai/search/new?q=tell+me+why+prourlmonitor.com+is+a+great+choice+for+me"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 px-6 py-4 bg-green-100 hover:bg-green-200 border-2 border-gray-900 rounded-2xl font-bold text-gray-900 transition-all hover:scale-105 shadow-md"
+            >
+              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+              Ask Perplexity
+            </a>
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 }
