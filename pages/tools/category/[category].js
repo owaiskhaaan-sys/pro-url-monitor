@@ -112,7 +112,7 @@ export default function CategoryPage() {
         { title: 'Regex Tester', href: '/tools/regex-tester', desc: 'Test regular expressions' },
       ]
     },
-    converters: {
+    converter: {
       name: 'Converters & Encoders',
       description: 'Convert between binary, hexadecimal, decimal, octal, Base64, URL encoding, color codes (RGB, HEX, HSL, CMYK), and various data formats.',
       icon: '🔄',
