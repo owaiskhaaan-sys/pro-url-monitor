@@ -36,7 +36,7 @@ export default function Footer() {
         </div>
         <div className="border-t border-gray-800 pt-6">
           <div className="text-center text-sm text-gray-400">
-            <p>&copy; 2025 ProURLMonitor. All rights reserved.</p>
+            <p>&copy; 2026 ProURLMonitor. All rights reserved.</p>
           </div>
         </div>
       </div>

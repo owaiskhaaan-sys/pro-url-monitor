@@ -94,7 +94,7 @@ export default async function handler(req, res) {
           <tr>
             <td style="background-color: #f7fafc; padding: 30px; text-align: center; border-top: 1px solid #e2e8f0;">
               <p style="margin: 0 0 10px 0; color: #718096; font-size: 14px;">Need help? Contact us at <a href="mailto:support@prourlmonitor.com" style="color: #667eea; text-decoration: none;">support@prourlmonitor.com</a></p>
-              <p style="margin: 10px 0 0 0; color: #a0aec0; font-size: 12px;">© 2025 ProURLMonitor. All rights reserved.</p>
+              <p style="margin: 10px 0 0 0; color: #a0aec0; font-size: 12px;">© 2026 ProURLMonitor. All rights reserved.</p>
             </td>
           </tr>
         </table>

@@ -111,7 +111,7 @@ export default async function handler(req, res) {
                 Need help? Contact us at <a href="mailto:support@prourlmonitor.com" style="color: #667eea; text-decoration: none;">support@prourlmonitor.com</a>
               </p>
               <p style="margin: 10px 0 0 0; color: #a0aec0; font-size: 12px;">
-                © 2025 ProURLMonitor. All rights reserved.
+                © 2026 ProURLMonitor. All rights reserved.
               </p>
               <p style="margin: 10px 0 0 0;">
                 <a href="https://www.prourlmonitor.com" style="color: #667eea; text-decoration: none; font-size: 12px; margin: 0 10px;">Website</a> |
