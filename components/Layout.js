@@ -1,5 +1,6 @@
 import Header from './Header';
 import Footer from './Footer';
+import Chatbot from './Chatbot';
 
 export default function Layout({ children }) {
   return (
@@ -7,6 +8,7 @@ export default function Layout({ children }) {
       <Header />
       <main className="flex-1 container py-8 sm:py-12">{children}</main>
       <Footer />
+      <Chatbot />
     </div>
   );
 }
