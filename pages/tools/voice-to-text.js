@@ -425,13 +425,13 @@ export default function VoiceToText() {
               <div className="mb-6">
                 <label className="block text-gray-700 font-semibold mb-2">
                   Transcript:
-                  {(isPaused || isEditing) && (
+                  {(isPaused || (!isListening && isEditing)) && (
                     <span className="ml-2 text-sm text-blue-600 font-normal">
                       (Editable - Click to edit)
                     </span>
                   )}
                 </label>
-                {(isPaused || isEditing) && !isListening ? (
+                {(isPaused || (!isListening && isEditing)) ? (
                   <textarea
                     ref={textareaRef}
                     value={transcript}
@@ -452,14 +452,14 @@ export default function VoiceToText() {
                     </p>
                   </div>
                 )}
-                <div className="mt-2 text-sm text-gray-500 flex items-center justify-between">
+                <div className="mt-2 text-sm text-gray-500 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                   <div>
                     Words: {transcript.trim().split(/\s+/).filter(word => word.length > 0).length} | 
                     Characters: {transcript.length}
                     {isListening && !isPaused && <span className="ml-2 text-green-600">● REC</span>}
                     {isPaused && <span className="ml-2 text-yellow-600">⏸ PAUSED</span>}
                   </div>
-                  {(isPaused || isEditing) && (
+                  {(isPaused || (!isListening && isEditing)) && (
                     <div className="text-blue-600 text-xs">
                       💡 Tip: Edit text, remove mistakes, then click Resume to continue
                     </div>
