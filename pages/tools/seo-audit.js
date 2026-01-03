@@ -508,6 +508,37 @@ export default function SEOAudit() {
               </p>
             </div>
           </div>
+
+          {/* Related Tools Section */}
+          <div className="card mt-8">
+            <h2 className="text-2xl font-bold text-gray-800 mb-6">Related SEO & Website Analysis Tools</h2>
+            <div className="grid md:grid-cols-3 gap-4">
+              <a href="/tools/meta-generator" className="block p-4 border border-gray-200 rounded-lg hover:border-emerald-500 hover:shadow-lg transition-all">
+                <h3 className="font-semibold text-emerald-600 mb-2">Meta Tags Generator</h3>
+                <p className="text-sm text-gray-600">Create optimized meta titles and descriptions for better SEO</p>
+              </a>
+              <a href="/tools/http-status-checker" className="block p-4 border border-gray-200 rounded-lg hover:border-emerald-500 hover:shadow-lg transition-all">
+                <h3 className="font-semibold text-emerald-600 mb-2">HTTP Status Checker</h3>
+                <p className="text-sm text-gray-600">Check response codes and server status of your URLs</p>
+              </a>
+              <a href="/tools/broken-links-checker" className="block p-4 border border-gray-200 rounded-lg hover:border-emerald-500 hover:shadow-lg transition-all">
+                <h3 className="font-semibold text-emerald-600 mb-2">Broken Links Checker</h3>
+                <p className="text-sm text-gray-600">Find and fix broken links that hurt your SEO rankings</p>
+              </a>
+              <a href="/tools/keyword-density-checker" className="block p-4 border border-gray-200 rounded-lg hover:border-emerald-500 hover:shadow-lg transition-all">
+                <h3 className="font-semibold text-emerald-600 mb-2">Keyword Density Checker</h3>
+                <p className="text-sm text-gray-600">Analyze keyword usage and optimize content for target keywords</p>
+              </a>
+              <a href="/tools/schema-generator" className="block p-4 border border-gray-200 rounded-lg hover:border-emerald-500 hover:shadow-lg transition-all">
+                <h3 className="font-semibold text-emerald-600 mb-2">Schema Markup Generator</h3>
+                <p className="text-sm text-gray-600">Add structured data to improve search engine understanding</p>
+              </a>
+              <a href="/tools/favicon-converter" className="block p-4 border border-gray-200 rounded-lg hover:border-emerald-500 hover:shadow-lg transition-all">
+                <h3 className="font-semibold text-emerald-600 mb-2">Favicon Converter</h3>
+                <p className="text-sm text-gray-600">Generate all favicon sizes for complete website branding</p>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </Layout>
