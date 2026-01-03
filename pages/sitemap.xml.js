@@ -102,6 +102,10 @@ export async function getServerSideProps({ res }) {
     'sha256-generator',
     'sha512-generator',
     
+    // Image & Icon Tools
+    'image-compress',
+    'favicon-converter',
+    
     // Color Tools
     'hex-to-rgb',
     'rgb-to-hex',
