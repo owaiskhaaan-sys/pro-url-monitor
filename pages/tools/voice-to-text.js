@@ -440,6 +440,309 @@ export default function VoiceToText() {
             </div>
           )}
         </div>
+
+        {/* Comprehensive Content Section */}
+        <div className="max-w-4xl mx-auto mt-12 space-y-8">
+          {/* How to Use */}
+          <div className="card">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">How to Use Voice to Text Converter</h2>
+            <div className="space-y-4 text-gray-700">
+              <p>
+                Converting your voice to text has never been easier. Our free speech-to-text tool works directly in your browser without requiring any downloads or installations. Here's how to get started:
+              </p>
+              <ol className="list-decimal list-inside space-y-3 ml-4">
+                <li><strong>Select Your Language:</strong> Choose from 15+ supported languages including English, Urdu, Hindi, Spanish, French, Arabic, Chinese, and more. The tool automatically adjusts to your selected language's accent and pronunciation patterns.</li>
+                <li><strong>Grant Microphone Access:</strong> Click the "Start Listening" button and allow microphone access when prompted. This is required for the tool to capture your voice input.</li>
+                <li><strong>Start Speaking:</strong> Speak clearly and naturally. The tool will transcribe your speech in real-time, showing both interim (gray) and final (black) text as you speak.</li>
+                <li><strong>Pause When Needed:</strong> Need to think or take a break? Hit "Pause" to temporarily stop transcription. Your existing text is preserved and becomes editable. Click "Resume" to continue where you left off.</li>
+                <li><strong>Edit Your Text:</strong> When paused or after stopping, you can manually edit the transcript to fix any recognition errors or add punctuation.</li>
+                <li><strong>Copy or Download:</strong> Once finished, use the "Copy Text" button to copy to clipboard, or "Download" to save as a .txt file on your device.</li>
+              </ol>
+              <p className="text-sm text-gray-600 mt-4">
+                <strong>Pro Tip:</strong> For best accuracy, speak in a quiet environment with minimal background noise. Position your microphone 6-12 inches from your mouth and speak at a normal conversational pace.
+              </p>
+            </div>
+          </div>
+
+          {/* Key Features */}
+          <div className="card">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">Key Features of Our Voice to Text Tool</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="font-semibold text-emerald-600 mb-2">🎤 Real-Time Transcription</h3>
+                <p className="text-gray-700 text-sm">See your words appear instantly as you speak. The tool displays interim results (in progress) and finalizes them automatically, giving you immediate feedback on accuracy.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-emerald-600 mb-2">🌍 15+ Languages Supported</h3>
+                <p className="text-gray-700 text-sm">Transcribe in English (US/UK), Urdu, Hindi, Spanish, French, German, Arabic, Chinese, Japanese, Korean, Portuguese, Russian, Italian, Dutch, and Turkish.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-emerald-600 mb-2">⏸️ Pause & Resume</h3>
+                <p className="text-gray-700 text-sm">Unique pause functionality lets you stop recording while keeping your transcript intact. Perfect for collecting your thoughts or handling interruptions without losing work.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-emerald-600 mb-2">✏️ Manual Editing</h3>
+                <p className="text-gray-700 text-sm">Edit your transcript directly in the tool. Fix recognition errors, add punctuation, or refine your text before copying or downloading.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-emerald-600 mb-2">📱 Mobile Optimized</h3>
+                <p className="text-gray-700 text-sm">Works perfectly on smartphones and tablets. Our advanced processing prevents duplicate text issues common in mobile browsers, ensuring clean, accurate transcripts.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-emerald-600 mb-2">🔒 100% Private</h3>
+                <p className="text-gray-700 text-sm">All processing happens in your browser using Web Speech API. Your voice and text never leave your device or get stored on our servers. Complete privacy guaranteed.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-emerald-600 mb-2">💾 Export Options</h3>
+                <p className="text-gray-700 text-sm">Copy transcribed text to clipboard with one click, or download as a .txt file for use in documents, emails, or other applications.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-emerald-600 mb-2">🆓 Completely Free</h3>
+                <p className="text-gray-700 text-sm">No registration, no subscription, no hidden fees. Unlimited transcription for personal and commercial use without any restrictions.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Why Use Voice to Text */}
+          <div className="card">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">Why Use Voice to Text Technology?</h2>
+            <div className="space-y-4 text-gray-700">
+              <p>
+                Voice-to-text technology is revolutionizing how we create written content. Whether you're a professional writer, student, business person, or someone who simply types slowly, speech recognition offers significant advantages:
+              </p>
+              
+              <h3 className="text-lg font-semibold text-emerald-600 mt-6">⚡ Speed and Efficiency</h3>
+              <p>
+                The average person speaks at 150-160 words per minute but types only 40-50 words per minute. That means you can create written content 3-4x faster using voice dictation. For lengthy documents, emails, reports, or articles, this time savings is massive.
+              </p>
+
+              <h3 className="text-lg font-semibold text-emerald-600 mt-6">♿ Accessibility</h3>
+              <p>
+                Voice typing is essential for people with physical disabilities, repetitive strain injuries (RSI), carpal tunnel syndrome, or conditions that make traditional typing difficult or painful. It provides equal access to digital communication and content creation.
+              </p>
+
+              <h3 className="text-lg font-semibold text-emerald-600 mt-6">🎯 Hands-Free Operation</h3>
+              <p>
+                Need to write while cooking, driving, walking, or doing other tasks? Voice-to-text lets you be productive in situations where typing isn't possible. Perfect for busy professionals who want to draft emails during their commute or capture ideas while exercising.
+              </p>
+
+              <h3 className="text-lg font-semibold text-emerald-600 mt-6">🧠 Better for Creative Flow</h3>
+              <p>
+                Many writers find that speaking their thoughts feels more natural than typing. It can help overcome writer's block because you're having a conversation rather than staring at a blank page. The continuous flow of speech can unlock creativity in ways that typing sometimes restricts.
+              </p>
+
+              <h3 className="text-lg font-semibold text-emerald-600 mt-6">📝 Note-Taking and Meetings</h3>
+              <p>
+                Capture meeting notes, lecture content, interviews, or brainstorming sessions in real-time. Much faster than manual note-taking and ensures you don't miss important details while trying to write everything down.
+              </p>
+
+              <h3 className="text-lg font-semibold text-emerald-600 mt-6">💼 Professional Applications</h3>
+              <ul className="list-disc list-inside ml-4 space-y-2">
+                <li><strong>Content Creators:</strong> Draft blog posts, social media content, video scripts, and articles faster</li>
+                <li><strong>Medical Professionals:</strong> Dictate patient notes and medical reports hands-free</li>
+                <li><strong>Legal Professionals:</strong> Transcribe case notes, client meetings, and dictate legal documents</li>
+                <li><strong>Journalists:</strong> Record and transcribe interviews, field notes, and article drafts</li>
+                <li><strong>Students:</strong> Take lecture notes, draft essays, and create study guides efficiently</li>
+                <li><strong>Business:</strong> Draft emails, create reports, and document processes quickly</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Best Practices */}
+          <div className="card">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">Best Practices for Accurate Voice Transcription</h2>
+            <div className="space-y-4 text-gray-700">
+              <p>
+                While modern speech recognition is highly accurate, following these best practices will significantly improve your results:
+              </p>
+
+              <h3 className="text-lg font-semibold text-emerald-600 mt-6">🎙️ Microphone and Environment</h3>
+              <ul className="list-disc list-inside ml-4 space-y-2">
+                <li><strong>Use a quality microphone:</strong> Built-in laptop/phone mics work, but an external USB or headset mic provides better clarity</li>
+                <li><strong>Minimize background noise:</strong> Find a quiet space. Turn off fans, music, TV, and close windows if there's traffic noise</li>
+                <li><strong>Proper distance:</strong> Position your microphone 6-12 inches from your mouth. Too close causes distortion; too far reduces accuracy</li>
+                <li><strong>Consistent volume:</strong> Speak at a normal conversational volume. Don't whisper or shout</li>
+              </ul>
+
+              <h3 className="text-lg font-semibold text-emerald-600 mt-6">🗣️ Speaking Technique</h3>
+              <ul className="list-disc list-inside ml-4 space-y-2">
+                <li><strong>Speak clearly and naturally:</strong> Don't over-enunciate or speak robotically. Use your normal speaking voice</li>
+                <li><strong>Pace yourself:</strong> Speak at a moderate pace. Not too fast (recognition can't keep up) or too slow (sounds unnatural)</li>
+                <li><strong>Pause between sentences:</strong> Brief pauses help the tool recognize sentence boundaries</li>
+                <li><strong>Articulate clearly:</strong> Open your mouth fully when speaking and pronounce words completely</li>
+                <li><strong>Say punctuation commands:</strong> In most languages, you can say "period", "comma", "question mark", "exclamation point" to add punctuation (Note: Effectiveness varies by language)</li>
+              </ul>
+
+              <h3 className="text-lg font-semibold text-emerald-600 mt-6">📱 Technical Tips</h3>
+              <ul className="list-disc list-inside ml-4 space-y-2">
+                <li><strong>Use supported browsers:</strong> Chrome, Edge, and Safari work best. Firefox support varies</li>
+                <li><strong>Grant permanent microphone access:</strong> Click "Always allow" when prompted to avoid repeated permission requests</li>
+                <li><strong>Check language settings:</strong> Ensure you've selected the correct language matching what you're speaking</li>
+                <li><strong>Stable internet connection:</strong> While processing is local, initial API loading requires internet</li>
+                <li><strong>Mobile users:</strong> Our tool prevents duplicate text issues. If you encounter problems, try using Chrome mobile browser</li>
+              </ul>
+
+              <h3 className="text-lg font-semibold text-emerald-600 mt-6">✏️ Post-Transcription Editing</h3>
+              <ul className="list-disc list-inside ml-4 space-y-2">
+                <li><strong>Always review:</strong> Even 95% accuracy means errors every 20 words. Quick proofread catches mistakes</li>
+                <li><strong>Add punctuation:</strong> Voice recognition sometimes misses punctuation. Add periods, commas, and capitals during editing</li>
+                <li><strong>Fix homophones:</strong> Words like "there/their/they're" or "to/too/two" may need correction</li>
+                <li><strong>Format properly:</strong> Add paragraph breaks, headings, and formatting after transcription</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Common Use Cases */}
+          <div className="card">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">Popular Use Cases for Voice to Text</h2>
+            <div className="space-y-4 text-gray-700">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="border-l-4 border-emerald-500 pl-4">
+                  <h4 className="font-semibold text-gray-800 mb-2">📧 Email Drafting</h4>
+                  <p className="text-sm">Compose professional emails 3x faster. Especially useful for lengthy emails or when responding to multiple messages.</p>
+                </div>
+                <div className="border-l-4 border-emerald-500 pl-4">
+                  <h4 className="font-semibold text-gray-800 mb-2">📄 Document Creation</h4>
+                  <p className="text-sm">Draft reports, proposals, articles, and essays. Great for getting initial thoughts down quickly before refining.</p>
+                </div>
+                <div className="border-l-4 border-emerald-500 pl-4">
+                  <h4 className="font-semibold text-gray-800 mb-2">📝 Meeting Notes</h4>
+                  <p className="text-sm">Capture meeting discussions, action items, and decisions in real-time without missing important details.</p>
+                </div>
+                <div className="border-l-4 border-emerald-500 pl-4">
+                  <h4 className="font-semibold text-gray-800 mb-2">🎓 Lecture Transcription</h4>
+                  <p className="text-sm">Students can transcribe professors' lectures for study notes. Review and edit later for better retention.</p>
+                </div>
+                <div className="border-l-4 border-emerald-500 pl-4">
+                  <h4 className="font-semibold text-gray-800 mb-2">📱 Social Media Content</h4>
+                  <p className="text-sm">Create Facebook posts, Twitter threads, LinkedIn articles, and Instagram captions by speaking naturally.</p>
+                </div>
+                <div className="border-l-4 border-emerald-500 pl-4">
+                  <h4 className="font-semibold text-gray-800 mb-2">🎬 Video Scripts</h4>
+                  <p className="text-sm">YouTubers and content creators can draft video scripts by speaking through their content flow naturally.</p>
+                </div>
+                <div className="border-l-4 border-emerald-500 pl-4">
+                  <h4 className="font-semibold text-gray-800 mb-2">📚 Book Writing</h4>
+                  <p className="text-sm">Authors can dictate chapters, scenes, and ideas. Some write entire novels using voice-to-text technology.</p>
+                </div>
+                <div className="border-l-4 border-emerald-500 pl-4">
+                  <h4 className="font-semibold text-gray-800 mb-2">💭 Brainstorming</h4>
+                  <p className="text-sm">Capture spontaneous ideas, creative thoughts, and project plans as they come to you throughout the day.</p>
+                </div>
+                <div className="border-l-4 border-emerald-500 pl-4">
+                  <h4 className="font-semibold text-gray-800 mb-2">🏥 Medical Documentation</h4>
+                  <p className="text-sm">Healthcare professionals can dictate patient notes, treatment plans, and observations hands-free.</p>
+                </div>
+                <div className="border-l-4 border-emerald-500 pl-4">
+                  <h4 className="font-semibold text-gray-800 mb-2">⚖️ Legal Transcription</h4>
+                  <p className="text-sm">Lawyers and legal assistants can transcribe case notes, client interviews, and legal briefs efficiently.</p>
+                </div>
+                <div className="border-l-4 border-emerald-500 pl-4">
+                  <h4 className="font-semibold text-gray-800 mb-2">🎤 Interview Transcription</h4>
+                  <p className="text-sm">Journalists, podcasters, and researchers can transcribe interview recordings or dictate interview summaries.</p>
+                </div>
+                <div className="border-l-4 border-emerald-500 pl-4">
+                  <h4 className="font-semibold text-gray-800 mb-2">🌐 Translation Preparation</h4>
+                  <p className="text-sm">Speak in your native language to transcribe, then use translation tools to convert to other languages.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Troubleshooting */}
+          <div className="card">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">Troubleshooting Common Issues</h2>
+            <div className="space-y-4 text-gray-700">
+              <div className="bg-gray-50 p-4 rounded-lg">
+                <h4 className="font-semibold text-gray-800 mb-2">❌ Tool not working / "Not Supported" message</h4>
+                <p className="text-sm mb-2"><strong>Solution:</strong> Your browser may not support Web Speech API. Try:</p>
+                <ul className="list-disc list-inside text-sm ml-4 space-y-1">
+                  <li>Use Chrome, Edge, or Safari (best compatibility)</li>
+                  <li>Update your browser to the latest version</li>
+                  <li>Enable JavaScript in browser settings</li>
+                  <li>Try on a different device</li>
+                </ul>
+              </div>
+
+              <div className="bg-gray-50 p-4 rounded-lg">
+                <h4 className="font-semibold text-gray-800 mb-2">🎤 Microphone not working</h4>
+                <p className="text-sm mb-2"><strong>Solution:</strong></p>
+                <ul className="list-disc list-inside text-sm ml-4 space-y-1">
+                  <li>Click the microphone icon in your browser's address bar and allow access</li>
+                  <li>Check system settings to ensure microphone is enabled</li>
+                  <li>Make sure no other app is using the microphone</li>
+                  <li>Try unplugging and replugging external microphones</li>
+                  <li>Restart your browser</li>
+                </ul>
+              </div>
+
+              <div className="bg-gray-50 p-4 rounded-lg">
+                <h4 className="font-semibold text-gray-800 mb-2">⚠️ Poor accuracy / Many errors</h4>
+                <p className="text-sm mb-2"><strong>Solution:</strong></p>
+                <ul className="list-disc list-inside text-sm ml-4 space-y-1">
+                  <li>Reduce background noise</li>
+                  <li>Speak more clearly and at a moderate pace</li>
+                  <li>Check if you've selected the correct language</li>
+                  <li>Move closer to the microphone (but not too close)</li>
+                  <li>Use a better quality microphone</li>
+                </ul>
+              </div>
+
+              <div className="bg-gray-50 p-4 rounded-lg">
+                <h4 className="font-semibold text-gray-800 mb-2">🔄 Recognition stops automatically</h4>
+                <p className="text-sm mb-2"><strong>Solution:</strong></p>
+                <ul className="list-disc list-inside text-sm ml-4 space-y-1">
+                  <li>This is normal after periods of silence. Just click Resume or Start again</li>
+                  <li>Some browsers have timeouts after 60 seconds of silence</li>
+                  <li>Keep speaking to maintain active recognition</li>
+                  <li>Use Pause if you need a deliberate break</li>
+                </ul>
+              </div>
+
+              <div className="bg-gray-50 p-4 rounded-lg">
+                <h4 className="font-semibold text-gray-800 mb-2">📱 Duplicate text on mobile</h4>
+                <p className="text-sm mb-2"><strong>Solution:</strong></p>
+                <ul className="list-disc list-inside text-sm ml-4 space-y-1">
+                  <li>Our tool has advanced processing to prevent this issue</li>
+                  <li>If it still occurs, try using Chrome mobile browser</li>
+                  <li>Clear browser cache and reload the page</li>
+                  <li>Make sure you're using the latest version of the tool</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Related Tools */}
+          <div className="card">
+            <h2 className="text-2xl font-bold text-gray-800 mb-6">Related Text & Content Tools</h2>
+            <div className="grid md:grid-cols-3 gap-4">
+              <a href="/tools/case-converter" className="block p-4 border border-gray-200 rounded-lg hover:border-emerald-500 hover:shadow-lg transition-all">
+                <h3 className="font-semibold text-emerald-600 mb-2">Case Converter</h3>
+                <p className="text-sm text-gray-600">Convert transcribed text to UPPERCASE, lowercase, Title Case, and more</p>
+              </a>
+              <a href="/tools/word-counter" className="block p-4 border border-gray-200 rounded-lg hover:border-emerald-500 hover:shadow-lg transition-all">
+                <h3 className="font-semibold text-emerald-600 mb-2">Word Counter</h3>
+                <p className="text-sm text-gray-600">Count words, characters, sentences, and paragraphs in your transcript</p>
+              </a>
+              <a href="/tools/text-to-slug" className="block p-4 border border-gray-200 rounded-lg hover:border-emerald-500 hover:shadow-lg transition-all">
+                <h3 className="font-semibold text-emerald-600 mb-2">Text to Slug</h3>
+                <p className="text-sm text-gray-600">Convert transcribed text to URL-friendly slugs</p>
+              </a>
+              <a href="/tools/remove-duplicate-lines" className="block p-4 border border-gray-200 rounded-lg hover:border-emerald-500 hover:shadow-lg transition-all">
+                <h3 className="font-semibold text-emerald-600 mb-2">Remove Duplicates</h3>
+                <p className="text-sm text-gray-600">Clean up duplicate lines in your transcribed text</p>
+              </a>
+              <a href="/tools/find-and-replace" className="block p-4 border border-gray-200 rounded-lg hover:border-emerald-500 hover:shadow-lg transition-all">
+                <h3 className="font-semibold text-emerald-600 mb-2">Find & Replace</h3>
+                <p className="text-sm text-gray-600">Quickly find and replace words in your transcript</p>
+              </a>
+              <a href="/tools/ai-text-humanizer" className="block p-4 border border-gray-200 rounded-lg hover:border-emerald-500 hover:shadow-lg transition-all">
+                <h3 className="font-semibold text-emerald-600 mb-2">AI Text Humanizer</h3>
+                <p className="text-sm text-gray-600">Make your transcribed text sound more natural and human</p>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </Layout>
   );
