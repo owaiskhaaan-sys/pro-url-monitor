@@ -177,10 +177,10 @@ export default function VoiceToText() {
     setError('');
     setIsEditing(false);
     setIsPaused(false);
-    isPausedRprocessed index for new session
-    processedIndexRef.current = 0
-    // reset dedupe so previous final doesn't block new session
-    lastFinalRef.current = '';
+    isPausedRef.current = false;
+
+    // reset processed index for new session
+    processedIndexRef.current = 0;
 
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
@@ -226,10 +226,10 @@ export default function VoiceToText() {
     setIsPaused(false);
     setIsEditing(false);
     setError('');
-    isPausedRprocessed index on resume
-    processedIndexRef.current = 0
-    // reset dedupe on resume so it doesn't block next phrase
-    lastFinalRef.current = '';
+    isPausedRef.current = false;
+
+    // reset processed index on resume
+    processedIndexRef.current = 0;
 
     setTimeout(() => safeStart(), 100);
   };
