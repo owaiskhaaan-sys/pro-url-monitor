@@ -19,7 +19,7 @@ export default function VoiceToText() {
   const isListeningRef = useRef(false);
   const isPausedRef = useRef(false);
   const startedRef = useRef(false);
-  const lastFinalRef = useRef(''); // dedupe final text on mobile
+  const processedIndexRef = useRef(0); // track which results we've already processed
 
   useEffect(() => {
     isListeningRef.current = isListening;
@@ -95,21 +95,21 @@ export default function VoiceToText() {
       let interim = '';
       let final = '';
 
-      for (let i = event.resultIndex; i < event.results.length; i++) {
+      // Mobile fix: Only process NEW results, not all results from beginning
+      const startIndex = Math.max(event.resultIndex, processedIndexRef.current);
+
+      for (let i = startIndex; i < event.results.length; i++) {
         const res = event.results[i];
         const text = (res[0]?.transcript || '').trim();
 
         if (!text) continue;
 
         if (res.isFinal) {
-          // ✅ DEDUPE: mobile often repeats the same final line
-          // If same final text comes again, ignore it
-          if (text === lastFinalRef.current) {
-            continue;
+          // Mark this index as processed to avoid reprocessing
+          if (i >= processedIndexRef.current) {
+            final += text + ' ';
+            processedIndexRef.current = i + 1;
           }
-          lastFinalRef.current = text;
-
-          final += text + ' ';
         } else {
           interim += text + ' ';
         }
@@ -151,6 +151,8 @@ export default function VoiceToText() {
 
       // Restart only if still listening AND not paused
       if (isListeningRef.current && !isPausedRef.current) {
+        // Reset processed index when restarting
+        processedIndexRef.current = 0;
         setTimeout(() => {
           safeStart();
         }, 250);
@@ -175,8 +177,8 @@ export default function VoiceToText() {
     setError('');
     setIsEditing(false);
     setIsPaused(false);
-    isPausedRef.current = false;
-
+    isPausedRprocessed index for new session
+    processedIndexRef.current = 0
     // reset dedupe so previous final doesn't block new session
     lastFinalRef.current = '';
 
@@ -224,8 +226,8 @@ export default function VoiceToText() {
     setIsPaused(false);
     setIsEditing(false);
     setError('');
-    isPausedRef.current = false;
-
+    isPausedRprocessed index on resume
+    processedIndexRef.current = 0
     // reset dedupe on resume so it doesn't block next phrase
     lastFinalRef.current = '';
 
@@ -240,7 +242,7 @@ export default function VoiceToText() {
     setTranscript('');
     setInterimTranscript('');
     setError('');
-    lastFinalRef.current = '';
+    processedIndexRef.current = 0;
   };
 
   const copyToClipboard = async () => {
