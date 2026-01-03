@@ -142,10 +142,27 @@ export async function getServerSideProps({ res }) {
 
   const staticPages = [
     '',
+    '/about',
+    '/pricing',
+    '/contact',
+    '/privacy',
+    '/terms',
     '/login',
     '/signup',
     '/app/dashboard',
     '/blog'
+  ];
+
+  const categoryPages = [
+    '/tools/category/seo',
+    '/tools/category/domain',
+    '/tools/category/network',
+    '/tools/category/text',
+    '/tools/category/code',
+    '/tools/category/image',
+    '/tools/category/converter',
+    '/tools/category/ai',
+    '/tools/category/security'
   ];
 
   // Get blog posts dynamically
@@ -165,6 +182,13 @@ export async function getServerSideProps({ res }) {
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>${page === '' ? '1.0' : '0.8'}</priority>
+  </url>`).join('')}
+  ${categoryPages.map(page => `
+  <url>
+    <loc>${baseUrl}${page}</loc>
+    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>`).join('')}
   ${tools.map(tool => `
   <url>
