@@ -178,41 +178,44 @@ export default function Header() {
             
             {showToolsDropdown && (
               <div 
-                className="absolute left-0 mt-0 w-[600px] bg-white border border-emerald-100 rounded-lg shadow-xl py-4 z-50"
+                className="absolute left-0 mt-2 w-[680px] bg-white border border-gray-200 rounded-xl shadow-2xl py-6 z-50"
+                style={{boxShadow: '0 20px 60px rgba(0,0,0,0.12)'}}
                 onMouseEnter={() => setShowToolsDropdown(true)}
                 onMouseLeave={() => setShowToolsDropdown(false)}
               >
-                <div className="px-4 pb-3 mb-3 border-b border-emerald-100">
-                  <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Browse by Category</h3>
+                <div className="px-6 pb-4 mb-4 border-b border-gray-100">
+                  <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider">Browse by Category</h3>
                 </div>
-                <div className="grid grid-cols-2 gap-2 px-3 max-h-[500px] overflow-y-auto">
+                <div className="grid grid-cols-2 gap-3 px-5 max-h-[480px] overflow-y-auto scrollbar-thin scrollbar-thumb-emerald-300 scrollbar-track-gray-100">
                   {toolCategories.map((category) => (
                     <Link
                       key={category.href}
                       href={category.href}
-                      className="group px-3 py-3 rounded-lg hover:bg-emerald-50 transition border border-transparent hover:border-emerald-200"
+                      className="group px-4 py-4 rounded-xl hover:bg-gradient-to-br hover:from-emerald-50 hover:to-teal-50 transition-all duration-200 border border-gray-100 hover:border-emerald-200 hover:shadow-md"
                     >
-                      <div className="flex items-start gap-3">
-                        <span className="text-2xl">{category.icon}</span>
+                      <div className="flex items-start gap-4">
+                        <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-emerald-100 to-teal-100 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                          {category.icon}
+                        </div>
                         <div className="flex-1 min-w-0">
-                          <div className="font-semibold text-emerald-700 group-hover:text-emerald-800 text-sm mb-1">
+                          <div className="font-bold text-gray-800 group-hover:text-emerald-700 text-base mb-1.5 transition-colors">
                             {category.name}
                           </div>
-                          <div className="text-xs text-gray-500 line-clamp-2">
+                          <div className="text-xs text-gray-500 leading-relaxed line-clamp-2">
                             {category.tools.join(' • ')}
                           </div>
                         </div>
-                        <svg className="w-4 h-4 text-emerald-400 opacity-0 group-hover:opacity-100 transition flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        <svg className="w-5 h-5 text-emerald-500 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
                         </svg>
                       </div>
                     </Link>
                   ))}
                 </div>
-                <div className="px-4 pt-3 mt-3 border-t border-emerald-100">
+                <div className="px-6 pt-4 mt-4 border-t border-gray-100">
                   <Link 
                     href="/#all-tools"
-                    className="text-sm text-emerald-600 hover:text-emerald-700 font-medium flex items-center gap-2"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-600 transition-all duration-200 hover:shadow-lg text-sm"
                   >
                     <span>View All 140+ Tools</span>
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
