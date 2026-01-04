@@ -216,7 +216,7 @@ export default function Signup() {
         <div className="w-full max-w-md">
           <div className="text-center mb-8">
             <Link href="/">
-              <div className="text-3xl font-bold text-blue-600 inline-block">Pro URL Monitor</div>
+              <div className="text-3xl font-bold text-emerald-600 inline-block">Pro URL Monitor</div>
             </Link>
           </div>
 
@@ -309,8 +309,8 @@ export default function Signup() {
             ) : (
               <form onSubmit={handleVerifyCode} className="space-y-4">
                 <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
@@ -330,7 +330,7 @@ export default function Signup() {
                     value={verificationCode} 
                     onChange={(e) => setVerificationCode(e.target.value.replace(/\D/g, '').slice(0, 6))} 
                     placeholder="000000" 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-center text-2xl font-mono tracking-widest" 
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none text-center text-2xl font-mono tracking-widest" 
                     maxLength="6"
                     required 
                   />
@@ -350,7 +350,7 @@ export default function Signup() {
                     type="button" 
                     onClick={handleResendCode} 
                     disabled={loading}
-                    className="text-sm text-blue-600 hover:text-blue-700 font-medium disabled:opacity-50"
+                    className="text-sm text-emerald-600 hover:text-emerald-700 font-medium disabled:opacity-50"
                   >
                     Resend Code
                   </button>
@@ -366,10 +366,10 @@ export default function Signup() {
               </form>
             )}
 
-            <p className="text-center text-sm text-gray-600 mt-6">Already have an account? <Link href="/login" className="text-blue-600 hover:text-blue-700 font-semibold">Log in</Link></p>
+            <p className="text-center text-sm text-gray-600 mt-6">Already have an account? <Link href="/login" className="text-emerald-600 hover:text-emerald-700 font-semibold">Log in</Link></p>
           </div>
 
-          <p className="text-center text-xs text-gray-500 mt-8 max-w-sm">By signing up, you agree to our <a href="#" className="text-blue-600 hover:text-blue-700">Terms of Service</a> and <a href="#" className="text-blue-600 hover:text-blue-700">Privacy Policy</a></p>
+          <p className="text-center text-xs text-gray-500 mt-8 max-w-sm">By signing up, you agree to our <a href="#" className="text-emerald-600 hover:text-emerald-700">Terms of Service</a> and <a href="#" className="text-emerald-600 hover:text-emerald-700">Privacy Policy</a></p>
         </div>
       </div>
     </Layout>

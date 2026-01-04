@@ -67,7 +67,7 @@ export default function Login() {
         <div className="w-full max-w-4xl">
           <div className="text-center mb-8">
             <Link href="/">
-              <div className="text-3xl font-bold text-blue-600 inline-block">Pro URL Monitor</div>
+              <div className="text-3xl font-bold text-emerald-600 inline-block">Pro URL Monitor</div>
             </Link>
           </div>
 
@@ -89,12 +89,12 @@ export default function Login() {
                 <div>
                   <div className="flex justify-between items-center mb-1">
                     <label htmlFor="password" className="block text-sm font-medium text-gray-700">Password</label>
-                    <Link href="/forgot-password" className="text-sm text-blue-600 hover:text-blue-800">
+                    <Link href="/forgot-password" className="text-sm text-emerald-600 hover:text-emerald-800">
                       Forgot password?
                     </Link>
                   </div>
                   <div className="relative">
-                    <input id="password" type={showPassword ? 'text' : 'password'} value={password} onChange={(e) => setPassword(e.target.value)} placeholder="••••••••" className="w-full px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" />
+                    <input id="password" type={showPassword ? 'text' : 'password'} value={password} onChange={(e) => setPassword(e.target.value)} placeholder="••••••••" className="w-full px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none" />
                     <button
                       type="button"
                       onClick={() => setShowPassword(!showPassword)}
@@ -142,14 +142,14 @@ export default function Login() {
 
               <button className="w-full mt-4 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 font-medium">Continue with Google</button>
 
-              <p className="text-center text-sm text-gray-600 mt-6">Don't have an account? <Link href="/signup" className="text-blue-600 hover:text-blue-700 font-semibold">Sign up</Link></p>
+              <p className="text-center text-sm text-gray-600 mt-6">Don't have an account? <Link href="/signup" className="text-emerald-600 hover:text-emerald-700 font-semibold">Sign up</Link></p>
 
-              <p className="text-center text-sm text-gray-600 mt-4"><a href="#" className="text-blue-600 hover:text-blue-700">Forgot password?</a></p>
+              <p className="text-center text-sm text-gray-600 mt-4"><a href="#" className="text-emerald-600 hover:text-emerald-700">Forgot password?</a></p>
             </div>
 
             {/* Benefits Section */}
             <div className="space-y-6">
-              <div className="card bg-gradient-to-br from-blue-50 to-indigo-50">
+              <div className="card bg-gradient-to-br from-emerald-50 to-teal-50">
                 <h2 className="text-xl font-bold mb-4 text-gray-900">Why Login to Pro URL Monitor?</h2>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
