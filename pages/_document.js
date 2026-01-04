@@ -31,6 +31,9 @@ export default function Document() {
         {/* Bing Webmaster Tools Verification */}
         <meta name="msvalidate.01" content="316058EE0783F93821FCFF3C2D97AB81" />
         
+        {/* Impact.com Verification */}
+        <meta name='impact-site-verification' value='5c3dca9e-b178-48a6-a5fa-ee87581080c4' />
+        
         {/* Cloudflare Turnstile */}
         <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
       </Head>
