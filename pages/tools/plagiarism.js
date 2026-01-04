@@ -9,45 +9,155 @@ export default function Plagiarism() {
         <meta name="description" content="Check plagiarism online for free. Detect copied content, find duplicate text, and ensure originality. Accurate plagiarism checker." />
         <link rel="canonical" href="https://www.prourlmonitor.com/tools/plagiarism" />
       </Head>
-      <section className="max-w-3xl mx-auto px-4 py-12">
-        <h1 className="text-3xl font-bold text-emerald-700 mb-3">Plagiarism Checker (Coming Soon)</h1>
-        <p className="text-gray-700 mb-6">Full plagiarism detection requires server-side indexing and external APIs. This page outlines planned capabilities and interim guidance.</p>
+      <section className="max-w-4xl mx-auto px-4 py-12">
+        <h1 className="text-3xl font-bold text-emerald-700 mb-3">Free Plagiarism Checker - Detect Copied Content</h1>
+        <p className="text-gray-700 mb-8">Check your content for plagiarism using trusted free online tools. Detect duplicate content, ensure originality, and protect your work from copyright issues.</p>
 
-        <div className="space-y-8">
-          <section className="bg-blue-50 p-6 rounded-lg border border-blue-200">
-            <h3 className="text-xl font-bold text-blue-900 mb-3">What is Plagiarism Checking?</h3>
-            <p className="text-blue-800">Plagiarism checking compares your text against large indexes of web pages and publications to find duplicate or highly similar content.</p>
-          </section>
+        {/* Top Recommended Tools */}
+        <div className="bg-gradient-to-br from-emerald-50 to-teal-50 border-2 border-emerald-200 rounded-xl p-8 mb-8">
+          <h2 className="text-2xl font-bold text-emerald-800 mb-6">🔍 Top Free Plagiarism Checkers</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Grammarly */}
+            <a 
+              href="https://www.grammarly.com/plagiarism-checker" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-white border-2 border-emerald-300 rounded-lg p-6 hover:shadow-lg hover:border-emerald-500 transition-all group"
+            >
+              <div className="flex items-start justify-between mb-3">
+                <h3 className="text-xl font-bold text-gray-900 group-hover:text-emerald-700">Grammarly</h3>
+                <span className="text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded font-semibold">FREE</span>
+              </div>
+              <p className="text-gray-600 text-sm mb-3">Professional plagiarism checker with 16+ billion web pages indexed. Includes grammar checking and writing suggestions.</p>
+              <div className="flex items-center text-emerald-600 font-medium text-sm">
+                Check on Grammarly →
+              </div>
+            </a>
 
-          <section>
-            <h3 className="text-xl font-bold text-emerald-800 mb-3">Planned Features</h3>
-            <ul className="list-disc pl-6 space-y-2 text-gray-700">
-              <li>Deep web + academic index scanning</li>
-              <li>Similarity percentages and highlighted matches</li>
-              <li>Source links and citation suggestions</li>
-              <li>Batch document uploads (DOCX/PDF/TXT)</li>
-              <li>Downloadable reports</li>
-            </ul>
-          </section>
+            {/* Quetext */}
+            <a 
+              href="https://www.quetext.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-white border-2 border-emerald-300 rounded-lg p-6 hover:shadow-lg hover:border-emerald-500 transition-all group"
+            >
+              <div className="flex items-start justify-between mb-3">
+                <h3 className="text-xl font-bold text-gray-900 group-hover:text-emerald-700">Quetext</h3>
+                <span className="text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded font-semibold">FREE</span>
+              </div>
+              <p className="text-gray-600 text-sm mb-3">Fast plagiarism detection with color-coded results. Shows exact matches and similarity scores instantly.</p>
+              <div className="flex items-center text-emerald-600 font-medium text-sm">
+                Check on Quetext →
+              </div>
+            </a>
 
-          <section>
-            <h3 className="text-xl font-bold text-emerald-800 mb-3">Interim Guidance</h3>
-            <ul className="list-disc pl-6 space-y-2 text-gray-700">
-              <li>Use trusted online checkers for now and keep your text local</li>
-              <li>Paraphrase and cite sources properly</li>
-              <li>Keep originality above 90% for safety</li>
-            </ul>
-          </section>
+            {/* Duplichecker */}
+            <a 
+              href="https://www.duplichecker.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-white border-2 border-emerald-300 rounded-lg p-6 hover:shadow-lg hover:border-emerald-500 transition-all group"
+            >
+              <div className="flex items-start justify-between mb-3">
+                <h3 className="text-xl font-bold text-gray-900 group-hover:text-emerald-700">Duplichecker</h3>
+                <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded font-semibold">NO LOGIN</span>
+              </div>
+              <p className="text-gray-600 text-sm mb-3">Simple and fast checker with no registration required. Supports up to 1000 words per check. File upload available.</p>
+              <div className="flex items-center text-emerald-600 font-medium text-sm">
+                Check on Duplichecker →
+              </div>
+            </a>
 
-          <section className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-            <h3 className="text-lg font-bold text-gray-900 mb-3">Related Tools</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-              <a href="/tools/paraphraser" className="text-emerald-600 hover:underline">→ Paraphraser</a>
-              <a href="/tools/word-counter" className="text-emerald-600 hover:underline">→ Word Counter</a>
-              <a href="/tools/text-cleaner" className="text-emerald-600 hover:underline">→ Text Cleaner</a>
-              <a href="/tools/meta-generator" className="text-emerald-600 hover:underline">→ Meta Tag Generator</a>
+            {/* SmallSEOTools */}
+            <a 
+              href="https://smallseotools.com/plagiarism-checker/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-white border-2 border-emerald-300 rounded-lg p-6 hover:shadow-lg hover:border-emerald-500 transition-all group"
+            >
+              <div className="flex items-start justify-between mb-3">
+                <h3 className="text-xl font-bold text-gray-900 group-hover:text-emerald-700">SmallSEOTools</h3>
+                <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded font-semibold">NO LOGIN</span>
+              </div>
+              <p className="text-gray-600 text-sm mb-3">Multiple checks per day without registration. Upload files or paste text. Detailed source links provided.</p>
+              <div className="flex items-center text-emerald-600 font-medium text-sm">
+                Check on SmallSEOTools →
+              </div>
+            </a>
+          </div>
+        </div>
+
+        {/* How to Use Section */}
+        <div className="bg-white border border-gray-200 rounded-lg p-8 mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">📋 How to Check Plagiarism</h2>
+          <div className="space-y-4">
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 font-bold">1</div>
+              <div>
+                <h3 className="font-bold text-gray-900 mb-1">Choose a Checker Above</h3>
+                <p className="text-gray-600 text-sm">Click on any recommended tool based on your needs. Grammarly for comprehensive checks, Duplichecker for quick scans.</p>
+              </div>
             </div>
-          </section>
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 font-bold">2</div>
+              <div>
+                <h3 className="font-bold text-gray-900 mb-1">Paste Your Text</h3>
+                <p className="text-gray-600 text-sm">Copy your content and paste it into the checker. Most tools accept 500-1000 words per check for free accounts.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 font-bold">3</div>
+              <div>
+                <h3 className="font-bold text-gray-900 mb-1">Review Results</h3>
+                <p className="text-gray-600 text-sm">Check the similarity percentage and highlighted matches. Click on sources to see where duplicates were found.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 font-bold">4</div>
+              <div>
+                <h3 className="font-bold text-gray-900 mb-1">Rewrite & Fix</h3>
+                <p className="text-gray-600 text-sm">Paraphrase plagiarized sections, add citations, or rewrite completely. Aim for 90%+ originality for academic/professional work.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Tips Section */}
+        <div className="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-8">
+          <h2 className="text-xl font-bold text-amber-900 mb-4">💡 Pro Tips for Avoiding Plagiarism</h2>
+          <ul className="space-y-2 text-gray-700">
+            <li className="flex items-start gap-2">
+              <span className="text-emerald-600 font-bold">✓</span>
+              <span><strong>Always cite sources:</strong> Even paraphrased content needs proper attribution</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-emerald-600 font-bold">✓</span>
+              <span><strong>Use quotation marks:</strong> Direct quotes must be in quotes with citations</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-emerald-600 font-bold">✓</span>
+              <span><strong>Paraphrase properly:</strong> Change sentence structure, not just a few words</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-emerald-600 font-bold">✓</span>
+              <span><strong>Check before submitting:</strong> Run all content through plagiarism checkers first</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-emerald-600 font-bold">✓</span>
+              <span><strong>Keep 90%+ originality:</strong> Aim for maximum unique content in your work</span>
+            </li>
+          </ul>
+        </div>
+
+        {/* Related Tools */}
+        <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
+          <h2 className="text-lg font-bold text-gray-900 mb-4">🔧 Related ProURLMonitor Tools</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <a href="/tools/paraphraser" className="text-emerald-600 hover:underline text-sm">→ Paraphraser</a>
+            <a href="/tools/word-counter" className="text-emerald-600 hover:underline text-sm">→ Word Counter</a>
+            <a href="/tools/text-cleaner" className="text-emerald-600 hover:underline text-sm">→ Text Cleaner</a>
+            <a href="/tools/ai-content-detector" className="text-emerald-600 hover:underline text-sm">→ AI Content Detector</a>
+          </div>
         </div>
       </section>
 
